@@ -1,0 +1,620 @@
+/* =========================================
+   PRODUCT MANAGEMENT
+   Premium Dark Neon Theme
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#050816;
+}
+
+.product-management{
+    min-height:100vh;
+    padding:40px;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(0,255,255,.10),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(109,40,217,.18),
+    transparent 45%),
+
+    linear-gradient(
+    135deg,
+    #050816 0%,
+    #091323 40%,
+    #17153b 100%);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.product-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.product-header h2{
+
+    font-size:40px;
+    font-weight:800;
+
+    color:#ffffff;
+
+    letter-spacing:.5px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.product-header h2 svg{
+
+    color:#25d9ff;
+
+    font-size:38px;
+
+    filter:drop-shadow(0 0 12px #25d9ff);
+}
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.add-btn{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    font-size:16px;
+    font-weight:700;
+
+    color:#fff;
+
+    background:linear-gradient(
+    135deg,
+    #20d7ff,
+    #4f46e5);
+
+    box-shadow:
+    0 0 25px rgba(32,215,255,.35);
+
+    transition:.35s;
+}
+
+.add-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 40px rgba(32,215,255,.6);
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-box{
+
+    width:100%;
+    max-width:460px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:16px 22px;
+
+    border-radius:50px;
+
+    margin-bottom:35px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(0,255,255,.15);
+
+    backdrop-filter:blur(20px);
+}
+
+.search-box svg{
+
+    color:#27dcff;
+
+    font-size:20px;
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    color:#fff;
+
+    font-size:16px;
+}
+
+.search-box input::placeholder{
+
+    color:#8ea3bd;
+}
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.table-container{
+
+    overflow-x:auto;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:1100px;
+}
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+thead{
+
+    background:
+    linear-gradient(
+    90deg,
+    #0d1728,
+    #121f39);
+}
+
+thead th{
+
+    padding:22px 20px;
+
+    color:#27dcff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+tbody tr{
+
+    transition:.35s;
+}
+
+tbody tr:hover{
+
+    background:
+    rgba(0,255,255,.05);
+
+    transform:scale(1.005);
+}
+
+tbody td{
+
+    padding:20px;
+
+    color:#eef3ff;
+
+    font-size:15px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.06);
+
+    vertical-align:middle;
+}
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+tbody img{
+
+    width:85px;
+
+    height:85px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:2px solid #25d9ff;
+
+    box-shadow:
+    0 0 18px rgba(37,217,255,.30);
+
+    transition:.35s;
+}
+
+tbody img:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 30px rgba(37,217,255,.55);
+}
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.product-name{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#ffffff;
+}
+
+.product-category{
+
+    font-size:13px;
+
+    color:#8ea3bd;
+
+    margin-top:4px;
+}
+
+/* =========================================
+   PRICE
+========================================= */
+
+.price{
+
+    color:#25d9ff;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+/* =========================================
+   STOCK BADGES
+========================================= */
+
+.stock-high,
+.stock-medium,
+.stock-low{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:700;
+}
+
+.stock-high{
+
+    color:#16f28c;
+
+    background:
+    rgba(22,242,140,.12);
+
+    border:
+    1px solid rgba(22,242,140,.35);
+}
+
+.stock-medium{
+
+    color:#ffc857;
+
+    background:
+    rgba(255,200,87,.12);
+
+    border:
+    1px solid rgba(255,200,87,.35);
+}
+
+.stock-low{
+
+    color:#ff5b6f;
+
+    background:
+    rgba(255,91,111,.12);
+
+    border:
+    1px solid rgba(255,91,111,.35);
+}
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.edit-btn,
+.delete-btn{
+
+    width:48px;
+    height:48px;
+
+    border:none;
+    outline:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+
+    transition:.35s;
+}
+
+.edit-btn{
+
+    background:linear-gradient(
+    135deg,
+    #7c3aed,
+    #4f46e5);
+
+    color:#fff;
+
+    box-shadow:
+    0 0 20px rgba(124,58,237,.35);
+}
+
+.edit-btn:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:
+    0 0 30px rgba(124,58,237,.6);
+}
+
+.delete-btn{
+
+    background:linear-gradient(
+    135deg,
+    #ef4444,
+    #dc2626);
+
+    color:#fff;
+
+    box-shadow:
+    0 0 20px rgba(239,68,68,.35);
+}
+
+.delete-btn:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    box-shadow:
+    0 0 30px rgba(239,68,68,.6);
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.table-container::-webkit-scrollbar{
+
+    height:10px;
+}
+
+.table-container::-webkit-scrollbar-track{
+
+    background:#0b1220;
+
+    border-radius:20px;
+}
+
+.table-container::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+    180deg,
+    #22d3ee,
+    #3b82f6);
+
+    border-radius:20px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover{
+
+    background:#22d3ee;
+}
+
+/* =========================================
+   CARD HOVER EFFECT
+========================================= */
+
+.table-container:hover{
+
+    border-color:rgba(34,211,238,.25);
+
+    box-shadow:
+    0 25px 60px rgba(34,211,238,.12),
+    0 20px 60px rgba(0,0,0,.35);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+.product-management{
+    padding:30px;
+}
+
+.product-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.search-box{
+    max-width:100%;
+}
+
+table{
+    min-width:950px;
+}
+
+}
+
+@media(max-width:768px){
+
+.product-management{
+    padding:20px;
+}
+
+.product-header h2{
+    font-size:30px;
+}
+
+.add-btn{
+    width:100%;
+    justify-content:center;
+}
+
+.search-box{
+    padding:14px 18px;
+}
+
+table{
+    min-width:850px;
+}
+
+thead th,
+tbody td{
+    padding:16px;
+}
+
+tbody img{
+    width:70px;
+    height:70px;
+}
+
+.edit-btn,
+.delete-btn{
+    width:42px;
+    height:42px;
+}
+
+}
+
+@media(max-width:480px){
+
+.product-management{
+    padding:15px;
+}
+
+.product-header h2{
+    font-size:24px;
+}
+
+.add-btn{
+    font-size:15px;
+    padding:14px;
+}
+
+.search-box{
+    padding:12px 15px;
+}
+
+.search-box input{
+    font-size:14px;
+}
+
+thead th{
+    font-size:14px;
+}
+
+tbody td{
+    font-size:14px;
+}
+
+.price{
+    font-size:16px;
+}
+
+.stock-high,
+.stock-medium,
+.stock-low{
+    font-size:12px;
+    padding:6px 12px;
+}
+
+tbody img{
+    width:60px;
+    height:60px;
+}
+
+}

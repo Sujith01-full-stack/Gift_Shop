@@ -1,0 +1,683 @@
+/*==========================================
+        GOOGLE FONT
+==========================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/*==========================================
+        CHECKOUT PAGE
+==========================================*/
+
+.checkout-page{
+
+    min-height:100vh;
+
+    padding:80px 40px;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(123,44,191,.22),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(0,255,255,.08),
+    transparent 45%),
+
+    linear-gradient(
+        135deg,
+        #08111f 0%,
+        #0d1425 45%,
+        #17142e 100%);
+}
+
+/*==========================================
+        CONTAINER
+==========================================*/
+
+.checkout-container{
+
+    max-width:1450px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:35px;
+}
+
+/*==========================================
+        CHECKOUT FORM
+==========================================*/
+
+.checkout-form{
+
+    background:rgba(25,33,48,.88);
+
+    border:1px solid rgba(0,255,255,.18);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    backdrop-filter:blur(22px);
+
+    box-shadow:
+    0 0 35px rgba(0,255,255,.08);
+}
+
+/*==========================================
+        TITLE
+==========================================*/
+
+.checkout-form h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#17e8ff;
+
+    margin-bottom:35px;
+
+    text-shadow:
+    0 0 18px rgba(23,232,255,.65);
+}
+
+.checkout-form form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+}
+
+/*==========================================
+        ROW
+==========================================*/
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+/*==========================================
+        INPUTS
+==========================================*/
+
+.checkout-form input,
+.checkout-form textarea,
+.payment-select,
+.payment-box input,
+.payment-box select{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid rgba(0,255,255,.18);
+
+    border-radius:16px;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:#ffffff;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+}
+
+/*==========================================
+        PLACEHOLDER
+==========================================*/
+
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder{
+
+    color:#9fb3c8;
+}
+
+/*==========================================
+        FOCUS
+==========================================*/
+
+.checkout-form input:focus,
+.checkout-form textarea:focus,
+.payment-select:focus,
+.payment-box input:focus,
+.payment-box select:focus{
+
+    border-color:#19e8ff;
+
+    box-shadow:
+    0 0 18px rgba(25,232,255,.35);
+
+    background:rgba(255,255,255,.08);
+}
+
+/*==========================================
+        TEXTAREA
+==========================================*/
+
+.checkout-form textarea{
+
+    resize:none;
+
+    min-height:120px;
+}
+
+/*==========================================
+        PAYMENT TITLE
+==========================================*/
+
+.payment-title{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#19e8ff;
+
+    margin-bottom:12px;
+
+    text-shadow:
+    0 0 10px rgba(25,232,255,.5);
+}
+
+/*==========================================
+        PAYMENT SELECT
+==========================================*/
+
+.payment-select{
+
+    height:60px;
+
+    cursor:pointer;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    color:#ffffff;
+
+    background:
+        rgba(255,255,255,.05)
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2319e8ff' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E")
+        no-repeat right 18px center;
+
+    background-size:18px;
+}
+
+.payment-select option{
+
+    background:#1b2233;
+
+    color:#ffffff;
+}
+
+/*==========================================
+        PAYMENT BOX
+==========================================*/
+
+.payment-box{
+
+    margin-top:18px;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(25,232,255,.18);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    animation:fade .35s;
+}
+
+/*==========================================
+        PAYMENT NOTE
+==========================================*/
+
+.payment-note{
+
+    margin-top:10px;
+
+    color:#aebcd0;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+/*==========================================
+        ORDER SUMMARY
+==========================================*/
+
+.order-summary{
+
+    background:rgba(25,33,48,.88);
+
+    border:1px solid rgba(25,232,255,.18);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 0 35px rgba(25,232,255,.08);
+
+    position:sticky;
+
+    top:90px;
+
+    height:fit-content;
+}
+
+/*==========================================
+        SUMMARY TITLE
+==========================================*/
+
+.order-summary h2{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#19e8ff;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 15px rgba(25,232,255,.6);
+}
+
+/*==========================================
+        SUMMARY ITEM
+==========================================*/
+
+.summary-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    font-size:17px;
+}
+
+.summary-item:last-child{
+
+    border-bottom:none;
+}
+
+.summary-item span:last-child{
+
+    font-weight:700;
+
+    color:#19e8ff;
+}
+
+/*==========================================
+        TOTAL
+==========================================*/
+
+.summary-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:22px;
+
+    padding-top:22px;
+
+    border-top:2px solid rgba(25,232,255,.18);
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#ffffff;
+}
+
+.summary-total span:last-child{
+
+    color:#19e8ff;
+
+    font-size:30px;
+
+    text-shadow:
+    0 0 12px rgba(25,232,255,.55);
+}
+
+/*==========================================
+        HR
+==========================================*/
+
+hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin:20px 0;
+}
+
+/*==========================================
+        PLACE ORDER BUTTON
+==========================================*/
+
+.checkout-form button{
+
+    width:100%;
+
+    height:60px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+        135deg,
+        #19e8ff,
+        #2563eb
+    );
+
+    transition:.35s;
+
+    box-shadow:
+    0 0 20px rgba(25,232,255,.35);
+}
+
+.checkout-form button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 35px rgba(25,232,255,.65);
+}
+
+.checkout-form button:active{
+
+    transform:scale(.98);
+}
+/*==========================================
+        TABLET
+==========================================*/
+
+@media (max-width:992px){
+
+.checkout-page{
+    padding:60px 25px;
+}
+
+.checkout-container{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.checkout-form,
+.order-summary{
+    padding:30px;
+}
+
+.checkout-form h1{
+    font-size:36px;
+}
+
+.order-summary{
+    position:relative;
+    top:0;
+}
+
+.summary-total{
+    font-size:22px;
+}
+
+.summary-total span:last-child{
+    font-size:28px;
+}
+
+}
+
+/*==========================================
+        MOBILE
+==========================================*/
+
+@media (max-width:768px){
+
+.checkout-page{
+    padding:35px 15px;
+}
+
+.checkout-container{
+    gap:25px;
+}
+
+.checkout-form,
+.order-summary{
+
+    padding:25px;
+
+    border-radius:22px;
+}
+
+.checkout-form h1{
+
+    font-size:30px;
+}
+
+.order-summary h2{
+
+    font-size:28px;
+}
+
+.row{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.payment-select,
+.payment-box input,
+.payment-box select{
+
+    padding:15px;
+
+    font-size:15px;
+}
+
+.payment-box{
+
+    padding:20px;
+}
+
+.summary-item{
+
+    font-size:16px;
+}
+
+.summary-total{
+
+    font-size:20px;
+}
+
+.summary-total span:last-child{
+
+    font-size:26px;
+}
+
+.checkout-form button{
+
+    height:56px;
+
+    font-size:17px;
+}
+
+}
+
+/*==========================================
+        SMALL MOBILE
+==========================================*/
+
+@media (max-width:480px){
+
+.checkout-page{
+
+    padding:20px 12px;
+}
+
+.checkout-form,
+.order-summary{
+
+    padding:18px;
+
+    border-radius:18px;
+}
+
+.checkout-form h1{
+
+    font-size:25px;
+}
+
+.order-summary h2{
+
+    font-size:24px;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.payment-select,
+.payment-box input,
+.payment-box select{
+
+    padding:13px;
+
+    font-size:14px;
+}
+
+.payment-title{
+
+    font-size:18px;
+}
+
+.payment-note{
+
+    font-size:13px;
+}
+
+.summary-item{
+
+    font-size:14px;
+}
+
+.summary-total{
+
+    font-size:18px;
+}
+
+.summary-total span:last-child{
+
+    font-size:22px;
+}
+
+.checkout-form button{
+
+    height:50px;
+
+    font-size:15px;
+}
+
+}
+
+/*==========================================
+        SCROLLBAR
+==========================================*/
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#19e8ff;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#3fdfff;
+}
+
+/*==========================================
+        SELECTION
+==========================================*/
+
+::selection{
+    background:#19e8ff;
+    color:#08111f;
+}
+
+/*==========================================
+        SMOOTH TRANSITIONS
+==========================================*/
+
+.checkout-form,
+.order-summary,
+.payment-box,
+.checkout-form input,
+.checkout-form textarea,
+.payment-select,
+.checkout-form button{
+    transition:all .35s ease;
+}

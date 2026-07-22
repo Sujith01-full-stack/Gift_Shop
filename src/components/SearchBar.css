@@ -1,0 +1,833 @@
+/* ==========================================
+            PREMIUM SEARCH BAR
+========================================== */
+
+.searchbar{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:660px;
+
+    z-index:999;
+
+}
+
+/* ==========================================
+            SEARCH BOX
+========================================== */
+
+.search-input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    height:78px;
+
+    padding:0 28px;
+
+    border-radius:40px;
+
+    background:rgba(17,24,39,.92);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(34,211,238,.18);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35);
+
+    transition:.35s ease;
+
+}
+
+/* ==========================================
+            PURPLE GLOW
+========================================== */
+
+.search-input-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-120px;
+
+    right:-90px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    filter:blur(120px);
+
+    opacity:.12;
+
+}
+
+/* ==========================================
+            HOVER
+========================================== */
+
+.search-input-box:hover{
+
+    border-color:#22d3ee;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.45),
+        0 0 20px rgba(34,211,238,.15);
+
+}
+
+/* ==========================================
+            FOCUS
+========================================== */
+
+.search-input-box:focus-within{
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 0 0 4px rgba(34,211,238,.10),
+        0 18px 40px rgba(0,0,0,.45),
+        0 0 25px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+            SEARCH ICON
+========================================== */
+
+.search-icon{
+
+    font-size:30px;
+
+    color:#22d3ee;
+
+    transition:.35s;
+
+}
+
+.search-input-box:hover .search-icon,
+.search-input-box:focus-within .search-icon{
+
+    transform:scale(1.1);
+
+    color:#67e8f9;
+
+}
+
+/* ==========================================
+            INPUT
+========================================== */
+
+.search-input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+.search-input-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+/* ==========================================
+            SEARCH RESULTS
+========================================== */
+
+.search-results{
+
+    position:absolute;
+
+    top:90px;
+
+    left:0;
+
+    width:100%;
+
+    max-height:420px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    border-radius:24px;
+
+    background:rgba(17,24,39,.96);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(34,211,238,.18);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.50),
+        0 0 25px rgba(34,211,238,.12);
+
+    animation:searchFade .35s ease;
+
+    z-index:9999;
+
+}
+
+/* ==========================================
+            PURPLE GLOW
+========================================== */
+
+.search-results::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    filter:blur(150px);
+
+    opacity:.12;
+
+}
+
+/* ==========================================
+            CYAN GLOW
+========================================== */
+
+.search-results::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    left:-90px;
+
+    bottom:-90px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(130px);
+
+    opacity:.10;
+
+}
+
+.search-results>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+.search-results::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.search-results::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+.search-results::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    border-radius:30px;
+
+}
+
+.search-results::-webkit-scrollbar-thumb:hover{
+
+    background:#38bdf8;
+
+}
+
+/* ==========================================
+            DROPDOWN ANIMATION
+========================================== */
+
+@keyframes searchFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+            SEARCH ITEM
+========================================== */
+
+.search-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px 20px;
+
+    cursor:pointer;
+
+    border-bottom:1px solid rgba(34,211,238,.10);
+
+    transition:.35s ease;
+
+}
+
+.search-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.search-item:hover{
+
+    background:rgba(34,211,238,.08);
+
+}
+
+/* ==========================================
+            PRODUCT IMAGE
+========================================== */
+
+.search-item img{
+
+    width:70px;
+
+    height:70px;
+
+    min-width:70px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    border:2px solid rgba(34,211,238,.15);
+
+    background:#111827;
+
+    transition:.35s;
+
+}
+
+.search-item:hover img{
+
+    transform:scale(1.08);
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 0 20px rgba(34,211,238,.25);
+
+}
+
+/* ==========================================
+            PRODUCT DETAILS
+========================================== */
+
+.search-details{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+/* ==========================================
+            PRODUCT NAME
+========================================== */
+
+.search-details h4{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.search-item:hover h4{
+
+    color:#22d3ee;
+
+}
+
+/* ==========================================
+            CATEGORY
+========================================== */
+
+.search-details p{
+
+    margin:6px 0;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+            PRICE
+========================================== */
+
+.search-details span{
+
+    display:inline-block;
+
+    margin-top:5px;
+
+    color:#22d3ee;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    text-shadow:
+        0 0 12px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+            NO RESULT
+========================================== */
+
+.no-result{
+
+    padding:28px;
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+            HOVER EFFECT
+========================================== */
+
+.search-item:hover{
+
+    transform:translateX(6px);
+
+}
+
+/* ==========================================
+            SMOOTH TRANSITIONS
+========================================== */
+
+.searchbar,
+.searchbar *,
+.search-results,
+.search-results *,
+.search-item,
+.search-item *{
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* ==========================================
+            FLOAT ANIMATION
+========================================== */
+
+.searchbar{
+
+    animation:searchAppear .6s ease;
+
+}
+
+@keyframes searchAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+            DESKTOP
+========================================== */
+
+@media (max-width:1400px){
+
+.searchbar{
+
+    max-width:620px;
+
+}
+
+.search-input-box{
+
+    height:72px;
+
+}
+
+.search-input-box input{
+
+    font-size:18px;
+
+}
+
+}
+
+/* ==========================================
+            LAPTOP
+========================================== */
+
+@media (max-width:1200px){
+
+.searchbar{
+
+    max-width:520px;
+
+}
+
+.search-input-box{
+
+    height:68px;
+
+    padding:0 22px;
+
+}
+
+.search-icon{
+
+    font-size:26px;
+
+}
+
+.search-input-box input{
+
+    font-size:17px;
+
+}
+
+.search-results{
+
+    top:80px;
+
+}
+
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.searchbar{
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+.search-input-box{
+
+    height:64px;
+
+}
+
+.search-results{
+
+    top:74px;
+
+}
+
+.search-item{
+
+    padding:14px 16px;
+
+}
+
+.search-item img{
+
+    width:60px;
+
+    height:60px;
+
+    min-width:60px;
+
+}
+
+.search-details h4{
+
+    font-size:16px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.search-input-box{
+
+    height:60px;
+
+    padding:0 18px;
+
+    border-radius:20px;
+
+}
+
+.search-icon{
+
+    font-size:22px;
+
+}
+
+.search-input-box input{
+
+    font-size:16px;
+
+}
+
+.search-results{
+
+    top:68px;
+
+    border-radius:18px;
+
+}
+
+.search-item{
+
+    gap:12px;
+
+}
+
+.search-item img{
+
+    width:55px;
+
+    height:55px;
+
+    min-width:55px;
+
+}
+
+.search-details h4{
+
+    font-size:15px;
+
+}
+
+.search-details p{
+
+    font-size:13px;
+
+}
+
+.search-details span{
+
+    font-size:16px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.search-input-box{
+
+    height:56px;
+
+    padding:0 15px;
+
+}
+
+.search-icon{
+
+    font-size:20px;
+
+}
+
+.search-input-box input{
+
+    font-size:15px;
+
+}
+
+.search-item{
+
+    padding:12px;
+
+}
+
+.search-item img{
+
+    width:50px;
+
+    height:50px;
+
+    min-width:50px;
+
+}
+
+.search-details h4{
+
+    font-size:14px;
+
+}
+
+.search-details p{
+
+    font-size:12px;
+
+}
+
+.search-details span{
+
+    font-size:15px;
+
+}
+
+.search-results{
+
+    max-height:320px;
+
+}
+
+}
+
+/* ==========================================
+            PREMIUM HOVER
+========================================== */
+
+.search-input-box:hover{
+
+    border-color:#22d3ee;
+
+}
+
+.search-item:hover{
+
+    cursor:pointer;
+
+}
+
+.search-item:hover .search-details span{
+
+    color:#67e8f9;
+
+    text-shadow:
+        0 0 18px rgba(34,211,238,.45);
+
+}
+
+.search-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+                    END
+========================================== */

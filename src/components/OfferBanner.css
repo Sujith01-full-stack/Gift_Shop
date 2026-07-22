@@ -1,0 +1,654 @@
+/* ==========================================
+   OFFER BADGE
+========================================== */
+
+.offer-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    margin-bottom:28px;
+
+    border-radius:50px;
+
+    background:rgba(34,211,238,.10);
+
+    border:1px solid rgba(34,211,238,.30);
+
+    color:#22d3ee;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 0 20px rgba(34,211,238,.12);
+
+}
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.offer-content h2{
+
+    color:#ffffff;
+
+    font-size:58px;
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+
+    font-weight:800;
+
+}
+
+.offer-content h2 span{
+
+    color:#22d3ee;
+
+    text-shadow:0 0 20px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.offer-content p{
+
+    max-width:620px;
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.offer-features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.offer-features div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:rgba(15,23,42,.70);
+
+    border:1px solid rgba(34,211,238,.18);
+
+    color:#ffffff;
+
+    backdrop-filter:blur(15px);
+
+    transition:.35s;
+
+}
+
+.offer-features div:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(34,211,238,.10);
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 10px 25px rgba(34,211,238,.15);
+
+}
+
+.offer-features svg{
+
+    color:#22d3ee;
+
+}
+/* ==========================================
+   OFFER BADGE
+========================================== */
+
+.offer-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    margin-bottom:30px;
+
+    border-radius:50px;
+
+    background:rgba(34,211,238,.10);
+
+    border:1px solid rgba(34,211,238,.28);
+
+    color:#22d3ee;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 0 20px rgba(34,211,238,.15);
+
+}
+
+/* ==========================================
+   OFFER HEADING
+========================================== */
+
+.offer-content h2{
+
+    color:#ffffff;
+
+    font-size:56px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+
+}
+
+.offer-content h2 span{
+
+    color:#22d3ee;
+
+    text-shadow:
+        0 0 20px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.offer-content p{
+
+    max-width:650px;
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.offer-features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.offer-features div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    background:rgba(15,23,42,.72);
+
+    border:1px solid rgba(34,211,238,.20);
+
+    color:#ffffff;
+
+    backdrop-filter:blur(16px);
+
+    transition:.35s ease;
+
+}
+
+.offer-features div:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#22d3ee;
+
+    background:rgba(34,211,238,.10);
+
+    box-shadow:
+        0 12px 25px rgba(34,211,238,.18);
+
+}
+
+.offer-features svg{
+
+    color:#22d3ee;
+
+    font-size:18px;
+
+}
+/* ==========================================
+   COUPON BOX
+========================================== */
+
+.coupon{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:35px;
+
+    padding:16px 26px;
+
+    border-radius:16px;
+
+    background:rgba(15,23,42,.75);
+
+    border:2px dashed rgba(34,211,238,.35);
+
+    color:#22d3ee;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 0 25px rgba(34,211,238,.12);
+
+}
+
+/* ==========================================
+   BUTTON GROUP
+========================================== */
+
+.offer-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================
+   COMMON BUTTON
+========================================== */
+
+.shop-btn,
+.whatsapp-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    transition:.35s ease;
+
+}
+
+/* ==========================================
+   SHOP BUTTON
+========================================== */
+
+.shop-btn{
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6,
+        #2563eb
+    );
+
+    box-shadow:
+        0 15px 35px rgba(34,211,238,.28);
+
+}
+
+.shop-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(34,211,238,.40);
+
+}
+
+/* ==========================================
+   WHATSAPP BUTTON
+========================================== */
+
+.whatsapp-btn{
+
+    background:rgba(15,23,42,.75);
+
+    border:2px solid rgba(34,211,238,.30);
+
+    backdrop-filter:blur(18px);
+
+}
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#22d3ee;
+
+    background:rgba(34,211,238,.10);
+
+    box-shadow:
+        0 18px 40px rgba(34,211,238,.20);
+
+}
+
+/* ==========================================
+   BUTTON SHINE
+========================================== */
+
+.shop-btn::before,
+.whatsapp-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:35%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.shop-btn:hover::before,
+.whatsapp-btn:hover::before{
+
+    left:140%;
+
+}
+
+/* ==========================================
+   OFFER IMAGE
+========================================== */
+
+.offer-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+.offer-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    border-radius:28px;
+
+    border:2px solid rgba(34,211,238,.20);
+
+    box-shadow:
+        0 25px 60px rgba(34,211,238,.20),
+        0 0 60px rgba(124,58,237,.10);
+
+    animation:offerFloat 5s ease-in-out infinite;
+
+    transition:all .4s ease;
+
+}
+
+.offer-image img:hover{
+
+    transform:scale(1.05);
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 35px 80px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+   FLOAT ANIMATION
+========================================== */
+
+@keyframes offerFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+/* ==========================================
+   SMOOTH TRANSITIONS
+========================================== */
+
+.offer-banner *,
+.offer-banner *::before,
+.offer-banner *::after{
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.offer-container{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+gap:45px;
+
+}
+
+.offer-title{
+
+font-size:46px;
+
+}
+
+.offer-content h2{
+
+font-size:42px;
+
+}
+
+.offer-content p{
+
+margin:auto auto 30px;
+
+}
+
+.offer-features{
+
+justify-content:center;
+
+}
+
+.offer-buttons{
+
+justify-content:center;
+
+}
+
+.offer-image img{
+
+max-width:420px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:576px){
+
+.offer-banner{
+
+padding:60px 20px;
+
+}
+
+.offer-title{
+
+font-size:34px;
+
+}
+
+.offer-content h2{
+
+font-size:30px;
+
+}
+
+.offer-content p{
+
+font-size:15px;
+
+}
+
+.offer-buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.shop-btn,
+.whatsapp-btn{
+
+width:100%;
+
+}
+
+.offer-image img{
+
+max-width:320px;
+
+}
+
+}
+
+/* ==========================================
+   END
+========================================== */

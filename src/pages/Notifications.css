@@ -1,0 +1,1324 @@
+/* ==========================================
+            GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ==========================================
+            RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#08111f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+            PAGE
+========================================== */
+
+.notifications-page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:60px 30px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(34,211,238,.10),
+        transparent 35%),
+
+        radial-gradient(circle at bottom right,
+        rgba(34,211,238,.08),
+        transparent 40%),
+
+        linear-gradient(
+            135deg,
+            #08111f 0%,
+            #111827 50%,
+            #18263d 100%);
+}
+
+/* ==========================================
+        TOP GLOW
+========================================== */
+
+.notifications-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    top:-180px;
+
+    left:-180px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(180px);
+
+    opacity:.12;
+
+}
+
+/* ==========================================
+        BOTTOM GLOW
+========================================== */
+
+.notifications-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    right:-200px;
+
+    bottom:-200px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+    filter:blur(200px);
+
+    opacity:.10;
+
+}
+
+/* ==========================================
+            CONTAINER
+========================================== */
+
+.notifications-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:1050px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:rgba(17,24,39,.92);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(34,211,238,.15);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        GLASS BORDER
+========================================== */
+
+.notifications-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    padding:1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(34,211,238,.25),
+            transparent,
+            rgba(34,211,238,.10)
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.notifications-container h1{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:40px;
+
+    font-size:44px;
+
+    font-weight:800;
+
+    color:#22d3ee;
+
+    text-shadow:
+        0 0 18px rgba(34,211,238,.30);
+
+}
+
+.notifications-container h1 svg{
+
+    color:#22d3ee;
+
+    font-size:42px;
+
+}
+
+/* ==========================================
+        NOTIFICATION CARD
+========================================== */
+
+.notification-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:22px 28px;
+
+    margin-bottom:20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(34,211,238,.08);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        LEFT BORDER
+========================================== */
+
+.notification-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        180deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+}
+
+/* ==========================================
+        CARD HOVER
+========================================== */
+
+.notification-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(34,211,238,.22);
+
+    background:rgba(34,211,238,.05);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35),
+        0 0 22px rgba(34,211,238,.12);
+
+}
+
+/* ==========================================
+        LEFT SIDE
+========================================== */
+
+.notification-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex:1;
+
+}
+
+/* ==========================================
+        ICON
+========================================== */
+
+.icon-circle{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    color:#fff;
+
+    font-size:24px;
+
+    box-shadow:
+        0 0 22px rgba(34,211,238,.25);
+
+    transition:.35s;
+
+}
+
+.notification-card:hover .icon-circle{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 35px rgba(34,211,238,.45);
+
+}
+
+/* ==========================================
+        TEXT
+========================================== */
+
+.notification-left h3{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.notification-left p{
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+        TOGGLE SWITCH
+========================================== */
+
+.switch{
+
+    position:relative;
+
+    width:68px;
+
+    height:36px;
+
+    flex-shrink:0;
+
+}
+
+.switch input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+}
+
+/* ==========================================
+        SLIDER
+========================================== */
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    cursor:pointer;
+
+    border-radius:50px;
+
+    background:#334155;
+
+    border:1px solid rgba(34,211,238,.15);
+
+    transition:.35s ease;
+
+}
+
+/* ==========================================
+        TOGGLE CIRCLE
+========================================== */
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:28px;
+
+    height:28px;
+
+    left:3px;
+
+    top:3px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.35);
+
+    transition:.35s ease;
+
+}
+
+/* ==========================================
+        ACTIVE STATE
+========================================== */
+
+.switch input:checked + .slider{
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 0 18px rgba(34,211,238,.35);
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(32px);
+
+}
+
+/* ==========================================
+        HOVER
+========================================== */
+
+.switch:hover .slider{
+
+    border-color:rgba(34,211,238,.35);
+
+}
+
+.switch:hover .slider::before{
+
+    box-shadow:
+        0 0 15px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+        FOCUS
+========================================== */
+
+.switch input:focus + .slider{
+
+    box-shadow:
+        0 0 0 3px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+        ACTIVE ANIMATION
+========================================== */
+
+@keyframes toggleGlow{
+
+    0%{
+
+        box-shadow:0 0 8px rgba(34,211,238,.20);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 22px rgba(34,211,238,.45),
+            0 0 45px rgba(34,211,238,.18);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 8px rgba(34,211,238,.20);
+
+    }
+
+}
+
+.switch input:checked + .slider{
+
+    animation:toggleGlow 2s infinite;
+
+}
+
+/* ==========================================
+        SAVE BUTTON
+========================================== */
+
+.save-btn{
+
+    width:100%;
+
+    margin-top:30px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    box-shadow:
+        0 12px 30px rgba(34,211,238,.25);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        BUTTON ICON
+========================================== */
+
+.save-btn svg{
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+        BUTTON HOVER
+========================================== */
+
+.save-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(34,211,238,.40);
+
+}
+
+.save-btn:hover svg{
+
+    transform:rotate(-10deg) scale(1.15);
+
+}
+
+/* ==========================================
+        BUTTON RIPPLE
+========================================== */
+
+.save-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    transform:translate(-50%,-50%);
+
+    transition:.55s;
+
+}
+
+.save-btn:hover::before{
+
+    width:420px;
+
+    height:420px;
+
+}
+
+/* ==========================================
+        BUTTON ACTIVE
+========================================== */
+
+.save-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+        FOOTER
+========================================== */
+
+.notifications-footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.notifications-footer span{
+
+    color:#22d3ee;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+        DIVIDER
+========================================== */
+
+.notifications-divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:28px 0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(34,211,238,.30),
+        transparent
+    );
+
+}
+
+/* ==========================================
+            LAPTOP
+========================================== */
+
+@media (max-width:1200px){
+
+.notifications-container{
+
+    max-width:950px;
+
+    padding:35px;
+
+}
+
+.notifications-container h1{
+
+    font-size:38px;
+
+}
+
+.notification-card{
+
+    padding:20px 24px;
+
+}
+
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.notifications-page{
+
+    padding:40px 20px;
+
+}
+
+.notifications-container{
+
+    padding:28px;
+
+}
+
+.notifications-container h1{
+
+    font-size:34px;
+
+}
+
+.notification-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.notification-left{
+
+    width:100%;
+
+}
+
+.switch{
+
+    align-self:flex-end;
+
+}
+
+.save-btn{
+
+    height:56px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.notifications-page{
+
+    padding:25px 15px;
+
+}
+
+.notifications-container{
+
+    padding:22px;
+
+    border-radius:22px;
+
+}
+
+.notifications-container h1{
+
+    font-size:28px;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    text-align:center;
+
+}
+
+.notification-card{
+
+    padding:18px;
+
+    border-radius:16px;
+
+}
+
+.notification-left{
+
+    gap:15px;
+
+}
+
+.icon-circle{
+
+    width:56px;
+
+    height:56px;
+
+    font-size:22px;
+
+}
+
+.notification-left h3{
+
+    font-size:18px;
+
+}
+
+.notification-left p{
+
+    font-size:14px;
+
+}
+
+.switch{
+
+    width:62px;
+
+    height:34px;
+
+}
+
+.slider::before{
+
+    width:26px;
+
+    height:26px;
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(28px);
+
+}
+
+.save-btn{
+
+    font-size:16px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.notifications-page{
+
+    padding:18px 10px;
+
+}
+
+.notifications-container{
+
+    padding:16px;
+
+    border-radius:18px;
+
+}
+
+.notifications-container h1{
+
+    font-size:24px;
+
+}
+
+.notifications-container h1 svg{
+
+    font-size:28px;
+
+}
+
+.notification-card{
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+}
+
+.notification-left{
+
+    gap:12px;
+
+}
+
+.icon-circle{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+}
+
+.notification-left h3{
+
+    font-size:16px;
+
+}
+
+.notification-left p{
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+.switch{
+
+    width:58px;
+
+    height:32px;
+
+}
+
+.slider::before{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(26px);
+
+}
+
+.save-btn{
+
+    height:50px;
+
+    font-size:15px;
+
+    border-radius:14px;
+
+}
+
+.notifications-footer{
+
+    font-size:12px;
+
+}
+
+}
+/* ==========================================
+        FADE UP ANIMATION
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.notifications-container{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.notification-card{
+
+    animation:fadeUp .6s ease forwards;
+
+}
+
+/* ==========================================
+        FLOATING EFFECT
+========================================== */
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-4px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.notifications-container:hover{
+
+    animation:floatCard 3s ease-in-out infinite;
+
+}
+
+/* ==========================================
+        ICON GLOW
+========================================== */
+
+@keyframes iconGlow{
+
+    0%{
+
+        box-shadow:
+        0 0 12px rgba(34,211,238,.20);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 30px rgba(34,211,238,.45),
+        0 0 60px rgba(34,211,238,.18);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 12px rgba(34,211,238,.20);
+
+    }
+
+}
+
+.icon-circle{
+
+    animation:iconGlow 3s infinite;
+
+}
+
+/* ==========================================
+        HEADER SHINE
+========================================== */
+
+.notifications-container h1{
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #22d3ee,
+        #67e8f9,
+        #ffffff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:titleShine 5s linear infinite;
+
+}
+
+@keyframes titleShine{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:300%;
+
+    }
+
+}
+
+/* ==========================================
+        CARD SHIMMER
+========================================== */
+
+.notification-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.10),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.notification-card:hover::after{
+
+    left:140%;
+
+}
+
+/* ==========================================
+        SAVE BUTTON SHINE
+========================================== */
+
+.save-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:50%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.25),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.save-btn:hover::after{
+
+    left:150%;
+
+}
+
+/* ==========================================
+        PREMIUM HOVER
+========================================== */
+
+.notification-card:hover{
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        0 0 30px rgba(34,211,238,.18);
+
+}
+
+.notifications-container:hover{
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.50),
+        0 0 40px rgba(34,211,238,.12);
+
+}
+
+/* ==========================================
+        SELECTION
+========================================== */
+
+::selection{
+
+    background:#22d3ee;
+
+    color:#08111f;
+
+}
+
+/* ==========================================
+        SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#22d3ee;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#67e8f9;
+
+}
+
+/* ==========================================
+        SMOOTH SCROLL
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================
+        FOCUS
+========================================== */
+
+button:focus,
+input:focus{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 3px rgba(34,211,238,.25);
+
+}
+
+/* ==========================================
+        END
+========================================== */

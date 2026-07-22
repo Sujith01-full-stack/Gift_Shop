@@ -1,0 +1,928 @@
+/* ==========================================
+                RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ==========================================
+            ADDRESS BOOK
+========================================== */
+
+.address-book{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+    max-width:1700px;
+
+    margin:35px auto;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:
+    radial-gradient(circle at left top,
+    rgba(32,217,255,.08),
+    transparent 35%),
+
+    radial-gradient(circle at right center,
+    rgba(123,44,191,.16),
+    transparent 45%),
+
+    linear-gradient(
+    135deg,
+    #07111f 0%,
+    #0b1426 45%,
+    #171536 100%);
+
+    border:1px solid rgba(32,217,255,.10);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================
+            GLOW EFFECT
+========================================== */
+
+.address-book::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:#20d9ff;
+
+    opacity:.08;
+
+    filter:blur(220px);
+
+}
+
+.address-book::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    right:-280px;
+
+    top:-150px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    opacity:.16;
+
+    filter:blur(240px);
+
+}
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.address-header{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.address-header h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    font-size:44px;
+
+    font-weight:700;
+
+    color:#20d9ff;
+
+    text-shadow:
+    0 0 18px rgba(32,217,255,.35);
+
+}
+
+/* ==========================================
+            ADD BUTTON
+========================================== */
+
+.add-address-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    color:#0c0404;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+    135deg,
+    #e20707,
+    #c8ced6);
+
+    box-shadow:
+    0 12px 30px rgba(47,211,255,.35);
+
+    transition:.35s;
+
+}
+
+.add-address-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 40px rgba(47,211,255,.45);
+
+}
+
+/* ==========================================
+            FORM
+========================================== */
+
+.address-form{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(32,217,255,.15);
+
+    backdrop-filter:blur(18px);
+
+}
+
+.address-form h3{
+
+    text-align:center;
+
+    font-size:34px;
+
+    color:#20d9ff;
+
+    margin-bottom:10px;
+
+}
+/* ==========================================
+            INPUTS
+========================================== */
+
+.address-form input,
+.address-form textarea,
+.address-form select{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:#111827;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.35s;
+
+}
+
+.address-form input::placeholder,
+.address-form textarea::placeholder{
+
+    color:#94a3b8;
+
+}
+
+.address-form select{
+
+    cursor:pointer;
+
+    appearance:none;
+
+}
+
+.address-form textarea{
+
+    min-height:130px;
+
+    resize:none;
+
+}
+
+/* ==========================================
+            INPUT FOCUS
+========================================== */
+
+.address-form input:focus,
+.address-form textarea:focus,
+.address-form select:focus{
+
+    border-color:#20d9ff;
+
+    box-shadow:
+    0 0 0 3px rgba(32,217,255,.12),
+    0 0 20px rgba(32,217,255,.15);
+
+}
+
+/* ==========================================
+            FORM BUTTONS
+========================================== */
+
+.form-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:10px;
+
+}
+
+/* ==========================================
+            SAVE BUTTON
+========================================== */
+
+.form-buttons button{
+
+    flex:1;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    transition:.35s;
+
+}
+
+.form-buttons button:first-child{
+
+    background:linear-gradient(
+    135deg,
+    #20d9ff,
+    #2f80ed);
+
+    box-shadow:
+    0 12px 25px rgba(32,217,255,.30);
+
+}
+
+.form-buttons button:first-child:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 40px rgba(32,217,255,.40);
+
+}
+
+/* ==========================================
+            CANCEL BUTTON
+========================================== */
+
+.cancel-btn{
+
+    background:linear-gradient(
+    135deg,
+    #ff5a5a,
+    #ff2e63) !important;
+
+    box-shadow:
+    0 12px 25px rgba(255,70,70,.30);
+
+}
+
+.cancel-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 40px rgba(255,70,70,.40);
+
+}
+
+/* ==========================================
+            GRID
+========================================== */
+
+.address-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(380px,1fr));
+
+    gap:28px;
+
+}
+/* ==========================================
+            ADDRESS CARD
+========================================== */
+
+.address-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#161f30;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.address-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+    90deg,
+    #20d9ff,
+    #2f80ed,
+    #7c3aed);
+
+}
+
+.address-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(32,217,255,.25);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45),
+    0 0 25px rgba(32,217,255,.18);
+
+}
+
+/* ==========================================
+            CARD HEADER
+========================================== */
+
+.address-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+/* ==========================================
+            ADDRESS TYPE
+========================================== */
+
+.address-type{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#20d9ff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.address-type svg{
+
+    font-size:24px;
+
+}
+
+/* ==========================================
+            ACTION BUTTONS
+========================================== */
+
+.address-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.address-actions button{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+            EDIT
+========================================== */
+
+.edit-btn{
+
+    background:linear-gradient(
+    135deg,
+    #20d9ff,
+    #2f80ed);
+
+    box-shadow:
+    0 8px 18px rgba(32,217,255,.35);
+
+}
+
+.edit-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 30px rgba(32,217,255,.45);
+
+}
+
+/* ==========================================
+            DELETE
+========================================== */
+
+.delete-btn{
+
+    background:linear-gradient(
+    135deg,
+    #ff5b5b,
+    #ff2d55);
+
+    box-shadow:
+    0 8px 18px rgba(255,70,70,.35);
+
+}
+
+.delete-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 30px rgba(255,70,70,.45);
+
+}
+
+/* ==========================================
+            CARD TITLE
+========================================== */
+
+.address-card h3{
+
+    color:#ffffff;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================
+            CARD DETAILS
+========================================== */
+
+.address-card p{
+
+    color:#c8d5e6;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:8px;
+
+}
+
+.address-card strong{
+
+    color:#20d9ff;
+
+}
+
+/* ==========================================
+            SMOOTH TRANSITIONS
+========================================== */
+
+.address-book *,
+.address-book *::before,
+.address-book *::after{
+
+    transition:
+        background .35s,
+        color .35s,
+        border-color .35s,
+        box-shadow .35s,
+        transform .35s;
+
+}
+
+/* ==========================================
+            FLOAT ANIMATION
+========================================== */
+
+@keyframes floatCard{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+}
+
+.address-card{
+
+    animation:floatCard 6s ease-in-out infinite;
+
+}
+
+/* ==========================================
+            HEADER ICON
+========================================== */
+
+.address-header svg{
+
+    color:#20d9ff;
+
+    filter:drop-shadow(0 0 12px rgba(32,217,255,.5));
+
+}
+
+/* ==========================================
+            BUTTON ICON
+========================================== */
+
+.add-address-btn svg{
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+.address-book::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.address-book::-webkit-scrollbar-track{
+
+    background:#0b1426;
+
+}
+
+.address-book::-webkit-scrollbar-thumb{
+
+    background:#20d9ff;
+
+    border-radius:20px;
+
+}
+
+.address-book::-webkit-scrollbar-thumb:hover{
+
+    background:#49e4ff;
+
+}
+
+/* ==========================================
+            TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#20d9ff;
+
+    color:#07111f;
+
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.address-book{
+
+padding:30px;
+
+}
+
+.address-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+.address-header h2{
+
+font-size:36px;
+
+}
+
+.address-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.address-form{
+
+padding:28px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.address-book{
+
+padding:20px;
+
+border-radius:20px;
+
+}
+
+.address-header{
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.address-header h2{
+
+font-size:28px;
+
+justify-content:center;
+
+}
+
+.add-address-btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.form-buttons{
+
+flex-direction:column;
+
+}
+
+.form-buttons button{
+
+width:100%;
+
+}
+
+.address-top{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:16px;
+
+}
+
+.address-actions{
+
+width:100%;
+
+justify-content:flex-end;
+
+}
+
+.address-card{
+
+padding:22px;
+
+}
+
+.address-card h3{
+
+font-size:22px;
+
+}
+
+.address-card p{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.address-book{
+
+padding:15px;
+
+}
+
+.address-header h2{
+
+font-size:24px;
+
+}
+
+.address-form{
+
+padding:20px;
+
+}
+
+.address-form h3{
+
+font-size:26px;
+
+}
+
+.address-form input,
+.address-form textarea,
+.address-form select{
+
+font-size:15px;
+
+padding:14px;
+
+}
+
+.address-card{
+
+padding:18px;
+
+}
+
+.address-type{
+
+font-size:18px;
+
+}
+
+.address-actions button{
+
+width:42px;
+
+height:42px;
+
+font-size:16px;
+
+}
+
+}
+
+/* ==========================================
+            END
+========================================== */

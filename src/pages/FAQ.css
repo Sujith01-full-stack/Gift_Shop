@@ -1,0 +1,792 @@
+/* ==========================================
+        GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ==========================================
+        FAQ PAGE
+========================================== */
+
+.faq-page{
+
+    min-height:100vh;
+
+    padding:80px 35px;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(123,44,191,.22),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(0,255,255,.08),
+    transparent 45%),
+
+    linear-gradient(
+    135deg,
+    #08111f 0%,
+    #0d1425 50%,
+    #17142e 100%);
+}
+
+/* ==========================================
+        CONTAINER
+========================================== */
+
+.faq-container{
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+/* ==========================================
+        HEADER
+========================================== */
+
+.faq-header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.faq-icon{
+
+    font-size:65px;
+
+    color:#19e8ff;
+
+    margin-bottom:20px;
+
+    filter:drop-shadow(0 0 15px rgba(25,232,255,.6));
+}
+
+.faq-header h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#19e8ff;
+
+    text-shadow:
+    0 0 15px rgba(25,232,255,.6);
+
+    margin-bottom:15px;
+}
+
+.faq-header p{
+
+    font-size:18px;
+
+    color:#b7c5d8;
+
+    line-height:1.7;
+}
+
+/* ==========================================
+        SEARCH BOX
+========================================== */
+
+.faq-search{
+
+    max-width:650px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(25,232,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+}
+
+.faq-search:hover{
+
+    border-color:#19e8ff;
+
+    box-shadow:
+    0 0 20px rgba(25,232,255,.20);
+}
+
+.faq-search svg{
+
+    color:#19e8ff;
+
+    font-size:22px;
+}
+
+.faq-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#ffffff;
+
+    font-size:17px;
+}
+
+.faq-search input::placeholder{
+
+    color:#8f9fb3;
+}
+/* ==========================================
+        FAQ LIST
+========================================== */
+
+.faq-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+}
+
+/* ==========================================
+        FAQ CARD
+========================================== */
+
+.faq-item{
+
+    background:rgba(25,33,48,.88);
+
+    border:1px solid rgba(25,232,255,.15);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+
+    box-shadow:
+    0 0 20px rgba(25,232,255,.05);
+}
+
+.faq-item:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#19e8ff;
+
+    box-shadow:
+    0 0 28px rgba(25,232,255,.18);
+}
+
+.faq-item.active{
+
+    border-color:#19e8ff;
+
+    box-shadow:
+    0 0 35px rgba(25,232,255,.25);
+}
+
+/* ==========================================
+        QUESTION
+========================================== */
+
+.faq-question{
+
+    width:100%;
+
+    border:none;
+
+    background:transparent;
+
+    padding:24px 28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    transition:.35s;
+}
+
+.faq-question:hover{
+
+    background:rgba(25,232,255,.04);
+}
+
+.question-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.question-left h3{
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    line-height:1.5;
+}
+
+/* ==========================================
+        CATEGORY
+========================================== */
+
+.faq-category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    width:max-content;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #19e8ff,
+        #2563eb);
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    box-shadow:
+    0 0 15px rgba(25,232,255,.25);
+}
+
+.faq-category svg{
+
+    font-size:15px;
+}
+
+/* ==========================================
+        EXPAND ICON
+========================================== */
+
+.faq-question > svg{
+
+    font-size:26px;
+
+    color:#19e8ff;
+
+    transition:.35s;
+}
+
+.faq-item.active .faq-question > svg{
+
+    transform:rotate(180deg);
+
+    color:#19e8ff;
+
+    filter:drop-shadow(
+        0 0 10px rgba(25,232,255,.6));
+}
+/* ==========================================
+        ANSWER
+========================================== */
+
+.faq-answer{
+
+    padding:0 28px 25px;
+
+    color:#c6d3e5;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    animation:fade .35s ease;
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(-10px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+        EMPTY STATE
+========================================== */
+
+.faq-empty{
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    border-radius:22px;
+
+    background:rgba(25,33,48,.88);
+
+    border:1px solid rgba(25,232,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 0 25px rgba(25,232,255,.10);
+}
+
+.faq-empty h3{
+
+    color:#19e8ff;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    text-shadow:
+    0 0 10px rgba(25,232,255,.5);
+}
+
+.faq-empty p{
+
+    color:#b7c5d8;
+
+    font-size:16px;
+}
+
+/* ==========================================
+        SUPPORT CARD
+========================================== */
+
+.faq-support{
+
+    margin-top:60px;
+
+    padding:45px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:rgba(25,33,48,.88);
+
+    border:1px solid rgba(25,232,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 0 30px rgba(25,232,255,.10);
+}
+
+.faq-support h2{
+
+    color:#19e8ff;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    text-shadow:
+    0 0 15px rgba(25,232,255,.55);
+}
+
+.faq-support p{
+
+    color:#c5d3e5;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+/* ==========================================
+        BUTTONS
+========================================== */
+
+.support-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.support-buttons a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:180px;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    background:linear-gradient(
+        135deg,
+        #19e8ff,
+        #2563eb
+    );
+
+    box-shadow:
+    0 0 18px rgba(25,232,255,.25);
+}
+
+.support-buttons a:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 35px rgba(25,232,255,.60);
+}
+
+.support-buttons a svg{
+
+    font-size:18px;
+}
+
+/* Same Theme Buttons */
+
+.whatsapp-btn,
+.call-btn,
+.mail-btn{
+
+    background:linear-gradient(
+        135deg,
+        #19e8ff,
+        #2563eb
+    );
+}
+/* ==========================================
+        TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.faq-page{
+
+    padding:60px 25px;
+}
+
+.faq-container{
+
+    max-width:100%;
+}
+
+.faq-header h1{
+
+    font-size:40px;
+}
+
+.faq-header p{
+
+    font-size:17px;
+}
+
+.faq-search{
+
+    max-width:100%;
+
+    padding:16px 22px;
+}
+
+.question-left h3{
+
+    font-size:20px;
+}
+
+.faq-answer{
+
+    font-size:15px;
+}
+
+.faq-support{
+
+    padding:35px;
+}
+
+}
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.faq-page{
+
+    padding:40px 15px;
+}
+
+.faq-header{
+
+    margin-bottom:35px;
+}
+
+.faq-icon{
+
+    font-size:52px;
+}
+
+.faq-header h1{
+
+    font-size:32px;
+}
+
+.faq-header p{
+
+    font-size:15px;
+}
+
+.faq-search{
+
+    padding:15px 18px;
+
+    border-radius:18px;
+}
+
+.faq-question{
+
+    padding:20px;
+}
+
+.question-left h3{
+
+    font-size:18px;
+}
+
+.faq-category{
+
+    font-size:13px;
+
+    padding:7px 15px;
+}
+
+.faq-answer{
+
+    padding:0 20px 20px;
+
+    font-size:15px;
+}
+
+.faq-support{
+
+    padding:28px;
+
+    border-radius:22px;
+}
+
+.faq-support h2{
+
+    font-size:28px;
+}
+
+.faq-support p{
+
+    font-size:15px;
+}
+
+.support-buttons{
+
+    flex-direction:column;
+}
+
+.support-buttons a{
+
+    width:100%;
+}
+
+}
+
+/* ==========================================
+        SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.faq-page{
+
+    padding:25px 12px;
+}
+
+.faq-icon{
+
+    font-size:45px;
+}
+
+.faq-header h1{
+
+    font-size:26px;
+}
+
+.faq-header p{
+
+    font-size:14px;
+}
+
+.faq-question{
+
+    padding:18px;
+}
+
+.question-left h3{
+
+    font-size:16px;
+}
+
+.faq-category{
+
+    font-size:12px;
+
+    padding:6px 12px;
+}
+
+.faq-answer{
+
+    padding:0 18px 18px;
+
+    font-size:14px;
+}
+
+.faq-support{
+
+    padding:20px;
+
+    border-radius:18px;
+}
+
+.faq-support h2{
+
+    font-size:22px;
+}
+
+.faq-support p{
+
+    font-size:14px;
+}
+
+.support-buttons a{
+
+    height:50px;
+
+    font-size:15px;
+}
+
+}
+
+/* ==========================================
+        SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#19e8ff;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#48ecff;
+}
+
+/* ==========================================
+        TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#19e8ff;
+
+    color:#08111f;
+}
+
+/* ==========================================
+        SMOOTH TRANSITIONS
+========================================== */
+
+.faq-item,
+.faq-question,
+.faq-search,
+.support-buttons a,
+.faq-support{
+
+    transition:all .35s ease;
+}

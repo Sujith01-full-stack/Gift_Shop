@@ -1,0 +1,200 @@
+/* ==========================================
+        ADMIN LAYOUT
+========================================== */
+
+.admin-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#08111f;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        ADMIN CONTENT
+========================================== */
+
+.admin-content{
+
+    flex:1;
+
+    margin-left:280px;
+
+    padding:35px;
+
+    position:relative;
+
+    overflow-x:hidden;
+
+    overflow-y:auto;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(124,58,237,.18),
+        transparent 30%),
+
+        radial-gradient(circle at bottom left,
+        rgba(34,211,238,.10),
+        transparent 35%),
+
+        linear-gradient(
+            135deg,
+            #08111f 0%,
+            #111827 45%,
+            #18263d 100%
+        );
+
+}
+
+/* ==========================================
+        PURPLE GLOW
+========================================== */
+
+.admin-content::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:-180px;
+
+    right:-180px;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    filter:blur(180px);
+
+    opacity:.18;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+        CYAN GLOW
+========================================== */
+
+.admin-content::after{
+
+    content:"";
+
+    position:fixed;
+
+    bottom:-180px;
+
+    left:-180px;
+
+    width:380px;
+
+    height:380px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(170px);
+
+    opacity:.12;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+        SCROLLBAR
+========================================== */
+
+.admin-content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.admin-content::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+.admin-content::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+        LAPTOP
+========================================== */
+
+@media(max-width:1200px){
+
+.admin-content{
+
+    margin-left:250px;
+
+    padding:30px;
+
+}
+
+}
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.admin-content{
+
+    margin-left:220px;
+
+    padding:22px;
+
+}
+
+}
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.admin-layout{
+
+    flex-direction:column;
+
+}
+
+.admin-content{
+
+    margin-left:0;
+
+    padding:18px;
+
+}
+
+.admin-content::before,
+.admin-content::after{
+
+    display:none;
+
+}
+
+}

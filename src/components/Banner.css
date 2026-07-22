@@ -1,0 +1,778 @@
+/* ==========================================
+        PREMIUM DARK HERO
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+.banner{
+    position:relative;
+    overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 8%;
+
+    background:
+    radial-gradient(circle at left top,
+    rgba(0,255,255,.08),
+    transparent 35%),
+
+    radial-gradient(circle at right center,
+    rgba(120,60,255,.18),
+    transparent 45%),
+
+    linear-gradient(
+    135deg,
+    #07111f 0%,
+    #0b1426 40%,
+    #131936 70%,
+    #070d18 100%);
+}
+
+/* ==========================================
+        CYAN GLOW
+========================================== */
+
+.banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    left:-260px;
+    top:-260px;
+
+    border-radius:50%;
+
+    background:#20d9ff;
+
+    opacity:.10;
+
+    filter:blur(220px);
+
+}
+
+/* ==========================================
+        PURPLE GLOW
+========================================== */
+
+.banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    right:-280px;
+    bottom:-280px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    opacity:.18;
+
+    filter:blur(240px);
+
+}
+
+/* ==========================================
+        CONTENT
+========================================== */
+
+.banner-overlay{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.banner-content{
+
+    flex:1;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+        OFFER
+========================================== */
+
+.offer-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 26px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(32,217,255,.25);
+
+    color:#20d9ff;
+
+    backdrop-filter:blur(15px);
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+        TITLE
+========================================== */
+
+.banner-content h1{
+
+    font-size:68px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    color:#ffffff;
+
+    margin-bottom:18px;
+
+}
+
+.banner-content h1 span{
+
+    color:#20d9ff;
+
+    text-shadow:
+
+    0 0 20px rgba(32,217,255,.55);
+
+}
+
+/* ==========================================
+        TEXT
+========================================== */
+
+.main-text{
+
+    color:#f4f7fb;
+
+    font-size:28px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+.sub-text{
+
+    color:#b7c8da;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    max-width:620px;
+
+}
+/* ==========================================
+            PREMIUM CATEGORIES
+========================================== */
+
+.categories{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin:40px 0;
+}
+
+.categories span{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(32,217,255,.15);
+
+    color:#eaf6ff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s;
+}
+
+.categories span svg{
+
+    color:#20d9ff;
+
+    font-size:18px;
+
+}
+
+.categories span:hover{
+
+    transform:translateY(-6px);
+
+    background:linear-gradient(
+    135deg,
+    #1fcfff,
+    #2f80ed);
+
+    color:#fff;
+
+    border-color:transparent;
+
+    box-shadow:
+    0 12px 30px rgba(32,217,255,.35);
+
+}
+
+.categories span:hover svg{
+
+    color:#fff;
+
+}
+
+/* ==========================================
+            BUTTONS
+========================================== */
+
+.banner-buttons{
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+/* ==========================================
+            COMMON BUTTON
+========================================== */
+
+.shop-btn,
+.whatsapp-btn{
+
+    width:210px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+            SHOP BUTTON
+========================================== */
+
+.shop-btn{
+
+    background:linear-gradient(
+    135deg,
+    #19d4ff,
+    #2f80ed);
+
+    box-shadow:
+    0 12px 30px rgba(32,217,255,.35);
+
+}
+
+.shop-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 45px rgba(32,217,255,.45);
+
+}
+
+/* ==========================================
+            WHATSAPP BUTTON
+========================================== */
+
+.whatsapp-btn{
+
+    background:linear-gradient(
+    135deg,
+    #111827,
+    #1f2937);
+
+    border:1px solid rgba(32,217,255,.25);
+
+}
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:linear-gradient(
+    135deg,
+    #19d4ff,
+    #2f80ed);
+
+    border-color:transparent;
+
+    box-shadow:
+    0 18px 45px rgba(32,217,255,.40);
+
+}
+
+/* ==========================================
+            SHINE EFFECT
+========================================== */
+
+.shop-btn::before,
+.whatsapp-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.45),
+    transparent);
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.shop-btn:hover::before,
+.whatsapp-btn:hover::before{
+
+    left:160%;
+
+}
+
+/* ==========================================
+            FEATURES
+========================================== */
+
+.banner-features{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+.banner-features div{
+
+    min-width:220px;
+
+    height:58px;
+
+    padding:0 22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(32,217,255,.18);
+
+    color:#eef8ff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    backdrop-filter:blur(15px);
+
+    transition:.35s;
+
+}
+
+.banner-features div:hover{
+
+    transform:translateY(-6px);
+
+    background:linear-gradient(
+    135deg,
+    #19d4ff,
+    #2f80ed);
+
+    border-color:transparent;
+
+    box-shadow:
+    0 15px 35px rgba(32,217,255,.35);
+
+}
+/* ==========================================
+            HERO IMAGE
+========================================== */
+
+.banner-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.banner-image img{
+
+    width:100%;
+    max-width:520px;
+    padding:18px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(32,217,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    0 0 45px rgba(32,217,255,.18);
+
+    animation:bannerFloat 5s ease-in-out infinite;
+
+    transition:.4s;
+}
+
+.banner-image img:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.55),
+    0 0 60px rgba(32,217,255,.35);
+
+}
+
+/* ==========================================
+            FLOAT
+========================================== */
+
+@keyframes bannerFloat{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+/* ==========================================
+            SMOOTH TRANSITION
+========================================== */
+
+.banner *,
+.banner *::before,
+.banner *::after{
+
+transition:
+background .35s,
+color .35s,
+border-color .35s,
+box-shadow .35s,
+transform .35s;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.banner{
+
+padding:70px 30px;
+
+}
+
+.banner-overlay{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+gap:50px;
+
+}
+
+.banner-content h1{
+
+font-size:48px;
+
+}
+
+.main-text{
+
+font-size:24px;
+
+}
+
+.sub-text{
+
+max-width:100%;
+
+}
+
+.categories,
+.banner-buttons,
+.banner-features{
+
+justify-content:center;
+
+}
+
+.banner-image img{
+
+max-width:420px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.banner{
+
+padding:60px 20px;
+
+}
+
+.banner-content h1{
+
+font-size:36px;
+
+}
+
+.main-text{
+
+font-size:20px;
+
+}
+
+.sub-text{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.categories{
+
+justify-content:center;
+
+gap:12px;
+
+}
+
+.categories span{
+
+font-size:14px;
+
+padding:10px 16px;
+
+}
+
+.banner-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.shop-btn,
+.whatsapp-btn{
+
+width:100%;
+max-width:300px;
+
+}
+
+.banner-features{
+
+justify-content:center;
+
+}
+
+.banner-features div{
+
+min-width:100%;
+
+}
+
+.banner-image img{
+
+max-width:320px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.banner-content h1{
+
+font-size:30px;
+
+}
+
+.offer-tag{
+
+font-size:13px;
+
+padding:10px 18px;
+
+}
+
+.main-text{
+
+font-size:18px;
+
+}
+
+.sub-text{
+
+font-size:14px;
+
+}
+
+.categories span{
+
+font-size:13px;
+
+}
+
+}
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#08111f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#20d9ff;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#46e5ff;
+
+}
+
+/* ==========================================
+            TEXT SELECTION
+========================================== */
+
+::selection{
+
+background:#20d9ff;
+
+color:#08111f;
+
+}

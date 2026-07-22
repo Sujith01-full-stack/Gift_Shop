@@ -1,0 +1,930 @@
+/* ==========================================
+            GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+                FOOTER
+========================================== */
+
+.footer{
+    position:relative;
+    overflow:hidden;
+    margin-top:80px;
+    color:#fff;
+
+    background:
+    radial-gradient(circle at left top,
+    rgba(25,232,255,.08),
+    transparent 35%),
+
+    radial-gradient(circle at right center,
+    rgba(123,44,191,.18),
+    transparent 45%),
+
+    linear-gradient(
+    135deg,
+    #061226 0%,
+    #08152d 45%,
+    #171536 100%);
+}
+
+/* ==========================================
+              CYAN GLOW
+========================================== */
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    left:-220px;
+    top:-220px;
+
+    border-radius:50%;
+
+    background:#19e8ff;
+
+    opacity:.08;
+
+    filter:blur(220px);
+
+}
+
+/* ==========================================
+            PURPLE GLOW
+========================================== */
+
+.footer::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    right:-260px;
+    bottom:-260px;
+
+    border-radius:50%;
+
+    background:#7b2cbf;
+
+    opacity:.20;
+
+    filter:blur(240px);
+
+}
+
+/* ==========================================
+            CONTAINER
+========================================== */
+
+.footer-container{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:1650px;
+
+    margin:auto;
+
+    padding:70px 45px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1.3fr
+    1fr
+    1.2fr
+    1fr;
+
+    gap:70px;
+
+}
+
+/* ==========================================
+            SECTION
+========================================== */
+
+.footer-section{
+
+    position:relative;
+
+}
+
+/* ==========================================
+            HEADING
+========================================== */
+
+.footer-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* ==========================================
+            ICON
+========================================== */
+
+.heading-icon{
+
+    width:74px;
+
+    height:74px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    color:#19e8ff;
+
+    font-size:30px;
+
+    background:rgba(255,255,255,.02);
+
+    border:2px solid rgba(25,232,255,.22);
+
+    box-shadow:
+
+    0 0 20px rgba(25,232,255,.10);
+
+}
+
+/* ==========================================
+            TITLE
+========================================== */
+
+.footer h2,
+.footer h3{
+
+    color:#19e8ff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+            UNDERLINE
+========================================== */
+
+.heading-line{
+
+    width:78px;
+
+    height:4px;
+
+    border-radius:30px;
+
+    margin:22px 0 35px;
+
+    background:#19e8ff;
+
+    box-shadow:
+
+    0 0 12px rgba(25,232,255,.45);
+
+}
+
+/* ==========================================
+            PARAGRAPH
+========================================== */
+
+.footer p{
+
+    color:#d7e3f3;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+/* ==========================================
+            QUICK LINKS
+========================================== */
+
+.footer-links{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-links li{
+    margin-bottom:18px;
+}
+
+.footer-links a{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:#eef7ff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:500;
+    transition:.35s;
+}
+
+.footer-links a svg{
+    color:#19e8ff;
+    font-size:15px;
+}
+
+.footer-links a:hover{
+    color:#19e8ff;
+    transform:translateX(10px);
+}
+
+.footer-links a:hover svg{
+    transform:translateX(5px);
+}
+
+/* ==========================================
+            CATEGORY GRID
+========================================== */
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+.category-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.category-column a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#eef7ff;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+.category-column svg{
+
+    color:#19e8ff;
+
+    font-size:18px;
+
+    min-width:18px;
+
+}
+
+.category-column a:hover{
+
+    color:#19e8ff;
+
+    transform:translateX(8px);
+
+}
+
+/* ==========================================
+            CONTACT
+========================================== */
+
+.contact-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.contact-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.contact-icon{
+
+    width:62px;
+
+    height:62px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    border:2px solid rgba(25,232,255,.22);
+
+    color:#19e8ff;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+    transition:.35s;
+
+}
+
+.contact-item span{
+
+    color:#dbe7f5;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.contact-item:hover .contact-icon{
+
+    background:#19e8ff;
+
+    color:#061226;
+
+    box-shadow:0 0 25px rgba(25,232,255,.45);
+
+    transform:scale(1.08);
+
+}
+
+.contact-item:hover span{
+
+    color:#19e8ff;
+
+}
+
+/* ==========================================
+            SOCIAL ICONS
+========================================== */
+
+.social-icons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.social-icons a{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    color:#19e8ff;
+
+    background:rgba(255,255,255,.03);
+
+    border:2px solid rgba(25,232,255,.22);
+
+    font-size:24px;
+
+    transition:.4s;
+
+}
+
+.social-icons a:hover{
+
+    background:#19e8ff;
+
+    color:#061226;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 30px rgba(25,232,255,.45);
+
+}
+/* ==========================================
+            FOOTER BOTTOM
+========================================== */
+
+.footer-bottom{
+
+    position:relative;
+
+    z-index:10;
+
+    width:100%;
+
+    margin-top:70px;
+
+    padding:28px 50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.02);
+
+    border-top:1px solid rgba(25,232,255,.15);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.footer-bottom p{
+
+    color:#dce8f5;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+    text-align:center;
+
+}
+
+.footer-bottom span{
+
+    color:#19e8ff;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+            HOVER EFFECT
+========================================== */
+
+.footer-section{
+
+    transition:.35s;
+
+}
+
+.footer-section:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.footer-section:hover .heading-line{
+
+    width:120px;
+
+}
+
+.footer-section:hover .heading-icon{
+
+    background:#19e8ff;
+
+    color:#061226;
+
+    box-shadow:
+
+    0 0 35px rgba(25,232,255,.50);
+
+}
+
+.footer-section:hover h2,
+.footer-section:hover h3{
+
+    color:#35efff;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.footer-container{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:50px;
+
+}
+
+.category-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* =============================== */
+
+@media(max-width:768px){
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+padding:60px 25px;
+
+text-align:center;
+
+}
+
+.footer-heading{
+
+justify-content:center;
+
+}
+
+.heading-line{
+
+margin:20px auto 35px;
+
+}
+
+.footer-links a{
+
+justify-content:center;
+
+}
+
+.category-column a{
+
+justify-content:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+}
+
+.contact-item{
+
+justify-content:center;
+
+text-align:left;
+
+}
+
+.footer-bottom{
+
+padding:25px;
+
+}
+
+}
+
+/* =============================== */
+
+@media(max-width:480px){
+
+.footer-container{
+
+padding:45px 20px;
+
+}
+
+.heading-icon{
+
+width:60px;
+
+height:60px;
+
+font-size:24px;
+
+}
+
+.footer h2,
+.footer h3{
+
+font-size:24px;
+
+}
+
+.footer p{
+
+font-size:16px;
+
+}
+
+.footer-links a,
+.category-column a{
+
+font-size:16px;
+
+}
+
+.contact-icon{
+
+width:55px;
+
+height:55px;
+
+font-size:18px;
+
+}
+
+.contact-item span{
+
+font-size:15px;
+
+}
+
+.social-icons a{
+
+width:52px;
+
+height:52px;
+
+font-size:20px;
+
+}
+
+.footer-bottom p{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#061226;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#19e8ff;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#4cefff;
+
+}
+
+/* ==========================================
+            SELECTION
+========================================== */
+
+::selection{
+
+background:#19e8ff;
+
+color:#061226;
+
+}
+
+/* ==========================================
+        PREMIUM ANIMATIONS
+========================================== */
+
+@keyframes floatGlow{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+@keyframes pulseGlow{
+    0%{
+        box-shadow:0 0 0 rgba(25,232,255,0);
+    }
+    50%{
+        box-shadow:0 0 30px rgba(25,232,255,.45);
+    }
+    100%{
+        box-shadow:0 0 0 rgba(25,232,255,0);
+    }
+}
+
+.heading-icon{
+    animation:floatGlow 4s ease-in-out infinite;
+}
+
+.social-icons a:hover,
+.contact-icon:hover{
+    animation:pulseGlow 1.2s infinite;
+}
+
+/* ==========================================
+        LINK HOVER
+========================================== */
+
+.footer-links a,
+.category-column a{
+    position:relative;
+}
+
+.footer-links a::after,
+.category-column a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#19e8ff;
+
+    transition:.35s;
+
+}
+
+.footer-links a:hover::after,
+.category-column a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+        TOP BORDER
+========================================== */
+
+.footer{
+
+    border-top:2px solid rgba(25,232,255,.12);
+
+}
+
+/* ==========================================
+        SHADOW
+========================================== */
+
+.footer-container{
+
+    position:relative;
+
+}
+
+.footer-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+        SMOOTH
+========================================== */
+
+.footer *,
+.footer *::before,
+.footer *::after{
+
+    transition:
+
+    color .35s,
+
+    background .35s,
+
+    transform .35s,
+
+    border-color .35s,
+
+    box-shadow .35s;
+
+}
+
+/* ==========================================
+        COPYRIGHT
+========================================== */
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.bottom-line{
+
+    width:120px;
+
+    height:2px;
+
+    background:#19e8ff;
+
+    opacity:.6;
+
+    border-radius:20px;
+
+}
+
+@media(max-width:768px){
+
+.footer-bottom{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.bottom-line{
+
+width:70px;
+
+}
+
+}
+
+/* ==========================================
+        END
+========================================== */

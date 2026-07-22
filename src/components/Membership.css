@@ -1,0 +1,717 @@
+/* ==========================================
+   PREMIUM MEMBERSHIP CARD
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+.membership-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(124,58,237,.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(34,211,238,.14),
+    transparent 40%),
+
+    linear-gradient(
+        135deg,
+        #08111f 0%,
+        #111c31 45%,
+        #18263d 100%
+    );
+
+    border:2px solid rgba(34,211,238,.22);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45),
+        0 0 45px rgba(34,211,238,.08);
+
+}
+
+/* ==========================================
+   PURPLE GLOW
+========================================== */
+
+.membership-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    top:-150px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    filter:blur(160px);
+
+    opacity:.18;
+
+}
+
+/* ==========================================
+   CYAN GLOW
+========================================== */
+
+.membership-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    bottom:-120px;
+
+    left:-120px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(160px);
+
+    opacity:.16;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.membership-header{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-bottom:35px;
+
+}
+
+.membership-header h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#22d3ee;
+
+    font-size:38px;
+
+    font-weight:800;
+
+    text-shadow:0 0 20px rgba(34,211,238,.35);
+
+}
+
+.membership-header svg{
+
+    color:#22d3ee;
+
+    font-size:34px;
+
+}
+
+/* ==========================================
+   MEMBERSHIP INFO
+========================================== */
+
+.membership-info{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:rgba(15,23,42,.75);
+
+    border:2px solid rgba(34,211,238,.25);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35),
+        inset 0 0 20px rgba(255,255,255,.03);
+
+}
+
+/* ==========================================
+   MEMBERSHIP ICON
+========================================== */
+
+.membership-icon{
+
+    width:100px;
+
+    height:100px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    color:#ffffff;
+
+    font-size:42px;
+
+    border:3px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 0 30px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+   MEMBER DETAILS
+========================================== */
+
+.membership-info h3{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.membership-info p{
+
+    color:#cbd5e1;
+
+    font-size:19px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+.membership-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:14px;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:rgba(34,211,238,.12);
+
+    border:1px solid rgba(34,211,238,.30);
+
+    color:#22d3ee;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   REWARD POINTS
+========================================== */
+
+.reward-points{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:35px 0;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:rgba(15,23,42,.70);
+
+    border:2px solid rgba(34,211,238,.18);
+
+    backdrop-filter:blur(16px);
+
+}
+
+/* ==========================================
+   POINTS ROW
+========================================== */
+
+.points-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.points-row h3{
+
+    color:#22d3ee;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.points-row span{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.progress-bar{
+
+    width:100%;
+
+    height:16px;
+
+    overflow:hidden;
+
+    border-radius:50px;
+
+    background:#18263d;
+
+    border:1px solid rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+   PROGRESS FILL
+========================================== */
+
+.progress-fill{
+
+    position:relative;
+
+    width:70%;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #22d3ee,
+        #3b82f6,
+        #2563eb
+    );
+
+    box-shadow:
+        0 0 18px rgba(34,211,238,.45);
+
+    animation:progressGlow 2.5s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   SHINE EFFECT
+========================================== */
+
+.progress-fill::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-35%;
+
+    width:30%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.45);
+
+    transform:skewX(-25deg);
+
+    animation:progressShine 2.8s linear infinite;
+
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.reward-points p{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes progressGlow{
+
+    0%,100%{
+
+        box-shadow:
+        0 0 15px rgba(34,211,238,.35);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 30px rgba(34,211,238,.60);
+
+    }
+
+}
+
+@keyframes progressShine{
+
+    100%{
+
+        left:130%;
+
+    }
+
+}
+/* ==========================================
+   MEMBERSHIP BENEFITS
+========================================== */
+
+.membership-benefits{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:35px;
+
+}
+
+.membership-benefits h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+    color:#22d3ee;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.membership-benefits ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.membership-benefits li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 22px;
+
+    margin-bottom:16px;
+
+    border-radius:18px;
+
+    background:rgba(15,23,42,.65);
+
+    border:1px solid rgba(34,211,238,.18);
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    backdrop-filter:blur(15px);
+
+    transition:all .35s ease;
+
+}
+
+.membership-benefits li:hover{
+
+    transform:translateX(10px);
+
+    border-color:#22d3ee;
+
+    background:rgba(34,211,238,.10);
+
+    box-shadow:
+        0 10px 30px rgba(34,211,238,.15);
+
+}
+
+.membership-benefits li svg{
+
+    color:#22d3ee;
+
+    font-size:22px;
+
+}
+
+/* ==========================================
+   FLOAT ANIMATION
+========================================== */
+
+.membership-card{
+
+    animation:membershipFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes membershipFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.membership-card{
+
+padding:25px;
+
+}
+
+.membership-header h2{
+
+font-size:30px;
+
+}
+
+.membership-info{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.membership-icon{
+
+width:80px;
+
+height:80px;
+
+font-size:34px;
+
+}
+
+.membership-info h3{
+
+font-size:28px;
+
+}
+
+.points-row{
+
+flex-direction:column;
+
+gap:10px;
+
+text-align:center;
+
+}
+
+.points-row h3{
+
+font-size:24px;
+
+}
+
+.points-row span{
+
+font-size:28px;
+
+}
+
+.membership-benefits h3{
+
+font-size:24px;
+
+}
+
+.membership-benefits li{
+
+font-size:16px;
+
+padding:16px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.membership-card{
+
+padding:18px;
+
+border-radius:20px;
+
+}
+
+.membership-header h2{
+
+font-size:24px;
+
+}
+
+.membership-icon{
+
+width:65px;
+
+height:65px;
+
+font-size:28px;
+
+}
+
+.membership-info h3{
+
+font-size:22px;
+
+}
+
+.membership-info p{
+
+font-size:15px;
+
+}
+
+.reward-points{
+
+padding:20px;
+
+}
+
+.points-row span{
+
+font-size:24px;
+
+}
+
+.reward-points p{
+
+font-size:15px;
+
+}
+
+.membership-benefits li{
+
+font-size:15px;
+
+padding:14px;
+
+}
+
+}
+
+/* ==========================================
+   END
+========================================== */

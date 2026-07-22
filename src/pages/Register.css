@@ -1,0 +1,606 @@
+/* ==========================================
+   REGISTER PAGE
+   Premium Dark Neon Theme
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+.register-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 6%;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(0,229,255,.08),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(109,40,217,.18),
+    transparent 45%),
+
+    linear-gradient(
+    135deg,
+    #071321 0%,
+    #0c1629 45%,
+    #19183d 100%);
+
+    overflow:hidden;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.register-container{
+
+    width:100%;
+
+    max-width:1250px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    overflow:hidden;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+}
+
+/* ==========================================
+   LEFT SIDE
+========================================== */
+
+.register-left{
+
+    padding:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    background:
+    rgba(255,255,255,.03);
+
+    position:relative;
+}
+
+.register-left::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    135deg,
+    rgba(34,211,238,.05),
+    rgba(79,70,229,.05));
+
+    pointer-events:none;
+}
+
+.register-left h1{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    margin-bottom:18px;
+
+    line-height:1.2;
+}
+
+.register-left h2{
+
+    font-size:32px;
+
+    color:#22d3ee;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 15px rgba(34,211,238,.35);
+}
+
+.register-left p{
+
+    color:#a9bdd7;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.register-left img{
+
+    width:100%;
+
+    max-width:380px;
+
+    margin:auto;
+
+    border-radius:25px;
+
+    border:2px solid rgba(34,211,238,.15);
+
+    box-shadow:
+    0 0 35px rgba(34,211,238,.20);
+
+    transition:.4s;
+}
+
+.register-left img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 50px rgba(34,211,238,.35);
+}
+
+/* ==========================================
+   RIGHT SIDE
+========================================== */
+
+.register-right{
+
+    position:relative;
+
+    padding:60px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(25px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.register-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    135deg,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01));
+
+    pointer-events:none;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.register-right h2{
+
+    text-align:center;
+
+    color:#ffffff;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-bottom:35px;
+
+    text-shadow:
+    0 0 15px rgba(34,211,238,.25);
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.register-right form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+}
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+.input-group{
+
+    position:relative;
+}
+
+.input-group input{
+
+    width:100%;
+
+    height:60px;
+
+    padding:0 55px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:rgba(255,255,255,.05);
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.35s;
+}
+
+.input-group input::placeholder{
+
+    color:#8fa7c5;
+}
+
+.input-group input:focus{
+
+    border-color:#22d3ee;
+
+    background:rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 20px rgba(34,211,238,.25);
+}
+
+/* ==========================================
+   ICONS
+========================================== */
+
+.input-icon{
+
+    position:absolute;
+
+    left:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#22d3ee;
+
+    font-size:18px;
+}
+
+.password-toggle{
+
+    position:absolute;
+
+    right:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#a9bdd7;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.password-toggle:hover{
+
+    color:#22d3ee;
+}
+
+/* ==========================================
+   INPUT HOVER
+========================================== */
+
+.input-group:hover input{
+
+    border-color:rgba(34,211,238,.25);
+}
+/* ==========================================
+   REGISTER BUTTON
+========================================== */
+
+.register-right button{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+    135deg,
+    #22d3ee,
+    #3b82f6,
+    #6d28d9);
+
+    background-size:250%;
+
+    transition:.4s;
+
+    box-shadow:
+    0 0 25px rgba(34,211,238,.30);
+}
+
+.register-right button:hover{
+
+    background-position:right;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 40px rgba(34,211,238,.55);
+}
+
+/* ==========================================
+   LOGIN LINK
+========================================== */
+
+.login-link{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    color:#b8c6db;
+
+    font-size:15px;
+}
+
+.login-link a{
+
+    color:#22d3ee;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.login-link a:hover{
+
+    color:#ffffff;
+
+    text-shadow:
+    0 0 10px #22d3ee;
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.login-link::before{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:2px;
+
+    margin:0 auto 20px;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    #22d3ee,
+    transparent);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111d;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+    180deg,
+    #22d3ee,
+    #4f46e5);
+
+    border-radius:20px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.register-container{
+
+    grid-template-columns:1fr;
+}
+
+.register-left{
+
+    text-align:center;
+
+    padding:45px;
+}
+
+.register-left img{
+
+    margin-top:25px;
+
+    max-width:320px;
+}
+
+.register-right{
+
+    padding:45px;
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.register-page{
+
+    padding:20px;
+}
+
+.register-left,
+.register-right{
+
+    padding:30px 22px;
+}
+
+.register-left h1{
+
+    font-size:38px;
+}
+
+.register-left h2{
+
+    font-size:24px;
+}
+
+.register-right h2{
+
+    font-size:30px;
+}
+
+.register-left p{
+
+    font-size:15px;
+}
+
+.input-group input{
+
+    height:55px;
+
+    font-size:15px;
+}
+
+.register-right button{
+
+    height:55px;
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.register-page{
+
+    padding:15px;
+}
+
+.register-container{
+
+    border-radius:22px;
+}
+
+.register-left h1{
+
+    font-size:30px;
+}
+
+.register-left h2{
+
+    font-size:22px;
+}
+
+.register-right h2{
+
+    font-size:25px;
+}
+
+.register-left img{
+
+    max-width:220px;
+}
+
+.input-group input{
+
+    height:52px;
+
+    padding:0 48px;
+
+    font-size:14px;
+}
+
+.register-right button{
+
+    height:52px;
+
+    font-size:15px;
+}
+
+.login-link{
+
+    font-size:14px;
+}
+
+}

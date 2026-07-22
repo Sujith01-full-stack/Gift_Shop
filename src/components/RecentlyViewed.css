@@ -1,0 +1,894 @@
+/* ==========================================
+            RECENTLY VIEWED
+========================================== */
+
+.recently-viewed{
+
+    width:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:50px 4%;
+
+    border-radius:30px;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(124,58,237,.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(34,211,238,.14),
+    transparent 40%),
+
+    linear-gradient(
+        135deg,
+        #08111f 0%,
+        #111827 45%,
+        #18263d 100%
+    );
+
+    border:1px solid rgba(34,211,238,.18);
+
+    backdrop-filter:blur(20px);
+
+    transition:.4s ease;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45),
+        0 0 35px rgba(34,211,238,.10);
+
+}
+
+/* ==========================================
+            PURPLE GLOW
+========================================== */
+
+.recently-viewed::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    top:-160px;
+
+    right:-150px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    filter:blur(180px);
+
+    opacity:.18;
+
+}
+
+/* ==========================================
+            CYAN GLOW
+========================================== */
+
+.recently-viewed::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    bottom:-130px;
+
+    left:-130px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(170px);
+
+    opacity:.14;
+
+}
+
+/* ==========================================
+            CONTENT
+========================================== */
+
+.recently-viewed>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+            HOVER
+========================================== */
+
+.recently-viewed:hover{
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.55),
+        0 0 40px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.recent-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.recent-header h2{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:44px;
+
+    font-weight:800;
+
+    color:#22d3ee;
+
+    text-shadow:
+        0 0 18px rgba(34,211,238,.35);
+
+}
+
+.recent-header p{
+
+    margin-top:10px;
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    font-weight:500;
+
+}
+
+.recent-header svg{
+
+    font-size:40px;
+
+    color:#22d3ee;
+
+}
+
+/* ==========================================
+            GRID
+========================================== */
+
+.recent-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    width:100%;
+
+    align-items:stretch;
+
+}
+
+/* ==========================================
+            PRODUCT CARD
+========================================== */
+
+.recent-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    flex-direction:column;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(34,211,238,.18);
+
+    backdrop-filter:blur(18px);
+
+    transition:.4s ease;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+            CARD GLOW
+========================================== */
+
+.recent-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-90px;
+
+    right:-90px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    filter:blur(120px);
+
+    opacity:.12;
+
+}
+
+.recent-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+
+    height:150px;
+
+    bottom:-70px;
+
+    left:-70px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(110px);
+
+    opacity:.10;
+
+}
+
+.recent-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+            CARD HOVER
+========================================== */
+
+.recent-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#22d3ee;
+
+    background:rgba(34,211,238,.08);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45),
+        0 0 30px rgba(34,211,238,.20);
+
+}
+
+/* ==========================================
+            PRODUCT IMAGE
+========================================== */
+
+.recent-card img{
+
+    width:100%;
+
+    height:280px;
+
+    display:block;
+
+    object-fit:contain;
+
+    object-position:center;
+
+    padding:15px;
+
+    background:#111827;
+
+    border-radius:20px 20px 0 0;
+
+    transition:.4s ease;
+
+}
+
+/* ==========================================
+            IMAGE HOVER
+========================================== */
+
+.recent-card:hover img{
+
+    transform:scale(1.03);
+
+    filter:brightness(1.08);
+
+}
+
+/* ==========================================
+            IMAGE OVERLAY
+========================================== */
+
+.recent-card .image-wrapper{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.recent-card .image-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(8,17,31,.65),
+        transparent 60%
+    );
+
+}
+
+/* ==========================================
+            CONTENT
+========================================== */
+
+.recent-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:24px;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+            CATEGORY BADGE
+========================================== */
+
+.category{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:max-content;
+
+    margin:0 auto 18px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(34,211,238,.10);
+
+    border:1px solid rgba(34,211,238,.25);
+
+    color:#22d3ee;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+            PRODUCT TITLE
+========================================== */
+
+.recent-content h3{
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+    min-height:65px;
+
+    margin-bottom:15px;
+
+    transition:.35s;
+
+}
+
+.recent-card:hover h3{
+
+    color:#22d3ee;
+
+}
+
+/* ==========================================
+            PRICE
+========================================== */
+
+.recent-content h4{
+
+    color:#22d3ee;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 15px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+            BUTTON GROUP
+========================================== */
+
+.recent-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+/* ==========================================
+            COMMON BUTTON
+========================================== */
+
+.view-btn,
+.cart-btn{
+
+    flex:1;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+            VIEW BUTTON
+========================================== */
+
+.view-btn{
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    box-shadow:
+        0 10px 25px rgba(34,211,238,.25);
+
+}
+
+.view-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(34,211,238,.40);
+
+}
+
+/* ==========================================
+            CART BUTTON
+========================================== */
+
+.cart-btn{
+
+    background:#18263d;
+
+    border:1px solid rgba(34,211,238,.25);
+
+}
+
+.cart-btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+            SHINE EFFECT
+========================================== */
+
+.view-btn::before,
+.cart-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:40%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.view-btn:hover::before,
+.cart-btn:hover::before{
+
+    left:140%;
+
+}
+/* ==========================================
+            CARD ANIMATION
+========================================== */
+
+.recently-viewed{
+
+    animation:
+        recentFade .8s ease forwards,
+        recentFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes recentFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes recentFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* ==========================================
+            CARD ENTRY
+========================================== */
+
+.recent-card{
+
+    animation:cardFade .7s ease both;
+
+}
+
+.recent-card:nth-child(1){animation-delay:.1s;}
+.recent-card:nth-child(2){animation-delay:.2s;}
+.recent-card:nth-child(3){animation-delay:.3s;}
+.recent-card:nth-child(4){animation-delay:.4s;}
+.recent-card:nth-child(5){animation-delay:.5s;}
+.recent-card:nth-child(6){animation-delay:.6s;}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+            HOVER EFFECTS
+========================================== */
+
+.recent-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.recent-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.recent-card:hover .category{
+
+    background:#22d3ee;
+
+    color:#08111f;
+
+}
+
+.recent-card:hover h4{
+
+    text-shadow:
+        0 0 20px rgba(34,211,238,.50);
+
+}
+
+/* ==========================================
+            SMOOTH TRANSITIONS
+========================================== */
+
+.recently-viewed,
+.recently-viewed *,
+.recent-card,
+.recent-card *{
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* ==========================================
+            CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #22d3ee,
+        #2563eb
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#38bdf8;
+
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media (min-width:1400px){
+.recent-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(420px,500px));
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+.recent-card img{
+
+        height:300px;
+
+    }
+
+}
+
+/* Laptop */
+
+@media (max-width:1400px){
+
+    .recent-grid{
+
+        grid-template-columns:repeat(2,minmax(360px,450px));
+
+    }
+
+    .recent-card img{
+
+        height:260px;
+
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .recent-grid{
+
+        grid-template-columns:repeat(2,minmax(300px,1fr));
+
+        gap:20px;
+
+    }
+
+    .recent-card img{
+
+        height:2000px;
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .recent-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .recent-card{
+
+        max-width:450px;
+
+        margin:auto;
+
+    }
+
+    .recent-card img{
+
+        height:180px;
+
+    }
+
+    .recent-buttons{
+
+        flex-direction:row;
+
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+    .recent-card{
+
+        max-width:100%;
+
+    }
+
+    .recent-card img{
+
+        height:170px;
+
+    }
+
+    .recent-buttons{
+
+        flex-direction:column;
+
+    }
+
+}
+
+/* ==========================================
+                END
+========================================== */

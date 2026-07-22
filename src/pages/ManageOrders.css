@@ -1,0 +1,1489 @@
+/* ==========================================
+        GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ==========================================
+        RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#08111f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+        MANAGE ORDERS
+========================================== */
+
+.manage-orders{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(34,211,238,.12),
+        transparent 30%),
+
+        radial-gradient(circle at bottom left,
+        rgba(124,58,237,.08),
+        transparent 35%),
+
+        linear-gradient(
+            135deg,
+            #08111f 0%,
+            #111827 45%,
+            #18263d 100%);
+}
+
+/* ==========================================
+        CYAN GLOW
+========================================== */
+
+.manage-orders::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    top:-180px;
+
+    right:-180px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(170px);
+
+    opacity:.10;
+
+}
+
+/* ==========================================
+        PURPLE GLOW
+========================================== */
+
+.manage-orders::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    left:-200px;
+
+    bottom:-200px;
+
+    border-radius:50%;
+
+    background:#7c3aed;
+
+    filter:blur(180px);
+
+    opacity:.08;
+
+}
+
+/* ==========================================
+        HEADER
+========================================== */
+
+.orders-header{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================
+        TITLE
+========================================== */
+
+.orders-header h1{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:#22d3ee;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-shadow:
+        0 0 18px rgba(34,211,238,.35);
+
+}
+
+.orders-header h1 span{
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+        HEADER BUTTON
+========================================== */
+
+.add-order-btn{
+
+    height:60px;
+
+    padding:0 30px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    box-shadow:
+        0 15px 35px rgba(34,211,238,.30);
+
+    transition:.35s;
+
+}
+
+.add-order-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(34,211,238,.45);
+
+}
+
+/* ==========================================
+        SEARCH SECTION
+========================================== */
+
+.search-section{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+        SEARCH BOX
+========================================== */
+
+.search-box{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:650px;
+
+}
+
+/* ==========================================
+        SEARCH ICON
+========================================== */
+
+.search-box svg{
+
+    position:absolute;
+
+    top:50%;
+
+    left:24px;
+
+    transform:translateY(-50%);
+
+    color:#22d3ee;
+
+    font-size:24px;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+        SEARCH INPUT
+========================================== */
+
+.search-box input{
+
+    width:100%;
+
+    height:78px;
+
+    padding-left:68px;
+
+    padding-right:25px;
+
+    border-radius:22px;
+
+    outline:none;
+
+    border:1px solid rgba(34,211,238,.15);
+
+    background:rgba(17,24,39,.92);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    color:#fff;
+
+    font-size:20px;
+
+    transition:.35s;
+
+    box-shadow:
+        inset 0 0 0 rgba(34,211,238,0),
+        0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.search-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+.search-box input:focus{
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 0 22px rgba(34,211,238,.25),
+        inset 0 0 10px rgba(34,211,238,.08);
+
+}
+
+/* ==========================================
+        TABLE CONTAINER
+========================================== */
+
+.table-container{
+
+    position:relative;
+
+    z-index:2;
+
+    overflow-x:auto;
+
+    border-radius:28px;
+
+    background:rgba(17,24,39,.94);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(34,211,238,.15);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+        SCROLLBAR
+========================================== */
+
+.table-container::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.table-container::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+.table-container::-webkit-scrollbar-thumb{
+
+    background:#22d3ee;
+
+    border-radius:20px;
+
+}
+
+.table-container::-webkit-scrollbar-thumb:hover{
+
+    background:#67e8f9;
+
+}
+/* ==========================================
+        TABLE
+========================================== */
+
+table{
+
+    width:100%;
+
+    min-width:1300px;
+
+    border-collapse:collapse;
+
+}
+
+/* ==========================================
+        TABLE HEADER
+========================================== */
+
+thead{
+
+    background:#111827;
+
+}
+
+thead tr{
+
+    border-bottom:1px solid rgba(34,211,238,.15);
+
+}
+
+thead th{
+
+    padding:28px 30px;
+
+    text-align:left;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#22d3ee;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+        TABLE BODY
+========================================== */
+
+tbody tr{
+
+    transition:.35s;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+tbody tr:hover{
+
+    background:rgba(34,211,238,.05);
+
+    transform:scale(1.002);
+
+}
+
+tbody td{
+
+    padding:28px 30px;
+
+    color:#f8fafc;
+
+    font-size:18px;
+
+    vertical-align:middle;
+
+}
+
+/* ==========================================
+        ORDER IMAGE
+========================================== */
+
+.order-image{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    border:2px solid rgba(34,211,238,.20);
+
+    box-shadow:
+
+        0 0 25px rgba(34,211,238,.15);
+
+    transition:.35s;
+
+}
+
+.order-image:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+        0 0 35px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+        CUSTOMER DETAILS
+========================================== */
+
+.customer-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.customer-name{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+.customer-email{
+
+    font-size:15px;
+
+    color:#94a3b8;
+
+}
+
+/* ==========================================
+        ORDER ID
+========================================== */
+
+.order-id{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#22d3ee;
+
+}
+
+/* ==========================================
+        PRODUCT NAME
+========================================== */
+
+.product-name{
+
+    font-weight:600;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+        PRICE
+========================================== */
+
+.price{
+
+    color:#22d3ee;
+
+    font-size:19px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+        QUANTITY
+========================================== */
+
+.quantity{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(34,211,238,.10);
+
+    border:1px solid rgba(34,211,238,.15);
+
+    color:#22d3ee;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+        STATUS BADGES
+========================================== */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:130px;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    text-transform:uppercase;
+
+    color:#fff;
+
+}
+
+/* Pending */
+
+.pending{
+
+    background:rgba(245,158,11,.18);
+
+    color:#fbbf24;
+
+    border:1px solid rgba(245,158,11,.35);
+
+}
+
+/* Processing */
+
+.processing{
+
+    background:rgba(59,130,246,.18);
+
+    color:#60a5fa;
+
+    border:1px solid rgba(59,130,246,.35);
+
+}
+
+/* Shipped */
+
+.shipped{
+
+    background:rgba(34,211,238,.18);
+
+    color:#22d3ee;
+
+    border:1px solid rgba(34,211,238,.35);
+
+}
+
+/* Delivered */
+
+.delivered{
+
+    background:rgba(34,197,94,.18);
+
+    color:#4ade80;
+
+    border:1px solid rgba(34,197,94,.35);
+
+}
+
+/* Cancelled */
+
+.cancelled{
+
+    background:rgba(239,68,68,.18);
+
+    color:#f87171;
+
+    border:1px solid rgba(239,68,68,.35);
+
+}
+
+/* ==========================================
+        ACTION BUTTONS
+========================================== */
+
+.action-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+/* Common */
+
+.action-buttons button{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+        VIEW BUTTON
+========================================== */
+
+.view-btn{
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    box-shadow:
+        0 12px 30px rgba(34,211,238,.25);
+
+}
+
+.view-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(34,211,238,.45);
+
+}
+
+/* ==========================================
+        EDIT BUTTON
+========================================== */
+
+.edit-btn{
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #7c3aed
+    );
+
+    box-shadow:
+        0 12px 30px rgba(124,58,237,.25);
+
+}
+
+.edit-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(124,58,237,.45);
+
+}
+
+/* ==========================================
+        DELETE BUTTON
+========================================== */
+
+.delete-btn{
+
+    background:linear-gradient(
+        135deg,
+        #ff4d4d,
+        #ff1f1f
+    );
+
+    box-shadow:
+        0 12px 30px rgba(239,68,68,.25);
+
+}
+
+.delete-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(239,68,68,.45);
+
+}
+
+/* ==========================================
+        ICON ANIMATION
+========================================== */
+
+.action-buttons button svg{
+
+    transition:.3s;
+
+}
+
+.action-buttons button:hover svg{
+
+    transform:scale(1.15);
+
+}
+
+/* ==========================================
+        LAPTOP
+========================================== */
+
+@media (max-width:1200px){
+
+.manage-orders{
+
+    padding:35px 25px;
+
+}
+
+.orders-header h1{
+
+    font-size:40px;
+
+}
+
+.search-box{
+
+    max-width:520px;
+
+}
+
+table{
+
+    min-width:1150px;
+
+}
+
+}
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.manage-orders{
+
+    padding:30px 20px;
+
+}
+
+.orders-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+}
+
+.orders-header h1{
+
+    font-size:36px;
+
+}
+
+.search-section{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:20px;
+
+}
+
+.search-box{
+
+    max-width:100%;
+
+}
+
+.search-box input{
+
+    height:68px;
+
+    font-size:17px;
+
+}
+
+.add-order-btn{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+table{
+
+    min-width:1050px;
+
+}
+
+thead th{
+
+    font-size:16px;
+
+    padding:22px;
+
+}
+
+tbody td{
+
+    padding:22px;
+
+    font-size:16px;
+
+}
+
+.order-image{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+}
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.manage-orders{
+
+    padding:20px 15px;
+
+}
+
+.orders-header h1{
+
+    font-size:30px;
+
+}
+
+.search-box input{
+
+    height:60px;
+
+    font-size:15px;
+
+    padding-left:58px;
+
+}
+
+.search-box svg{
+
+    left:18px;
+
+    font-size:20px;
+
+}
+
+.add-order-btn{
+
+    height:55px;
+
+    font-size:15px;
+
+}
+
+thead th{
+
+    padding:18px;
+
+    font-size:14px;
+
+}
+
+tbody td{
+
+    padding:18px;
+
+    font-size:14px;
+
+}
+
+.order-image{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.customer-name{
+
+    font-size:16px;
+
+}
+
+.customer-email{
+
+    font-size:13px;
+
+}
+
+.price{
+
+    font-size:16px;
+
+}
+
+.status{
+
+    min-width:100px;
+
+    font-size:12px;
+
+    padding:8px 14px;
+
+}
+
+.action-buttons{
+
+    gap:8px;
+
+}
+
+.action-buttons button{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+        SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.manage-orders{
+
+    padding:15px 10px;
+
+}
+
+.orders-header h1{
+
+    font-size:25px;
+
+}
+
+.search-box input{
+
+    height:54px;
+
+    font-size:14px;
+
+}
+
+.add-order-btn{
+
+    height:50px;
+
+    border-radius:14px;
+
+}
+
+.order-image{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+.status{
+
+    min-width:90px;
+
+    font-size:11px;
+
+}
+
+.action-buttons button{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+}
+
+.table-container{
+
+    border-radius:20px;
+
+}
+
+}
+
+/* ==========================================
+        SCROLL IMPROVEMENT
+========================================== */
+
+.table-container{
+
+    scroll-behavior:smooth;
+
+}
+
+.table-container::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.table-container::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+.table-container::-webkit-scrollbar-thumb{
+
+    background:#22d3ee;
+
+    border-radius:30px;
+
+}
+
+.table-container::-webkit-scrollbar-thumb:hover{
+
+    background:#67e8f9;
+
+}
+
+/* ==========================================
+        PREMIUM GRID OVERLAY
+========================================== */
+
+.manage-orders::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+    background-size:40px 40px;
+
+    pointer-events:none;
+
+    opacity:.25;
+
+}
+
+/* ==========================================
+        GLASS BORDER
+========================================== */
+
+.table-container{
+
+    position:relative;
+
+}
+
+.table-container::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    border:1px solid rgba(34,211,238,.12);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+        TABLE HOVER GLOW
+========================================== */
+
+.table-container:hover{
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45),
+
+        0 0 30px rgba(34,211,238,.12);
+
+}
+
+/* ==========================================
+        ROW ANIMATION
+========================================== */
+
+tbody tr{
+
+    animation:fadeUp .5s ease;
+
+}
+
+/* ==========================================
+        IMAGE ANIMATION
+========================================== */
+
+.order-image{
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+
+/* ==========================================
+        HEADER GLOW
+========================================== */
+
+.orders-header h1{
+
+    animation:textGlow 3s infinite;
+
+}
+
+/* ==========================================
+        BUTTON SHINE
+========================================== */
+
+.action-buttons button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.action-buttons button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transition:.8s;
+
+}
+
+.action-buttons button:hover::before{
+
+    left:150%;
+
+}
+
+/* ==========================================
+        SEARCH HOVER
+========================================== */
+
+.search-box input:hover{
+
+    border-color:#22d3ee;
+
+}
+
+/* ==========================================
+        STATUS HOVER
+========================================== */
+
+.status{
+
+    transition:.35s;
+
+}
+
+.status:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+        FLOAT IMAGE
+========================================== */
+
+@keyframes floatImage{
+
+0%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-8px);
+
+}
+
+100%{
+
+    transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+        FADE UP
+========================================== */
+
+@keyframes fadeUp{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+        TEXT GLOW
+========================================== */
+
+@keyframes textGlow{
+
+0%{
+
+    text-shadow:0 0 12px rgba(34,211,238,.15);
+
+}
+
+50%{
+
+    text-shadow:0 0 25px rgba(34,211,238,.45);
+
+}
+
+100%{
+
+    text-shadow:0 0 12px rgba(34,211,238,.15);
+
+}
+
+}
+
+/* ==========================================
+        PAGE LOAD
+========================================== */
+
+.manage-orders{
+
+    animation:pageLoad .7s ease;
+
+}
+
+@keyframes pageLoad{
+
+from{
+
+    opacity:0;
+
+    transform:scale(.98);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+}
+
+/* ==========================================
+        CUSTOM SELECTION
+========================================== */
+
+::selection{
+
+    background:#22d3ee;
+
+    color:#08111f;
+
+}
+
+/* ==========================================
+        SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#22d3ee;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#67e8f9;
+
+}
+
+/* ==========================================
+        SMOOTH SCROLL
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}

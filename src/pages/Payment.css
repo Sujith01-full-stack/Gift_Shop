@@ -1,0 +1,1392 @@
+/* ==========================================
+        GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ==========================================
+        RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#08111f;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+        PAYMENT PAGE
+========================================== */
+
+.payment-page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:60px 30px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(34,211,238,.10),
+        transparent 35%),
+
+        radial-gradient(circle at bottom right,
+        rgba(59,130,246,.08),
+        transparent 40%),
+
+        linear-gradient(
+            135deg,
+            #08111f 0%,
+            #111827 50%,
+            #18263d 100%);
+
+}
+
+/* ==========================================
+        TOP GLOW
+========================================== */
+
+.payment-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:430px;
+
+    height:430px;
+
+    top:-180px;
+
+    left:-180px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(180px);
+
+    opacity:.12;
+
+}
+
+/* ==========================================
+        BOTTOM GLOW
+========================================== */
+
+.payment-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    right:-220px;
+
+    bottom:-220px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+    filter:blur(220px);
+
+    opacity:.10;
+
+}
+
+/* ==========================================
+        CONTAINER
+========================================== */
+
+.payment-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+}
+
+/* ==========================================
+        GLASS CARD
+========================================== */
+
+.payment-left,
+.payment-right{
+
+    position:relative;
+
+    background:rgba(17,24,39,.92);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    border:1px solid rgba(34,211,238,.15);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        GLASS BORDER
+========================================== */
+
+.payment-left::before,
+.payment-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    padding:1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(34,211,238,.25),
+            transparent,
+            rgba(59,130,246,.15)
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+        SECTION TITLE
+========================================== */
+
+.payment-left h2,
+.payment-right h2{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+    color:#22d3ee;
+
+    text-shadow:
+        0 0 15px rgba(34,211,238,.25);
+
+}
+/* ==========================================
+        PAYMENT OPTIONS
+========================================== */
+
+.payment-option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px 22px;
+
+    margin-bottom:18px;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(34,211,238,.08);
+
+    transition:.35s ease;
+
+}
+
+/* ==========================================
+        LEFT BORDER
+========================================== */
+
+.payment-option::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        180deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+}
+
+/* ==========================================
+        HOVER
+========================================== */
+
+.payment-option:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(34,211,238,.05);
+
+    border-color:rgba(34,211,238,.22);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35),
+        0 0 20px rgba(34,211,238,.12);
+
+}
+
+/* ==========================================
+        ACTIVE OPTION
+========================================== */
+
+.payment-option.active{
+
+    background:rgba(34,211,238,.08);
+
+    border-color:#22d3ee;
+
+    box-shadow:
+        0 0 22px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+        RADIO BUTTON
+========================================== */
+
+.payment-option input{
+
+    width:20px;
+
+    height:20px;
+
+    accent-color:#22d3ee;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+        ICON
+========================================== */
+
+.payment-option svg{
+
+    font-size:28px;
+
+    color:#22d3ee;
+
+    transition:.35s;
+
+}
+
+.payment-option:hover svg{
+
+    transform:scale(1.15);
+
+    text-shadow:
+        0 0 18px rgba(34,211,238,.45);
+
+}
+
+/* ==========================================
+        TITLE
+========================================== */
+
+.payment-option span{
+
+    flex:1;
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+        DESCRIPTION
+========================================== */
+
+.payment-option small{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+    font-weight:400;
+
+}
+
+/* ==========================================
+        CHECK BADGE
+========================================== */
+
+.payment-option.active::after{
+
+    content:"✓";
+
+    position:absolute;
+
+    right:20px;
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#22d3ee;
+
+    color:#08111f;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    box-shadow:
+        0 0 15px rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+        PAYMENT FORM
+========================================== */
+
+.payment-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+/* ==========================================
+        LABEL
+========================================== */
+
+.payment-box label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#22d3ee;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+        INPUT
+========================================== */
+
+.payment-box input{
+
+    width:100%;
+
+    height:58px;
+
+    padding:0 18px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(34,211,238,.12);
+
+    outline:none;
+
+    background:rgba(255,255,255,.03);
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}
+
+.payment-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* ==========================================
+        INPUT FOCUS
+========================================== */
+
+.payment-box input:focus{
+
+    border-color:#22d3ee;
+
+    background:rgba(34,211,238,.05);
+
+    box-shadow:
+        0 0 18px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+        CARD ROW
+========================================== */
+
+.card-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+/* ==========================================
+        CARD NUMBER
+========================================== */
+
+.card-number{
+
+    position:relative;
+
+}
+
+.card-number input{
+
+    padding-left:55px;
+
+}
+
+.card-number svg{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:22px;
+
+    color:#22d3ee;
+
+}
+
+/* ==========================================
+        CARD HOLDER
+========================================== */
+
+.card-holder{
+
+    position:relative;
+
+}
+
+.card-holder input{
+
+    padding-left:55px;
+
+}
+
+.card-holder svg{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#22d3ee;
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+        EXPIRY
+========================================== */
+
+.expiry{
+
+    position:relative;
+
+}
+
+.expiry input{
+
+    padding-left:50px;
+
+}
+
+.expiry svg{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#22d3ee;
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+        CVV
+========================================== */
+
+.cvv{
+
+    position:relative;
+
+}
+
+.cvv input{
+
+    padding-left:50px;
+
+}
+
+.cvv svg{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#22d3ee;
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+        INPUT HOVER
+========================================== */
+
+.payment-box input:hover{
+
+    border-color:rgba(34,211,238,.25);
+
+}
+
+/* ==========================================
+        ORDER SUMMARY
+========================================== */
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    color:#e2e8f0;
+
+    font-size:17px;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+}
+
+.summary-row:last-of-type{
+
+    border-bottom:none;
+
+}
+
+.summary-row span:last-child{
+
+    font-weight:600;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+        TOTAL
+========================================== */
+
+.summary-row.total{
+
+    margin-top:15px;
+
+    padding-top:20px;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#22d3ee;
+
+    border-top:2px solid rgba(34,211,238,.18);
+
+}
+
+.summary-row.total span:last-child{
+
+    color:#22d3ee;
+
+    text-shadow:
+        0 0 12px rgba(34,211,238,.25);
+
+}
+
+/* ==========================================
+        DIVIDER
+========================================== */
+
+.payment-right hr{
+
+    border:none;
+
+    height:1px;
+
+    margin:25px 0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(34,211,238,.30),
+        transparent
+    );
+
+}
+
+/* ==========================================
+        PLACE ORDER BUTTON
+========================================== */
+
+.place-order-btn{
+
+    position:relative;
+
+    width:100%;
+
+    height:60px;
+
+    margin-top:30px;
+
+    border:none;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    box-shadow:
+        0 15px 35px rgba(34,211,238,.28);
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+        BUTTON ICON
+========================================== */
+
+.place-order-btn svg{
+
+    font-size:20px;
+
+    transition:.35s;
+
+}
+
+.place-order-btn:hover svg{
+
+    transform:translateX(4px);
+
+}
+
+/* ==========================================
+        BUTTON SHINE
+========================================== */
+
+.place-order-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.place-order-btn:hover::before{
+
+    left:160%;
+
+}
+
+/* ==========================================
+        BUTTON HOVER
+========================================== */
+
+.place-order-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(34,211,238,.45);
+
+}
+
+/* ==========================================
+        BUTTON ACTIVE
+========================================== */
+
+.place-order-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+            LAPTOP
+========================================== */
+
+@media (max-width:1200px){
+
+.payment-container{
+
+    max-width:1100px;
+
+    gap:25px;
+
+}
+
+.payment-left,
+.payment-right{
+
+    padding:30px;
+
+}
+
+.payment-left h2,
+.payment-right h2{
+
+    font-size:28px;
+
+}
+
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.payment-page{
+
+    padding:40px 20px;
+
+}
+
+.payment-container{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+.payment-left,
+.payment-right{
+
+    padding:28px;
+
+}
+
+.payment-left h2,
+.payment-right h2{
+
+    font-size:26px;
+
+}
+
+.payment-option{
+
+    padding:18px;
+
+}
+
+.summary-row{
+
+    font-size:16px;
+
+}
+
+.summary-row.total{
+
+    font-size:22px;
+
+}
+
+.place-order-btn{
+
+    height:56px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.payment-page{
+
+    padding:25px 15px;
+
+}
+
+.payment-left,
+.payment-right{
+
+    padding:22px;
+
+    border-radius:22px;
+
+}
+
+.payment-left h2,
+.payment-right h2{
+
+    font-size:24px;
+
+    text-align:center;
+
+}
+
+.payment-option{
+
+    padding:16px;
+
+    gap:15px;
+
+}
+
+.payment-option span{
+
+    font-size:15px;
+
+}
+
+.payment-option small{
+
+    font-size:12px;
+
+}
+
+.payment-option svg{
+
+    font-size:24px;
+
+}
+
+.card-row{
+
+    grid-template-columns:1fr;
+
+    gap:16px;
+
+}
+
+.payment-box input{
+
+    height:54px;
+
+    font-size:15px;
+
+}
+
+.summary-row{
+
+    font-size:15px;
+
+}
+
+.summary-row.total{
+
+    font-size:20px;
+
+}
+
+.place-order-btn{
+
+    height:54px;
+
+    font-size:16px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.payment-page{
+
+    padding:18px 10px;
+
+}
+
+.payment-left,
+.payment-right{
+
+    padding:18px;
+
+    border-radius:18px;
+
+}
+
+.payment-left h2,
+.payment-right h2{
+
+    font-size:20px;
+
+}
+
+.payment-option{
+
+    padding:14px;
+
+    gap:12px;
+
+}
+
+.payment-option svg{
+
+    font-size:20px;
+
+}
+
+.payment-option span{
+
+    font-size:14px;
+
+}
+
+.payment-option small{
+
+    font-size:11px;
+
+}
+
+.payment-box label{
+
+    font-size:14px;
+
+}
+
+.payment-box input{
+
+    height:48px;
+
+    padding:0 15px;
+
+    font-size:14px;
+
+    border-radius:14px;
+
+}
+
+.card-number input,
+.card-holder input,
+.expiry input,
+.cvv input{
+
+    padding-left:45px;
+
+}
+
+.card-number svg,
+.card-holder svg,
+.expiry svg,
+.cvv svg{
+
+    left:15px;
+
+    font-size:18px;
+
+}
+
+.summary-row{
+
+    font-size:14px;
+
+}
+
+.summary-row.total{
+
+    font-size:18px;
+
+}
+
+.place-order-btn{
+
+    height:48px;
+
+    font-size:14px;
+
+    border-radius:14px;
+
+}
+
+}
+
+/* ==========================================
+        CARD ANIMATION
+========================================== */
+
+.payment-left,
+.payment-right{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.payment-right{
+
+    animation-delay:.2s;
+
+}
+
+/* ==========================================
+        OPTION ANIMATION
+========================================== */
+
+.payment-option{
+
+    animation:slideLeft .6s ease both;
+
+}
+
+.payment-option:nth-child(2){
+
+    animation-delay:.1s;
+
+}
+
+.payment-option:nth-child(3){
+
+    animation-delay:.2s;
+
+}
+
+.payment-option:nth-child(4){
+
+    animation-delay:.3s;
+
+}
+
+/* ==========================================
+        INPUT ANIMATION
+========================================== */
+
+.payment-box input{
+
+    transition:
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease,
+        transform .25s ease;
+
+}
+
+.payment-box input:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+        GLASS SHIMMER
+========================================== */
+
+.payment-left::after,
+.payment-right::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-40%;
+
+    width:35%;
+
+    height:260%;
+
+    transform:rotate(25deg);
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+    animation:glassShine 10s linear infinite;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+        BUTTON GLOW
+========================================== */
+
+.place-order-btn{
+
+    animation:buttonGlow 3s ease-in-out infinite;
+
+}
+
+/* ==========================================
+        TITLE GLOW
+========================================== */
+
+.payment-left h2,
+.payment-right h2{
+
+    animation:titleGlow 2.5s ease-in-out infinite;
+
+}
+
+/* ==========================================
+        KEYFRAMES
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes glassShine{
+
+    0%{
+
+        left:-60%;
+
+    }
+
+    100%{
+
+        left:170%;
+
+    }
+
+}
+
+@keyframes buttonGlow{
+
+    0%,100%{
+
+        box-shadow:
+            0 15px 35px rgba(34,211,238,.25);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 20px 50px rgba(34,211,238,.45);
+
+    }
+
+}
+
+@keyframes titleGlow{
+
+    0%,100%{
+
+        text-shadow:
+            0 0 10px rgba(34,211,238,.18);
+
+    }
+
+    50%{
+
+        text-shadow:
+            0 0 24px rgba(34,211,238,.45);
+
+    }
+
+}
+
+/* ==========================================
+        SMOOTH SCROLL
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}

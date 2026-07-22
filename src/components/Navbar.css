@@ -1,0 +1,819 @@
+/* ==========================================
+        GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#08111f;
+}
+
+/* ==========================================
+        PREMIUM NAVBAR
+========================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    z-index:9999;
+
+    width:100%;
+
+    height:85px;
+
+    padding:0 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    background:rgba(8,17,31,.92);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(25,232,255,.18);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.45);
+
+    transition:.35s ease;
+}
+
+/* ==========================================
+        LOGO
+========================================== */
+
+.logo{
+
+    text-decoration:none;
+
+    min-width: 200px;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    color:#ffffff;
+
+    transition:.35s;
+}
+
+.logo span{
+
+    background:linear-gradient(
+        135deg,
+        #19e8ff,
+        #2563eb);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+    
+
+   
+}
+
+.logo:hover{
+
+    transform:scale(1.05);
+
+    text-shadow:
+        0 0 15px rgba(25,232,255,.35);
+}
+
+/* ==========================================
+        NAVIGATION
+========================================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    list-style:none;
+}
+
+.nav-links li{
+
+    list-style:none;
+}
+
+.nav-links a{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    color:#d7e3f3;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.nav-links a:hover{
+
+    color:#19e8ff;
+
+    transform:translateY(-2px);
+}
+
+/* Underline Animation */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#19e8ff;
+
+    transition:.35s;
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+}
+
+/* ==========================================
+        NAV ICON
+========================================== */
+
+.nav-icon{
+
+    font-size:18px;
+
+    color:#19e8ff;
+
+    transition:.35s;
+}
+
+.nav-links a:hover .nav-icon{
+
+    transform:scale(1.1);
+}
+
+/* ==========================================
+        SEARCH BAR
+========================================== */
+
+.searchbar{
+
+    width:340px;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:rgba(25,33,48,.90);
+
+    border:1px solid rgba(25,232,255,.18);
+
+    border-radius:50px;
+
+    padding:0 18px;
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s;
+}
+
+.searchbar:hover,
+.searchbar:focus-within{
+
+    border-color:#19e8ff;
+
+    box-shadow:
+        0 0 20px rgba(25,232,255,.25);
+}
+
+.searchbar input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#ffffff;
+
+    font-size:15px;
+}
+
+.searchbar input::placeholder{
+
+    color:#90a4b8;
+}
+
+.searchbar svg{
+
+    color:#19e8ff;
+
+    font-size:18px;
+}
+
+/* ==========================================
+        NAV ICONS
+========================================== */
+
+.nav-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+}
+
+.nav-icons a{
+
+    position:relative;
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    border-radius:50%;
+
+    background:rgba(25,33,48,.90);
+
+    border:1px solid rgba(25,232,255,.18);
+
+    color:#19e8ff;
+
+    font-size:20px;
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s;
+}
+
+.nav-icons a:hover{
+
+    color:#08111f;
+
+    background:#19e8ff;
+
+    border-color:#19e8ff;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(25,232,255,.50);
+}
+
+/* ==========================================
+        BADGE
+========================================== */
+
+.badge{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-6px;
+
+    width:20px;
+
+    height:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #ff4d6d,
+        #ff1744);
+
+    color:#ffffff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    border:2px solid #08111f;
+
+    box-shadow:
+        0 0 12px rgba(255,77,109,.45);
+}
+
+/* ==========================================
+        ADMIN LINK
+========================================== */
+
+.admin-link{
+
+    color:#19e8ff !important;
+
+    font-weight:700;
+
+    transition:.35s;
+}
+
+.admin-link .nav-icon{
+
+    color:#19e8ff;
+}
+
+.admin-link:hover{
+
+    color:#ffffff !important;
+
+    text-shadow:
+        0 0 12px rgba(25,232,255,.60);
+}
+
+.admin-link:hover .nav-icon{
+
+    color:#19e8ff;
+
+    transform:scale(1.15);
+}
+
+/* ==========================================
+        MENU ICON
+========================================== */
+
+.menu-icon{
+
+    display:none;
+
+    font-size:30px;
+
+    color:#19e8ff;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+}
+
+.menu-icon:hover{
+
+    color:#ffffff;
+
+    transform:rotate(90deg);
+
+    text-shadow:
+        0 0 15px rgba(25,232,255,.70);
+}
+
+/* ==========================================
+        MOBILE MENU
+========================================== */
+
+.nav-links{
+
+    transition:all .4s ease;
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    height:72px;
+
+    padding:0 18px;
+}
+
+.menu-icon{
+
+    display:block;
+}
+
+.searchbar{
+
+    display:none;
+}
+
+.nav-links{
+
+    position:absolute;
+
+    top:72px;
+
+    left:-100%;
+
+    width:100%;
+
+    padding:35px 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    background:rgba(8,17,31,.96);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border-top:1px solid rgba(25,232,255,.18);
+
+    border-bottom:1px solid rgba(25,232,255,.18);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.45);
+
+    transition:all .4s ease;
+}
+
+.nav-links.active{
+
+    left:0;
+
+    animation:slideMenu .4s ease;
+}
+
+.nav-links li{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.nav-links a{
+
+    width:90%;
+
+    justify-content:center;
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    color:#d7e3f3;
+
+    transition:.35s;
+}
+
+.nav-links a:hover{
+
+    background:rgba(25,232,255,.12);
+
+    color:#19e8ff;
+
+    transform:translateX(6px);
+
+    box-shadow:
+        0 0 18px rgba(25,232,255,.18);
+}
+
+/* ==========================================
+        MOBILE ICON
+========================================== */
+
+.nav-links .nav-icon{
+
+    color:#19e8ff;
+
+    font-size:18px;
+}
+
+}
+
+/* ==========================================
+        SLIDE ANIMATION
+========================================== */
+
+@keyframes slideMenu{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(-25px);
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+}
+
+/* ==========================================
+        HOVER GLOW
+========================================== */
+
+.nav-links a:hover{
+
+    text-shadow:
+        0 0 12px rgba(25,232,255,.60);
+}
+
+/* ==========================================
+        ACTIVE LINK
+========================================== */
+
+.nav-links a.active{
+
+    color:#19e8ff;
+
+    background:rgba(25,232,255,.12);
+
+    border:1px solid rgba(25,232,255,.22);
+
+    box-shadow:
+        0 0 18px rgba(25,232,255,.20);
+}
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.navbar{
+
+    height:78px;
+
+    padding:0 22px;
+
+    gap:16px;
+}
+
+.logo{
+
+    font-size:28px;
+}
+
+.searchbar{
+
+    width:240px;
+
+    height:46px;
+}
+
+.nav-links{
+
+    gap:20px;
+}
+
+.nav-links a{
+
+    font-size:15px;
+}
+
+.nav-icons{
+
+    gap:12px;
+}
+
+.nav-icons a{
+
+    width:44px;
+
+    height:44px;
+
+    font-size:18px;
+}
+
+}
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.navbar{
+
+    height:70px;
+
+    padding:0 16px;
+}
+
+.logo{
+
+    font-size:24px;
+}
+
+.menu-icon{
+
+    display:block;
+}
+
+.searchbar{
+
+    display:none;
+}
+
+.nav-icons{
+
+    margin-right:10px;
+
+    gap:10px;
+}
+
+.nav-icons a{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:18px;
+}
+
+}
+
+/* ==========================================
+        SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.navbar{
+
+    height:65px;
+
+    padding:0 12px;
+}
+
+.logo{
+
+    font-size:21px;
+}
+
+.nav-icons{
+
+    gap:8px;
+}
+
+.nav-icons a{
+
+    width:38px;
+
+    height:38px;
+
+    font-size:16px;
+}
+
+.menu-icon{
+
+    font-size:24px;
+}
+
+}
+
+/* ==========================================
+        NAVBAR ENTRY ANIMATION
+========================================== */
+
+.navbar{
+
+    animation:navbarFade .6s ease;
+}
+
+@keyframes navbarFade{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(-25px);
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+}
+
+/* ==========================================
+        SMOOTH TRANSITIONS
+========================================== */
+
+.navbar,
+.logo,
+.logo span,
+.nav-links a,
+.nav-icon,
+.nav-icons a,
+.searchbar,
+.menu-icon,
+.badge{
+
+    transition:all .35s ease;
+}
+
+/* ==========================================
+        CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #19e8ff,
+        #2563eb);
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:linear-gradient(
+        180deg,
+        #4cefff,
+        #3b82f6);
+}
+
+/* ==========================================
+        TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#19e8ff;
+
+    color:#08111f;
+}
+
+/* ==========================================
+        REMOVE TAP HIGHLIGHT
+========================================== */
+
+*{
+
+    -webkit-tap-highlight-color:transparent;
+}

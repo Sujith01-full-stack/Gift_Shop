@@ -1,0 +1,1581 @@
+/* ==========================================
+            GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ==========================================
+            RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#08111f;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+            PAGE
+========================================== */
+
+.orders-page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:60px 30px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(34,211,238,.10),
+        transparent 35%),
+
+        radial-gradient(circle at bottom right,
+        rgba(59,130,246,.08),
+        transparent 40%),
+
+        linear-gradient(
+            135deg,
+            #08111f 0%,
+            #111827 50%,
+            #18263d 100%);
+}
+
+/* ==========================================
+            TOP GLOW
+========================================== */
+
+.orders-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:430px;
+
+    height:430px;
+
+    top:-180px;
+
+    left:-180px;
+
+    border-radius:50%;
+
+    background:#22d3ee;
+
+    filter:blur(180px);
+
+    opacity:.12;
+
+}
+
+/* ==========================================
+            BOTTOM GLOW
+========================================== */
+
+.orders-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    right:-220px;
+
+    bottom:-220px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+    filter:blur(220px);
+
+    opacity:.10;
+
+}
+
+/* ==========================================
+            CONTAINER
+========================================== */
+
+.orders-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1350px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+            TITLE
+========================================== */
+
+.orders-container h1{
+
+    text-align:center;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-bottom:55px;
+
+    color:#ffffff;
+
+}
+
+.orders-container h1 span{
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #67e8f9
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* ==========================================
+        GLASS PANEL
+========================================== */
+
+.orders-wrapper{
+
+    background:rgba(17,24,39,.92);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    border:1px solid rgba(34,211,238,.15);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        GLASS BORDER
+========================================== */
+
+.orders-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    padding:1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(34,211,238,.25),
+            transparent,
+            rgba(59,130,246,.15)
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+            ORDER CARD
+========================================== */
+
+.order-card{
+
+    display:grid;
+
+    grid-template-columns:180px 1fr 220px;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:28px;
+
+    margin-bottom:25px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(34,211,238,.08);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        LEFT CYAN BORDER
+========================================== */
+
+.order-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        180deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+}
+
+/* ==========================================
+        GLASS SHINE
+========================================== */
+
+.order-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.order-card:hover::after{
+
+    left:140%;
+
+}
+
+/* ==========================================
+        CARD HOVER
+========================================== */
+
+.order-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(34,211,238,.25);
+
+    background:rgba(34,211,238,.05);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.35),
+        0 0 25px rgba(34,211,238,.15);
+
+}
+
+/* ==========================================
+        ORDER INFO BOX
+========================================== */
+
+.order-info{
+
+    margin-top:15px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(34,211,238,.08);
+
+}
+
+.order-info p{
+
+    color:#cbd5e1;
+
+    margin:10px 0;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.order-info strong{
+
+    color:#22d3ee;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+        REORDER BUTTON
+========================================== */
+
+.reorder-btn{
+
+    width:100%;
+
+    height:52px;
+
+    margin-top:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    transition:.35s;
+
+    box-shadow:
+        0 12px 25px rgba(34,211,238,.25);
+
+}
+
+.reorder-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(34,211,238,.40);
+
+}
+
+/* ==========================================
+        CANCEL BUTTON
+========================================== */
+
+.cancel-btn{
+
+    width:100%;
+
+    height:52px;
+
+    margin-top:14px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+    transition:.35s;
+
+    box-shadow:
+        0 12px 25px rgba(239,68,68,.25);
+
+}
+
+.cancel-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(239,68,68,.40);
+
+}
+
+/* ==========================================
+            PRODUCT IMAGE
+========================================== */
+
+.order-card img{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:2px solid rgba(34,211,238,.15);
+
+    background:#111827;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35);
+
+}
+
+.order-card:hover img{
+
+    transform:scale(1.05);
+
+    border-color:rgba(34,211,238,.35);
+
+    box-shadow:
+        0 0 25px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+            DETAILS
+========================================== */
+
+.order-details{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+/* ==========================================
+            PRODUCT TITLE
+========================================== */
+
+.order-details h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:14px;
+
+}
+
+/* ==========================================
+            PARAGRAPH
+========================================== */
+
+.order-details p{
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin:6px 0;
+
+}
+
+.order-details strong{
+
+    color:#22d3ee;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+            PRICE
+========================================== */
+
+.order-details h3{
+
+    margin-top:18px;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#22d3ee;
+
+    text-shadow:
+        0 0 15px rgba(34,211,238,.25);
+
+}
+
+/* ==========================================
+            PRODUCT NAME
+========================================== */
+
+.product-name{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+            ORDER ID
+========================================== */
+
+.order-id{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    margin-bottom:15px;
+
+    border-radius:30px;
+
+    background:rgba(34,211,238,.08);
+
+    border:1px solid rgba(34,211,238,.15);
+
+    color:#22d3ee;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================================
+            DATE
+========================================== */
+
+.order-date{
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+            PAYMENT
+========================================== */
+
+.payment-method{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:10px;
+
+    padding:10px 16px;
+
+    border-radius:30px;
+
+    background:rgba(59,130,246,.10);
+
+    border:1px solid rgba(59,130,246,.20);
+
+    color:#60a5fa;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+            HOVER EFFECT
+========================================== */
+
+.order-card:hover .order-details h2{
+
+    color:#22d3ee;
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+            ORDER STATUS
+========================================== */
+
+.order-status{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+/* ==========================================
+            COMMON STATUS
+========================================== */
+
+.status{
+
+    min-width:170px;
+
+    padding:14px 25px;
+
+    border-radius:50px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.6px;
+
+    border:1px solid transparent;
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+            DELIVERED
+========================================== */
+
+.delivered{
+
+    color:#4ade80;
+
+    background:rgba(34,197,94,.12);
+
+    border-color:rgba(34,197,94,.35);
+
+}
+
+/* ==========================================
+            PROCESSING
+========================================== */
+
+.processing{
+
+    color:#60a5fa;
+
+    background:rgba(59,130,246,.12);
+
+    border-color:rgba(59,130,246,.35);
+
+}
+
+/* ==========================================
+            SHIPPED
+========================================== */
+
+.shipped{
+
+    color:#22d3ee;
+
+    background:rgba(34,211,238,.12);
+
+    border-color:rgba(34,211,238,.35);
+
+}
+
+/* ==========================================
+            PENDING
+========================================== */
+
+.pending{
+
+    color:#facc15;
+
+    background:rgba(250,204,21,.12);
+
+    border-color:rgba(250,204,21,.35);
+
+}
+
+/* ==========================================
+            CANCELLED
+========================================== */
+
+.cancelled{
+
+    color:#f87171;
+
+    background:rgba(239,68,68,.12);
+
+    border-color:rgba(239,68,68,.35);
+
+}
+
+/* ==========================================
+            STATUS HOVER
+========================================== */
+
+.status:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(34,211,238,.18);
+
+}
+
+/* ==========================================
+            TRACK BUTTON
+========================================== */
+
+.track-btn{
+
+    width:210px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+        135deg,
+        #22d3ee,
+        #3b82f6
+    );
+
+    box-shadow:
+        0 12px 28px rgba(34,211,238,.28);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+            BUTTON SHINE
+========================================== */
+
+.track-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.28),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+
+}
+
+.track-btn:hover::before{
+
+    left:160%;
+
+}
+
+/* ==========================================
+            BUTTON HOVER
+========================================== */
+
+.track-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(34,211,238,.40);
+
+}
+
+/* ==========================================
+            BUTTON ACTIVE
+========================================== */
+
+.track-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+            LAPTOP
+========================================== */
+
+@media (max-width:1200px){
+
+.orders-container{
+
+    max-width:1100px;
+
+}
+
+.orders-wrapper{
+
+    padding:28px;
+
+}
+
+.order-card{
+
+    grid-template-columns:160px 1fr 210px;
+
+    gap:25px;
+
+}
+
+.order-card img{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+.order-details h2{
+
+    font-size:24px;
+
+}
+
+.order-details h3{
+
+    font-size:28px;
+
+}
+
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.orders-page{
+
+    padding:40px 20px;
+
+}
+
+.orders-wrapper{
+
+    padding:24px;
+
+}
+
+.orders-container h1{
+
+    font-size:38px;
+
+}
+
+.order-card{
+
+    grid-template-columns:150px 1fr;
+
+    gap:20px;
+
+}
+
+.order-status{
+
+    grid-column:1/-1;
+
+    flex-direction:row;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:20px;
+
+}
+
+.track-btn{
+
+    width:180px;
+
+}
+
+.status{
+
+    min-width:140px;
+
+}
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.orders-page{
+
+    padding:25px 15px;
+
+}
+
+.orders-wrapper{
+
+    padding:20px;
+
+    border-radius:22px;
+
+}
+
+.orders-container h1{
+
+    font-size:30px;
+
+    margin-bottom:35px;
+
+}
+
+.order-card{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.order-card img{
+
+    margin:auto;
+
+    width:220px;
+
+    height:220px;
+
+}
+
+.order-details{
+
+    align-items:center;
+
+}
+
+.order-details h2{
+
+    font-size:22px;
+
+}
+
+.order-details p{
+
+    font-size:14px;
+
+}
+
+.order-details h3{
+
+    font-size:28px;
+
+}
+
+.order-info{
+
+    text-align:left;
+
+}
+
+.order-status{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.status{
+
+    width:100%;
+
+}
+
+.track-btn{
+
+    width:100%;
+
+}
+
+.reorder-btn,
+
+.cancel-btn{
+
+    width:100%;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.orders-page{
+
+    padding:18px 10px;
+
+}
+
+.orders-wrapper{
+
+    padding:15px;
+
+    border-radius:18px;
+
+}
+
+.orders-container h1{
+
+    font-size:24px;
+
+}
+
+.order-card{
+
+    padding:15px;
+
+    border-radius:16px;
+
+}
+
+.order-card img{
+
+    width:170px;
+
+    height:170px;
+
+}
+
+.order-details h2{
+
+    font-size:19px;
+
+}
+
+.order-details p{
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+.order-details h3{
+
+    font-size:24px;
+
+}
+
+.order-id{
+
+    font-size:12px;
+
+    padding:6px 14px;
+
+}
+
+.payment-method{
+
+    font-size:12px;
+
+    padding:8px 14px;
+
+}
+
+.status{
+
+    font-size:13px;
+
+    padding:12px;
+
+}
+
+.track-btn,
+
+.reorder-btn,
+
+.cancel-btn{
+
+    height:48px;
+
+    font-size:14px;
+
+}
+
+.no-orders{
+
+    padding:45px 20px;
+
+}
+
+.no-orders h2{
+
+    font-size:24px;
+
+}
+
+.no-orders p{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+            FADE UP
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.orders-wrapper{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.order-card{
+
+    animation:fadeUp .6s ease forwards;
+
+}
+
+/* ==========================================
+            FLOAT EFFECT
+========================================== */
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-4px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.orders-wrapper:hover{
+
+    animation:floatCard 3s ease-in-out infinite;
+
+}
+
+/* ==========================================
+            IMAGE GLOW
+========================================== */
+
+@keyframes imageGlow{
+
+    0%{
+
+        box-shadow:
+        0 10px 25px rgba(0,0,0,.35);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 28px rgba(34,211,238,.30);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 10px 25px rgba(0,0,0,.35);
+
+    }
+
+}
+
+.order-card img{
+
+    animation:imageGlow 3s infinite;
+
+}
+
+/* ==========================================
+            TITLE SHINE
+========================================== */
+
+.orders-container h1{
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #22d3ee,
+        #67e8f9,
+        #ffffff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:titleShine 5s linear infinite;
+
+}
+
+@keyframes titleShine{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:300%;
+
+    }
+
+}
+
+/* ==========================================
+            CARD SHIMMER
+========================================== */
+
+.order-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.order-card:hover::after{
+
+    left:140%;
+
+}
+
+/* ==========================================
+            BUTTON SHINE
+========================================== */
+
+.track-btn::after,
+.reorder-btn::after,
+.cancel-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:50%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.22),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.track-btn:hover::after,
+.reorder-btn:hover::after,
+.cancel-btn:hover::after{
+
+    left:150%;
+
+}
+
+/* ==========================================
+            PREMIUM HOVER
+========================================== */
+
+.order-card:hover{
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.40),
+        0 0 28px rgba(34,211,238,.18);
+
+}
+
+.orders-wrapper:hover{
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.50),
+        0 0 40px rgba(34,211,238,.12);
+
+}
+
+/* ==========================================
+            NO ORDERS
+========================================== */
+
+.no-orders{
+
+    padding:80px 30px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:rgba(17,24,39,.90);
+
+    border:1px solid rgba(34,211,238,.10);
+
+}
+
+.no-orders h2{
+
+    color:#22d3ee;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.no-orders p{
+
+    color:#cbd5e1;
+
+    font-size:16px;
+
+}
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#22d3ee;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#67e8f9;
+
+}
+
+/* ==========================================
+            TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#22d3ee;
+
+    color:#08111f;
+
+}
+
+/* ==========================================
+            SMOOTH SCROLL
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================
+            FOCUS
+========================================== */
+
+button:focus{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 3px rgba(34,211,238,.25);
+
+}
+
+/* ==========================================
+            END OF FILE
+========================================== */
