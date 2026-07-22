@@ -47,7 +47,7 @@ import bottlename from "../assets/images/bottle name.jpg";
 
 import stand from "../assets/images/stand.jpg";
 
-import polaroid from "../assets/images/polaroid.jpg";
+import polaroid from "../assets/images/Polaroid.jpg";
 
 import Eyes from "../assets/images/eyes.jpg";
 
