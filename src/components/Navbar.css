@@ -410,6 +410,7 @@ body{
     z-index:1001;
 }
 
+
 .menu-icon:hover{
 
     color:#ffffff;
@@ -821,4 +822,48 @@ to{
 *{
 
     -webkit-tap-highlight-color:transparent;
+}
+/* =========================
+   MOBILE NAVBAR FIX
+========================= */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        padding:0 12px;
+        height:72px;
+    }
+
+    .logo{
+        min-width:auto;
+        flex:1;
+        font-size:20px;
+    }
+
+    .nav-icons{
+        display:flex;
+        align-items:center;
+        gap:8px;
+    }
+
+    .nav-icons a{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
+
+    .menu-icon{
+        display:flex !important;
+        align-items:center;
+        justify-content:center;
+        width:42px;
+        height:42px;
+        font-size:32px;
+        color:#19e8ff;
+        flex-shrink:0;
+    }
 }
