@@ -406,6 +406,8 @@ body{
     cursor:pointer;
 
     transition:.35s ease;
+
+    z-index:1001;
 }
 
 .menu-icon:hover{
@@ -447,42 +449,27 @@ body{
 }
 
 .nav-links{
+        position:fixed;
+        top:80px;
+        left:-100%;
+        width:100%;
+        height:calc(100vh - 80px);
 
-    position:absolute;
+        background:#0b1220;
 
-    top:72px;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
 
-    left:-100%;
+        gap:30px;
+        padding-top:40px;
 
-    width:100%;
+        transition:.4s;
+    }
 
-    padding:35px 0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:24px;
-
-    background:rgba(8,17,31,.96);
-
-    backdrop-filter:blur(20px);
-
-    -webkit-backdrop-filter:blur(20px);
-
-    border-top:1px solid rgba(25,232,255,.18);
-
-    border-bottom:1px solid rgba(25,232,255,.18);
-
-    box-shadow:
-        0 20px 40px rgba(0,0,0,.45);
-
-    transition:all .4s ease;
-}
-
-.nav-links.active{
-
-    left:0;
+    .nav-links.active{
+        left:0;
 
     animation:slideMenu .4s ease;
 }
