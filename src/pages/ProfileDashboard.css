@@ -533,166 +533,190 @@
 }
 
 /* ==========================================
-   RESPONSIVE
+   MOBILE RESPONSIVE
 ========================================== */
 
-@media(max-width:1200px){
+@media screen and (max-width:768px){
 
-.dashboard-container{
+    .profile-dashboard{
+        padding:85px 15px 30px;
+    }
 
-    grid-template-columns:1fr;
+    .dashboard-container{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .dashboard-left{
+        position:static;
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .profile-image{
+        width:100px;
+        height:100px;
+    }
+
+    .profile-name{
+        font-size:22px;
+    }
+
+    .profile-email{
+        font-size:14px;
+    }
+
+    .dashboard-menu{
+        gap:12px;
+    }
+
+    .dashboard-menu a{
+        padding:14px 16px;
+        font-size:15px;
+    }
+
+    .dashboard-menu a svg{
+        font-size:18px;
+    }
+
+    .dashboard-right{
+        gap:18px;
+    }
+
+    .dashboard-right>*{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .dashboard-right h1{
+        font-size:28px;
+    }
+
+    .dashboard-right h2{
+        font-size:22px;
+    }
+
+    .dashboard-right h3{
+        font-size:18px;
+    }
+
+    .dashboard-right p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .stat-card{
+        padding:20px;
+    }
+
+    .stat-card h2{
+        font-size:28px;
+    }
+
+    .activity-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .activity-icon{
+        width:50px;
+        height:50px;
+        font-size:20px;
+    }
+
+    .dashboard-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .dashboard-btn{
+        width:100%;
+        padding:14px;
+        font-size:15px;
+    }
+
 }
 
-.dashboard-left{
+/* ==========================================
+   SMALL MOBILE
+========================================== */
 
-    position:static;
-}
+@media screen and (max-width:480px){
 
-.stats-grid{
+    .profile-dashboard{
+        padding:80px 12px 25px;
+    }
 
-    grid-template-columns:
-    repeat(2,1fr);
-}
+    .dashboard-left{
+        padding:15px;
+        border-radius:18px;
+    }
 
-}
+    .profile-image{
+        width:80px;
+        height:80px;
+    }
 
-@media(max-width:768px){
+    .profile-name{
+        font-size:18px;
+    }
 
-.profile-dashboard{
+    .profile-email{
+        font-size:12px;
+    }
 
-    padding:20px;
-}
+    .dashboard-menu a{
+        padding:12px;
+        font-size:14px;
+        gap:10px;
+    }
 
-.dashboard-container{
+    .dashboard-right>*{
+        padding:16px;
+    }
 
-    gap:20px;
-}
+    .dashboard-right h1{
+        font-size:24px;
+    }
 
-.dashboard-left{
+    .dashboard-right h2{
+        font-size:20px;
+    }
 
-    padding:20px;
-}
+    .dashboard-right h3{
+        font-size:17px;
+    }
 
-.dashboard-right{
+    .dashboard-right p{
+        font-size:13px;
+    }
 
-    gap:20px;
-}
+    .stat-card{
+        padding:16px;
+    }
 
-.dashboard-right>*{
+    .stat-card h2{
+        font-size:24px;
+    }
 
-    padding:22px;
+    .activity-info h4{
+        font-size:15px;
+    }
 
-    border-radius:22px;
-}
+    .activity-info p{
+        font-size:12px;
+    }
 
-.profile-image{
-
-    width:110px;
-    height:110px;
-}
-
-.profile-name{
-
-    font-size:24px;
-}
-
-.dashboard-menu a{
-
-    padding:14px;
-}
-
-.stats-grid{
-
-    grid-template-columns:1fr;
-}
-
-.dashboard-table{
-
-    display:block;
-
-    overflow-x:auto;
-}
-
-.dashboard-btn{
-
-    width:100%;
-}
-
-}
-
-@media(max-width:480px){
-
-.profile-dashboard{
-
-    padding:15px;
-}
-
-.dashboard-left{
-
-    border-radius:20px;
-}
-
-.profile-image{
-
-    width:90px;
-    height:90px;
-}
-
-.profile-name{
-
-    font-size:20px;
-}
-
-.profile-email{
-
-    font-size:13px;
-}
-
-.dashboard-menu a{
-
-    font-size:14px;
-}
-
-.dashboard-right>*{
-
-    padding:18px;
-}
-
-.dashboard-right h1,
-.dashboard-right h2,
-.dashboard-right h3{
-
-    font-size:22px;
-}
-
-.stat-card{
-
-    padding:20px;
-}
-
-.stat-card h2{
-
-    font-size:28px;
-}
-
-.activity-card{
-
-    flex-direction:column;
-
-    text-align:center;
-}
-
-.activity-icon{
-
-    width:50px;
-    height:50px;
-}
-
-.dashboard-btn{
-
-    font-size:14px;
-
-    padding:13px;
-}
+    .dashboard-btn{
+        width:100%;
+        padding:12px;
+        font-size:14px;
+    }
 
 }
