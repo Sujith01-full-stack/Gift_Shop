@@ -4,14 +4,16 @@ import {
   FaHeart,
   FaShoppingCart,
   FaStar,
+  FaEye,
 } from "react-icons/fa";
 
 import "./ProductCard.css";
-
+import { toast } from "react-toastify";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 
 const ProductCard = ({ product }) => {
+
   const { addToCart } = useCart();
 
   const {
@@ -20,13 +22,24 @@ const ProductCard = ({ product }) => {
     isInWishlist,
   } = useWishlist();
 
-  const handleWishlist = () => {
-    if (isInWishlist(product.id)) {
-      removeFromWishlist(product.id);
-    } else {
-      addToWishlist(product);
-    }
-  };
+ const handleWishlist = () => {
+  if (isInWishlist(product.id)) {
+    removeFromWishlist(product.id);
+
+    toast.info("💔 Removed from Wishlist", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+
+  } else {
+    addToWishlist(product);
+
+    toast.success("❤️ Added to Wishlist", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  }
+};
 
   const rating = product.rating || 4.8;
   const ratingCount = product.ratingCount || 125;
@@ -42,14 +55,13 @@ const ProductCard = ({ product }) => {
     );
 
   return (
+
     <div className="product-card">
 
-      {/* Discount */}
       <span className="discount-badge">
         {discount}% OFF
       </span>
 
-      {/* Image */}
       <div className="product-image">
 
         <img
@@ -65,7 +77,7 @@ const ProductCard = ({ product }) => {
             color={
               isInWishlist(product.id)
                 ? "#ff3b6b"
-                : "#ffffff"
+                : "#fff"
             }
           />
         </button>
@@ -76,12 +88,16 @@ const ProductCard = ({ product }) => {
 
       </div>
 
-      {/* Details */}
       <div className="product-details">
 
         <h3>{product.name}</h3>
 
-        {/* Rating */}
+        {/* Description */}
+
+        <p className="description">
+          {product.description ||
+            "Premium quality personalized gift for every special occasion."}
+        </p>
 
         <div className="rating">
 
@@ -92,8 +108,6 @@ const ProductCard = ({ product }) => {
           <small>({ratingCount})</small>
 
         </div>
-
-        {/* Price */}
 
         <div className="price-row">
 
@@ -117,37 +131,42 @@ const ProductCard = ({ product }) => {
 
         <div className="product-divider"></div>
 
-        {/* Buttons */}
-
         <div className="product-actions">
 
           <button
-            className="cart-btn"
-            onClick={() =>
-              addToCart({
-                ...product,
-                quantity: 1,
-              })
-            }
-          >
-            <FaShoppingCart />
+  className="cart-btn"
+  onClick={() => {
 
-            Add to Cart
+    addToCart({
+      ...product,
+      quantity: 1,
+    });
 
-          </button>
+    toast.success("🛒 Product Added to Cart", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+
+  }}
+>
+  <FaShoppingCart />
+  Add to Cart
+</button>
 
           <Link
-            to={`/product/${product.id}`}
-            className="buy-btn"
-          >
-            View Details
-          </Link>
+  to={`/product/${product.id}`}
+  className="buy-btn"
+>
+  <FaEye />
+  View Details
+</Link>
 
         </div>
 
       </div>
 
     </div>
+
   );
 };
 

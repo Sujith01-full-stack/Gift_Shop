@@ -19,74 +19,108 @@ const AdminSidebar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    if (window.confirm("Are you sure you want to logout?")) {
-      // localStorage.removeItem("token");
-      navigate("/login");
-    }
+    const confirmLogout = window.confirm(
+      "Are you sure you want to logout?"
+    );
+
+    if (!confirmLogout) return;
+
+    // Clear Login Data
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("lastLogin");
+
+    // Redirect Login
+    navigate("/login", { replace: true });
   };
 
   return (
     <aside className="admin-sidebar">
-
       <div className="sidebar-logo">
         <h2>
           <FaSpider /> Spider Admin
         </h2>
+
         <p>Gift Store Panel</p>
       </div>
 
       <nav className="sidebar-menu">
-
-        <NavLink to="/admin" className="sidebar-link">
+        <NavLink
+          to="/admin"
+          end
+          className="sidebar-link"
+        >
           <FaChartLine />
           <span>Dashboard</span>
         </NavLink>
 
-        <NavLink to="/add-product" className="sidebar-link">
+        <NavLink
+          to="/admin/add-product"
+          className="sidebar-link"
+        >
           <FaPlusCircle />
           <span>Add Product</span>
         </NavLink>
 
-        <NavLink to="/product-management" className="sidebar-link">
+        <NavLink
+          to="/admin/products"
+          className="sidebar-link"
+        >
           <FaBoxOpen />
           <span>Products</span>
         </NavLink>
 
-        <NavLink to="/manage-orders" className="sidebar-link">
+        <NavLink
+          to="/admin/manage-orders"
+          className="sidebar-link"
+        >
           <FaClipboardList />
           <span>Manage Orders</span>
         </NavLink>
 
-        <NavLink to="/customers" className="sidebar-link">
+        <NavLink
+          to="/admin/customers"
+          className="sidebar-link"
+        >
           <FaUsers />
           <span>Customers</span>
         </NavLink>
 
-        <NavLink to="/reports" className="sidebar-link">
+        <NavLink
+          to="/admin/reports"
+          className="sidebar-link"
+        >
           <FaChartBar />
           <span>Reports</span>
         </NavLink>
 
-        <NavLink to="/notifications" className="sidebar-link">
+        <NavLink
+          to="/admin/notifications"
+          className="sidebar-link"
+        >
           <FaBell />
           <span>Notifications</span>
         </NavLink>
 
-        <NavLink to="/settings" className="sidebar-link">
+        <NavLink
+          to="/admin/settings"
+          className="sidebar-link"
+        >
           <FaCog />
           <span>Settings</span>
         </NavLink>
 
         <button
+          type="button"
           className="sidebar-link logout-btn"
           onClick={handleLogout}
         >
           <FaSignOutAlt />
           <span>Logout</span>
         </button>
-
       </nav>
-
     </aside>
   );
 };

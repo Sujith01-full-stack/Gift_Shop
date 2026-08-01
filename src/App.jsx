@@ -39,7 +39,7 @@ import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 import EditProduct from "./pages/EditProduct";
-
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
 import NotFound from "./pages/NotFound";
 
 /* ===========================
@@ -123,47 +123,83 @@ function App() {
 
 <Route
   path="/admin"
-  element={<AdminDashboard />}
+  element={
+    <AdminProtectedRoute>
+      <AdminDashboard />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/add-product"
-  element={<AddProduct />}
+  element={
+    <AdminProtectedRoute>
+      <AddProduct />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/products"
-  element={<ProductManagement />}
+  element={
+    <AdminProtectedRoute>
+      <ProductManagement />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/manage-orders"
-  element={<ManageOrders />}
+  element={
+    <AdminProtectedRoute>
+      <ManageOrders />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/customers"
-  element={<CustomerManagement />}
+  element={
+    <AdminProtectedRoute>
+      <CustomerManagement />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/reports"
-  element={<Reports />}
+  element={
+    <AdminProtectedRoute>
+      <Reports />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/notifications"
-  element={<Notifications />}
+  element={
+    <AdminProtectedRoute>
+      <Notifications />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/settings"
-  element={<Settings />}
+  element={
+    <AdminProtectedRoute>
+      <Settings />
+    </AdminProtectedRoute>
+  }
 />
 
 <Route
   path="/admin/edit-product/:id"
-  element={<EditProduct />}
+  element={
+    <AdminProtectedRoute>
+      <EditProduct />
+    </AdminProtectedRoute>
+  }
 />
           {/* ================= 404 ================= */}
 

@@ -6,11 +6,11 @@ import {
   FaStar,
   FaEye,
 } from "react-icons/fa";
-
+import { toast } from "react-toastify";
 import products from "../data/products";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
-
+import ProductCard from "../components/ProductCard";
 import "./Products.css";
 
 const Products = () => {
@@ -104,14 +104,21 @@ const Products = () => {
                 )}
 
                 <button
-                  className="wishlist"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    addToWishlist(product);
-                  }}
-                >
-                  <FaHeart />
-                </button>
+  className="wishlist"
+  onClick={(e) => {
+    e.stopPropagation();
+
+    addToWishlist(product);
+
+    toast.success("❤️ Added to Wishlist", {
+      position: "top-right",
+      autoClose: 2000,
+      theme: "dark",
+    });
+  }}
+>
+  <FaHeart />
+</button>
 
                 {/* Product Image */}
 
@@ -137,10 +144,9 @@ const Products = () => {
 
                   <h3>{product.name}</h3>
 
-                  <p className="description">
-                    {product.description ||
-                      "Premium Customized Gift"}
-                  </p>
+                 <p className="description">
+  {product.description || "Premium Customized Gift"}
+</p>
 
                   <div className="rating">
 
@@ -181,19 +187,25 @@ const Products = () => {
                   <div className="product-buttons">
 
                     <button
-                      className="cart-btn"
-                      onClick={(e) => {
-                        e.stopPropagation();
+  className="cart-btn"
+  onClick={(e) => {
+    e.stopPropagation();
 
-                        addToCart({
-                          ...product,
-                          quantity: 1,
-                        });
-                      }}
-                    >
-                      <FaShoppingCart />
-                      Add to Cart
-                    </button>
+    addToCart({
+      ...product,
+      quantity: 1,
+    });
+
+    toast.success("🛒 Product Added to Cart", {
+      position: "top-right",
+      autoClose: 2000,
+      theme: "dark",
+    });
+  }}
+>
+  <FaShoppingCart />
+  Add to Cart
+</button>
 
                     <button
                       className="buy-btn"

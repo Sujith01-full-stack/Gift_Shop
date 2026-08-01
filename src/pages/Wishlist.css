@@ -213,6 +213,35 @@ body{
 
 }
 
+/* Category Badge */
+.product-category,
+.category-badge{
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;      /* குறைத்தது */
+    font-size: 15px;        /* 20px இருந்தால் குறைக்கவும் */
+    font-weight: 600;
+
+    width: auto;            /* முக்கியம் */
+    min-width: auto;
+    max-width: 160px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(90deg,#22d3ee,#0ea5e9);
+    color: #fff;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* ==========================================
    EMPTY WISHLIST
 ========================================== */
@@ -715,6 +744,19 @@ body{
 .cart-btn:hover::before,
 .delete-btn:hover::before{
     left:140%;
+}
+
+.wishlist-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+    gap:30px;
+    justify-content:center;
+}
+
+.wishlist-card{
+    width:360px;
+    max-width:100%;
+    margin:auto;
 }
 
 /* ==========================================

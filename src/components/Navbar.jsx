@@ -27,10 +27,20 @@ const Navbar = () => {
   const { cartCount } = useCart();
   const { wishlistCount } = useWishlist();
 
+  // ===========================
+  // LOGIN STATUS
+  // ===========================
+
+  const isLoggedIn =
+    localStorage.getItem("isLoggedIn") === "true";
+
+  const role = localStorage.getItem("role");
+
   return (
     <nav className="navbar">
 
       {/* Logo */}
+
       <Link
         to="/"
         className="logo"
@@ -40,72 +50,79 @@ const Navbar = () => {
       </Link>
 
       {/* Navigation */}
+
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
         <li>
-  <Link to="/" onClick={() => setMenuOpen(false)}>
-    <FaHome className="nav-icon" />
-    Home
-  </Link>
-</li>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            <FaHome className="nav-icon" />
+            Home
+          </Link>
+        </li>
 
-<li>
-  <Link
-    to="/products"
-    onClick={() => setMenuOpen(false)}
-  >
-    <FaBoxOpen className="nav-icon" />
-    Products
-  </Link>
-</li>
+        <li>
+          <Link
+            to="/products"
+            onClick={() => setMenuOpen(false)}
+          >
+            <FaBoxOpen className="nav-icon" />
+            Products
+          </Link>
+        </li>
 
-<li>
-  <Link
-    to="/about"
-    onClick={() => setMenuOpen(false)}
-  >
-    <FaInfoCircle className="nav-icon" />
-    About
-  </Link>
-</li>
+        <li>
+          <Link
+            to="/about"
+            onClick={() => setMenuOpen(false)}
+          >
+            <FaInfoCircle className="nav-icon" />
+            About
+          </Link>
+        </li>
 
-<li>
-  <Link
-    to="/contact"
-    onClick={() => setMenuOpen(false)}
-  >
-    <FaEnvelope className="nav-icon" />
-    Contact
-  </Link>
-</li>
+        <li>
+          <Link
+            to="/contact"
+            onClick={() => setMenuOpen(false)}
+          >
+            <FaEnvelope className="nav-icon" />
+            Contact
+          </Link>
+        </li>
 
-<li>
-  <Link
-    to="/orders"
-    onClick={() => setMenuOpen(false)}
-  >
-    <FaClipboardList className="nav-icon" />
-    Orders
-  </Link>
-</li>
+        <li>
+          <Link
+            to="/orders"
+            onClick={() => setMenuOpen(false)}
+          >
+            <FaClipboardList className="nav-icon" />
+            Orders
+          </Link>
+        </li>
 
-<li>
-  <Link
-    to="/admin"
-    onClick={() => setMenuOpen(false)}
-    className="admin-link"
-  >
-    <FaUserShield className="nav-icon" />
-    Admin
-  </Link>
-</li>
+        {/* ADMIN MENU */}
+
+        {isLoggedIn && role === "admin" && (
+          <li>
+            <Link
+              to="/admin"
+              onClick={() => setMenuOpen(false)}
+              className="admin-link"
+            >
+              <FaUserShield className="nav-icon" />
+              Admin
+            </Link>
+          </li>
+        )}
 
       </ul>
 
       {/* Search */}
+
       <SearchBar />
 
       {/* Icons */}
+
       <div className="nav-icons">
 
         <Link
@@ -145,6 +162,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
+
       <div
         className="menu-icon"
         onClick={() => setMenuOpen(!menuOpen)}

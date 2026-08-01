@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaLock,
+  FaEye,
+  FaEyeSlash,
+} from "react-icons/fa";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,16 +20,16 @@ const Login = () => {
   });
 
   useEffect(() => {
-  const savedEmail = localStorage.getItem("rememberEmail");
+    const savedEmail = localStorage.getItem("rememberEmail");
 
-  if (savedEmail) {
-    setFormData((prev) => ({
-      ...prev,
-      email: savedEmail,
-      remember: true,
-    }));
-  }
-}, []);
+    if (savedEmail) {
+      setFormData((prev) => ({
+        ...prev,
+        email: savedEmail,
+        remember: true,
+      }));
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -35,82 +40,99 @@ const Login = () => {
     });
   };
 
- const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  // ===========================
-  // ADMIN LOGIN
-  // ===========================
+    // ===========================
+    // ADMIN LOGIN
+    // ===========================
 
-  if (
-    formData.email === "admin@gmail.com" &&
-    formData.password === "SPIDER"
-  ) {
-    localStorage.setItem("isLoggedIn", "true");
-    localStorage.setItem("role", "admin");
+    if (
+      formData.email === "admin@gmail.com" &&
+      formData.password === "SPIDER"
+    ) {
+      localStorage.setItem("token", "admin-token");
+      localStorage.setItem("role", "admin");
+      localStorage.setItem("isLoggedIn", "true");
 
-    localStorage.setItem(
-      "currentUser",
-      JSON.stringify({
-        name: "Administrator",
-        email: "admin@gmail.com",
-      })
+      localStorage.setItem(
+        "currentUser",
+        JSON.stringify({
+          name: "Administrator",
+          email: "admin@gmail.com",
+        })
+      );
+
+      if (formData.remember) {
+        localStorage.setItem(
+          "rememberEmail",
+          formData.email
+        );
+      } else {
+        localStorage.removeItem("rememberEmail");
+      }
+
+      localStorage.setItem(
+        "lastLogin",
+        new Date().toLocaleString()
+      );
+
+      alert("Admin Login Successful!");
+
+      navigate("/admin");
+      return;
+    }
+
+    // ===========================
+    // USER LOGIN
+    // ===========================
+
+    const users =
+      JSON.parse(localStorage.getItem("users")) || [];
+
+    const user = users.find(
+      (u) =>
+        u.email === formData.email &&
+        u.password === formData.password
     );
 
-    // Remember Me
-    if (formData.remember) {
-      localStorage.setItem("rememberEmail", formData.email);
+    if (user) {
+      localStorage.setItem("token", "user-token");
+      localStorage.setItem("role", "user");
+      localStorage.setItem("isLoggedIn", "true");
+
+      localStorage.setItem(
+        "currentUser",
+        JSON.stringify(user)
+      );
+
+      if (formData.remember) {
+        localStorage.setItem(
+          "rememberEmail",
+          formData.email
+        );
+      } else {
+        localStorage.removeItem("rememberEmail");
+      }
+
+      localStorage.setItem(
+        "lastLogin",
+        new Date().toLocaleString()
+      );
+
+      alert(`Welcome ${user.name} 🎉`);
+
+      navigate("/");
     } else {
-      localStorage.removeItem("rememberEmail");
+      alert("Invalid Email or Password");
     }
-
-    localStorage.setItem("lastLogin", new Date().toLocaleString());
-
-    alert("Admin Login Successful!");
-
-    navigate("/admin");
-    return;
-  }
-
-  // ===========================
-  // USER LOGIN
-  // ===========================
-
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-
-  const user = users.find(
-    (u) =>
-      u.email === formData.email &&
-      u.password === formData.password
-  );
-
-  if (user) {
-    localStorage.setItem("isLoggedIn", "true");
-    localStorage.setItem("role", "user");
-    localStorage.setItem("currentUser", JSON.stringify(user));
-
-    // Remember Me
-    if (formData.remember) {
-      localStorage.setItem("rememberEmail", formData.email);
-    } else {
-      localStorage.removeItem("rememberEmail");
-    }
-
-    localStorage.setItem("lastLogin", new Date().toLocaleString());
-
-    alert(`Welcome ${user.name} 🎉`);
-
-    navigate("/");
-  } else {
-    alert("Invalid Email or Password");
-  }
-};
+  };
 
   return (
     <div className="login-page">
       <div className="login-container">
 
-        {/* Left Side */}
+        {/* Left */}
 
         <div className="login-left">
           <h1>🕷️ Spider Gift Store</h1>
@@ -118,7 +140,8 @@ const Login = () => {
           <h2>Welcome Back!</h2>
 
           <p>
-            Login to manage your orders, wishlist, and personalized gifts.
+            Login to manage your orders, wishlist,
+            and personalized gifts.
           </p>
 
           <img
@@ -127,7 +150,7 @@ const Login = () => {
           />
         </div>
 
-        {/* Right Side */}
+        {/* Right */}
 
         <div className="login-right">
 
@@ -136,6 +159,7 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
 
             <div className="input-group">
+
               <FaEnvelope className="input-icon" />
 
               <input
@@ -146,13 +170,19 @@ const Login = () => {
                 onChange={handleChange}
                 required
               />
+
             </div>
 
             <div className="input-group">
+
               <FaLock className="input-icon" />
 
               <input
-                type={showPassword ? "text" : "password"}
+                type={
+                  showPassword
+                    ? "text"
+                    : "password"
+                }
                 name="password"
                 placeholder="Password"
                 value={formData.password}
@@ -172,6 +202,7 @@ const Login = () => {
                   <FaEye />
                 )}
               </span>
+
             </div>
 
             <div className="login-options">

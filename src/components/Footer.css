@@ -549,6 +549,33 @@
 
 }
 
+.footer-nav-btn{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:transparent;
+    border:none;
+    color:#d9e7f5;
+    font-size:16px;
+    font-weight:500;
+    padding:10px 0;
+    cursor:pointer;
+    transition:0.3s ease;
+    text-align:left;
+}
+
+.footer-nav-btn:hover{
+    color:#22d3ee;
+    transform:translateX(8px);
+}
+
+.footer-nav-btn svg{
+    color:#22d3ee;
+    font-size:15px;
+    min-width:18px;
+}
+
 /* ==========================================
             RESPONSIVE
 ========================================== */

@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
 const Cart = () => {
   const navigate = useNavigate();
 
@@ -76,13 +76,19 @@ const Cart = () => {
                     </h3>
 
                     <button
-                      className="delete-btn"
-                      onClick={() =>
-                        removeFromCart(item.id)
-                      }
-                    >
-                      <FaTrash />
-                    </button>
+  className="delete-btn"
+  onClick={() => {
+    removeFromCart(item.id);
+
+    toast.error("🗑️ Product Removed from Cart", {
+      position: "top-right",
+      autoClose: 2000,
+      theme: "dark",
+    });
+  }}
+>
+  <FaTrash />
+</button>
                   </div>
                 </div>
               ))}

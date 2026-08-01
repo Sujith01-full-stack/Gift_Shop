@@ -1,40 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Footer.css";
 
-import{
-FaGift,
-FaLink,
-FaThLarge,
-FaPhoneAlt,
-FaEnvelope,
-FaMapMarkerAlt,
+import {
+  FaGift,
+  FaLink,
+  FaThLarge,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
 
-FaInstagram,
-FaWhatsapp,
+  FaInstagram,
+  FaWhatsapp,
 
-FaChevronRight,
+  FaChevronRight,
 
-FaImage,
-FaKey,
-FaCoffee,
-FaMobileAlt,
-FaWallet,
-FaPaintBrush,
-FaPiggyBank,
-FaRegImage,
-FaLightbulb,
-FaIdCard,
-FaGlassWhiskey,
-FaEye,
-FaTags,
-FaPenFancy,
+  FaImage,
+  FaKey,
+  FaCoffee,
+  FaMobileAlt,
+  FaWallet,
+  FaPaintBrush,
+  FaPiggyBank,
+  FaRegImage,
+  FaLightbulb,
+  FaIdCard,
+  FaGlassWhiskey,
+  FaEye,
+  FaTags,
+  FaPenFancy,
 
 } from "react-icons/fa";
 
-const Footer=()=>{
+const Footer = () => {
 
-const year=new Date().getFullYear();
+  const navigate = useNavigate();
+
+  const year = new Date().getFullYear();
 
 return(
 
@@ -104,135 +106,121 @@ rel="noreferrer">
 
 <div className="footer-section">
 
-<div className="footer-heading">
-
-<div className="heading-icon">
-
-<FaLink/>
-
-</div>
-
-<h3>
-
-Quick Links
-
-</h3>
-
-</div>
-
-<div className="heading-line"></div>
-
-<ul className="footer-links">
-
-<li>
-
-<Link to="/">
-
-<FaChevronRight/>
-
-Home
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/products">
-
-<FaChevronRight/>
-
-Products
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/wishlist">
-
-<FaChevronRight/>
-
-Wishlist
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/cart">
-
-<FaChevronRight/>
-
-Cart
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/contact">
-
-<FaChevronRight/>
-
-Contact
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/about">
-
-<FaChevronRight/>
-
-About Us
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/faq">
-
-<FaChevronRight/>
-
-FAQ
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/terms">
-
-<FaChevronRight/>
-
-Terms & Conditions
-
-</Link>
-
-</li>
-
-<li>
-
-<Link to="/privacy">
-
-<FaChevronRight/>
-
-Privacy Policy
-
-</Link>
-
-</li>
-
-</ul>
+  <div className="footer-heading">
+
+    <div className="heading-icon">
+      <FaLink />
+    </div>
+
+    <h3>Quick Links</h3>
+
+  </div>
+
+  <div className="heading-line"></div>
+
+  <ul className="footer-links">
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/")}
+      >
+        <FaChevronRight />
+        <span>Home</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products")}
+      >
+        <FaChevronRight />
+        <span>Products</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/wishlist")}
+      >
+        <FaChevronRight />
+        <span>Wishlist</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/cart")}
+      >
+        <FaChevronRight />
+        <span>Cart</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/orders")}
+      >
+        <FaChevronRight />
+        <span>Orders</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/contact")}
+      >
+        <FaChevronRight />
+        <span>Contact</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/about")}
+      >
+        <FaChevronRight />
+        <span>About Us</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/faq")}
+      >
+        <FaChevronRight />
+        <span>FAQ</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/terms")}
+      >
+        <FaChevronRight />
+        <span>Terms & Conditions</span>
+      </button>
+    </li>
+
+    <li>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/privacy")}
+      >
+        <FaChevronRight />
+        <span>Privacy Policy</span>
+      </button>
+    </li>
+
+  </ul>
 
 </div>
 
@@ -240,67 +228,177 @@ Privacy Policy
 
 <div className="footer-section">
 
-    <div className="footer-heading">
+  <div className="footer-heading">
 
-        <div className="heading-icon">
-            <FaThLarge />
-        </div>
+    <div className="heading-icon">
+      <FaThLarge />
+    </div>
 
-        <h3>Categories</h3>
+    <h3>Categories</h3>
+
+  </div>
+
+  <div className="heading-line"></div>
+
+  <div className="category-grid">
+
+    {/* LEFT */}
+
+    <div className="category-column">
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Photo Frames")}
+      >
+        <FaImage />
+        Photo Frames
+      </button>
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Keychains")}
+      >
+        <FaKey />
+        Keychains
+      </button>
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Cup Printing")}
+      >
+        <FaCoffee />
+        Cup Printing
+      </button>
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Mobile Cases")}
+      >
+        <FaMobileAlt />
+        Mobile Cases
+      </button>
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Wallets")}
+      >
+        <FaWallet />
+        Wallets
+      </button>
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Resin Art")}
+      >
+        <FaPaintBrush />
+        Resin Art
+      </button>
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Money Box")}
+      >
+        <FaPiggyBank />
+        Money Box
+      </button>
+
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Customized Gifts")}
+      >
+        <FaGift />
+        Customized Gifts
+      </button>
 
     </div>
 
-    <div className="heading-line"></div>
+    {/* RIGHT */}
 
-    <div className="category-grid">
+    <div className="category-column">
 
-        <div className="category-column">
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Acrylic Frames")}
+      >
+        <FaRegImage />
+        Acrylic Frames
+      </button>
 
-            <Link to="/products"><FaImage /> Photo Frames</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Mirror Light")}
+      >
+        <FaLightbulb />
+        Mirror Light
+      </button>
 
-            <Link to="/products"><FaKey /> Keychains</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=LED Mirror Light")}
+      >
+        <FaLightbulb />
+        LED Mirror Light
+      </button>
 
-            <Link to="/products"><FaCoffee /> Cup Printing</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Wallet Card")}
+      >
+        <FaIdCard />
+        Wallet Card
+      </button>
 
-            <Link to="/products"><FaMobileAlt /> Mobile Cases</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Customized Bottle")}
+      >
+        <FaGlassWhiskey />
+        Customized Bottle
+      </button>
 
-            <Link to="/products"><FaWallet /> Wallets</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Customized Stand")}
+      >
+        <FaRegImage />
+        Customized Stand
+      </button>
 
-            <Link to="/products"><FaPaintBrush /> Resin Art</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Polaroid")}
+      >
+        <FaImage />
+        Polaroid
+      </button>
 
-            <Link to="/products"><FaPiggyBank /> Money Box</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Custom Eyes Print")}
+      >
+        <FaEye />
+        Custom Eyes Print
+      </button>
 
-            <Link to="/products"><FaGift /> Customized Gifts</Link>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=School Label Sticker")}
+      >
+        <FaTags />
+        School Label Sticker
+      </button>
 
-        </div>
-
-        <div className="category-column">
-
-            <Link to="/products"><FaRegImage /> Acrylic Frames</Link>
-
-            <Link to="/products"><FaLightbulb /> Mirror Light</Link>
-
-            <Link to="/products"><FaLightbulb /> LED Mirror Light</Link>
-
-            <Link to="/products"><FaIdCard /> Wallet Card</Link>
-
-            <Link to="/products"><FaGlassWhiskey /> Customized Bottle</Link>
-
-            <Link to="/products"><FaRegImage /> Customized Stand</Link>
-
-            <Link to="/products"><FaImage /> Polaroid</Link>
-
-            <Link to="/products"><FaEye /> Custom Eyes Print</Link>
-
-            <Link to="/products"><FaTags /> School Label Sticker</Link>
-
-            <Link to="/products"><FaPenFancy /> Engraved Metal Pen</Link>
-
-            
-
-        </div>
+      <button
+        className="footer-nav-btn"
+        onClick={() => navigate("/products?category=Engraved Metal Pen")}
+      >
+        <FaPenFancy />
+        Engraved Metal Pen
+      </button>
 
     </div>
+
+  </div>
 
 </div>
 

@@ -584,144 +584,162 @@ to{
         0 0 18px rgba(25,232,255,.20);
 }
 
-/* ==========================================
-        TABLET
-========================================== */
+/* ===========================
+LAPTOP
+=========================== */
 
-@media (max-width:992px){
+@media (max-width:1200px){
 
-.navbar{
+    .navbar-container{
+        padding:0 30px;
+    }
 
-    height:78px;
+    .nav-menu ul{
+        gap:20px;
+    }
 
-    padding:0 22px;
+    .nav-menu a{
+        font-size:16px;
+    }
 
-    gap:16px;
-}
+    .resume-btn{
+        padding:12px 24px;
+        font-size:15px;
+    }
 
-.logo{
-
-    font-size:28px;
-}
-
-.searchbar{
-
-    width:240px;
-
-    height:46px;
-}
-
-.nav-links{
-
-    gap:20px;
-}
-
-.nav-links a{
-
-    font-size:15px;
-}
-
-.nav-icons{
-
-    gap:12px;
-}
-
-.nav-icons a{
-
-    width:44px;
-
-    height:44px;
-
-    font-size:18px;
-}
+    .theme-toggle{
+        width:42px;
+        height:42px;
+    }
 
 }
 
-/* ==========================================
-        MOBILE
-========================================== */
+/* ===========================
+TABLET
+=========================== */
 
 @media (max-width:768px){
 
-.navbar{
+    .navbar-container{
+        height:70px;
+        padding:0 20px;
+    }
 
-    height:70px;
+    .menu-icon{
+        display:block;
+        font-size:30px;
+        z-index:1100;
+    }
 
-    padding:0 16px;
-}
+    .desktop-btn{
+        display:none;
+    }
 
-.logo{
+    .mobile-btn{
+        display:inline-flex;
+        justify-content:center;
+        align-items:center;
+        margin-top:25px;
+    }
 
-    font-size:24px;
-}
+    .nav-menu{
+        position:fixed;
+        top:70px;
+        right:-100%;
+        width:280px;
+        height:calc(100vh - 70px);
+        background:#0f172a;
+        padding:35px 20px;
+        transition:.35s;
+        box-shadow:-5px 0 20px rgba(0,0,0,.35);
+    }
 
-.menu-icon{
+    .nav-menu.active{
+        right:0;
+    }
 
-    display:block;
-}
+    .nav-menu ul{
+        flex-direction:column;
+        gap:25px;
+    }
 
-.searchbar{
+    .resume-btn{
+        width:100%;
+        height:45px;
+        font-size:15px;
+    }
 
-    display:none;
-}
-
-.nav-icons{
-
-    margin-right:10px;
-
-    gap:10px;
-}
-
-.nav-icons a{
-
-    width:42px;
-
-    height:42px;
-
-    font-size:18px;
-}
-
-}
-
-/* ==========================================
-        SMALL MOBILE
-========================================== */
-
-@media (max-width:480px){
-
-.navbar{
-
-    height:65px;
-
-    padding:0 12px;
-}
-
-.logo{
-
-    font-size:21px;
-}
-
-.nav-icons{
-
-    gap:8px;
-}
-
-.nav-icons a{
-
-    width:38px;
-
-    height:38px;
-
-    font-size:16px;
-}
-
-.menu-icon{
-
-    font-size:24px;
-}
+    .theme-toggle{
+        width:40px;
+        height:40px;
+    }
 
 }
 
+/* ===========================
+MOBILE
+=========================== */
+
+@media (max-width:576px){
+
+    .navbar-container{
+        height:65px;
+        padding:0 15px;
+    }
+
+    .logo img{
+        width:40px;
+        height:40px;
+    }
+
+    .logo span{
+        font-size:22px;
+    }
+
+    .nav-menu{
+        width:100%;
+    }
+
+    .resume-btn{
+        width:100%;
+        height:42px;
+        font-size:14px;
+        border-radius:25px;
+    }
+
+    .theme-toggle{
+        width:36px;
+        height:36px;
+    }
+
+}
+
+/* ===========================
+SMALL MOBILE
+=========================== */
+
+@media (max-width:400px){
+
+    .logo span{
+        font-size:18px;
+    }
+
+    .logo img{
+        width:34px;
+        height:34px;
+    }
+
+    .resume-btn{
+        height:40px;
+        font-size:13px;
+    }
+
+    .theme-toggle{
+        width:32px;
+        height:32px;
+    }
+
+}
 /* ==========================================
         NAVBAR ENTRY ANIMATION
 ========================================== */
