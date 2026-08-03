@@ -50,8 +50,10 @@
 ========================================== */
 
 .about-image{
-    width:60%;
-    height:500px;
+    width:100%;
+    max-width:500px;
+    height:auto;
+    margin:auto;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -61,27 +63,12 @@
 }
 
 .about-image img{
-
-    width:900%;
-
-    height:520px;
-
+    width:100%;
+    height:auto;
+    max-height:520px;
     object-fit:cover;
-
     object-position:center;
-
     border-radius:30px;
-
-    border:2px solid rgba(34,211,238,.18);
-
-    box-shadow:
-
-    0 0 25px rgba(34,211,238,.25),
-
-    0 0 70px rgba(124,58,237,.18);
-
-    transition:.45s;
-
 }
 
 .about-image:hover img{
@@ -955,103 +942,134 @@
 }
 
 /* ==========================================
-            RESPONSIVE
+        RESPONSIVE ABOUT
 ========================================== */
 
-@media(max-width:1024px){
+@media screen and (max-width:992px){
 
-.about-container{
+    .about-container{
+        grid-template-columns:1fr;
+        gap:40px;
+        text-align:center;
+    }
 
-    grid-template-columns:1fr;
+    .about-image{
+        max-width:420px;
+        margin:auto;
+    }
 
-}
+    .about-image img{
+        width:100%;
+        height:auto;
+    }
 
-.about-stats{
+    .about-content{
+        align-items:center;
+    }
 
-    grid-template-columns:repeat(2,1fr);
+    .about-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
 
-}
+    .about-stats{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
 
-.review-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.why-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.about{
-
-    padding:60px 20px;
-
-}
-
-.about-content h1{
-
-    font-size:38px;
+    .why-grid,
+    .review-grid{
+        grid-template-columns:1fr;
+    }
 
 }
 
-.about-buttons{
+@media screen and (max-width:768px){
 
-    flex-direction:column;
+    .about{
+        padding:60px 20px;
+    }
 
-}
+    .about-content h1{
+        font-size:34px;
+    }
 
-.about-btn,
-.about-btn-outline{
+    .about-content p{
+        font-size:15px;
+    }
 
-    width:100%;
+    .about-buttons{
+        flex-direction:column;
+        width:100%;
+    }
 
-}
+    .about-btn,
+    .about-btn-outline{
+        width:100%;
+    }
 
-.about-stats{
+    .about-image{
+        max-width:320px;
+    }
 
-    grid-template-columns:1fr;
+    .about-stats{
+        grid-template-columns:1fr;
+    }
 
-}
+    .newsletter-box{
+        flex-direction:column;
+        border-radius:20px;
+    }
 
-.newsletter-box{
-
-    flex-direction:column;
-
-    border-radius:20px;
-
-}
-
-.newsletter-box input{
-
-    width:100%;
-
-}
-
-.newsletter-box button{
-
-    padding:18px;
-
-}
-
-.category-tags{
-
-    gap:12px;
-
-}
-
-.category-tags span{
-
-    width:100%;
-
-    justify-content:center;
+    .newsletter-box input,
+    .newsletter-box button{
+        width:100%;
+    }
 
 }
+
+@media screen and (max-width:480px){
+
+    .about{
+        padding:40px 15px;
+    }
+
+    .about-content h1{
+        font-size:28px;
+    }
+
+    .about-image{
+        max-width:260px;
+    }
+
+    .about-image img{
+        width:100%;
+        height:auto;
+    }
+
+    .feature-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .feature-icon{
+        margin:auto;
+    }
+
+    .about-cta h2,
+    .mission h2,
+    .reviews h2,
+    .why-us h2,
+    .newsletter h2,
+    .social-section h2{
+        font-size:24px;
+    }
+
+    .social-links a{
+        width:52px;
+        height:52px;
+        font-size:20px;
+    }
 
 }
 
@@ -1334,79 +1352,6 @@ html{
 
 }
 
-/* ==========================================
-            MOBILE
-========================================== */
-
-@media(max-width:480px){
-
-.about{
-
-    padding:45px 15px;
-
-}
-
-.about-content h1{
-
-    font-size:30px;
-
-}
-
-.about-content p{
-
-    font-size:15px;
-
-}
-
-.about-image img{
-
-    height:320px;
-
-}
-
-.feature-card{
-
-    flex-direction:column;
-
-    text-align:center;
-
-}
-
-.feature-icon{
-
-    margin:auto;
-
-}
-
-.about-cta h2,
-.newsletter h2,
-.social-section h2,
-.mission h2,
-.reviews h2,
-.categories-section-about h2,
-.why-us h2{
-
-    font-size:28px;
-
-}
-
-.social-links{
-
-    gap:15px;
-
-}
-
-.social-links a{
-
-    width:55px;
-
-    height:55px;
-
-    font-size:22px;
-
-}
-
-}
 
 /* ==========================================
             FINAL POLISH

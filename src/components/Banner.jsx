@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Banner.css";
 import bannerImage from "../assets/images/Dp1.jpeg";
-import { FaGlassWhiskey, } from "react-icons/fa";
 
 import {
+  FaGlassWhiskey,
   FaImage,
   FaKey,
   FaCoffee,
@@ -19,11 +19,59 @@ import {
   FaTags,
   FaPenFancy,
   FaEye,
-  
 } from "react-icons/fa";
 
 const Banner = () => {
+
   const navigate = useNavigate();
+
+  // Banner Offer
+  const [offer, setOffer] = useState(
+    "🎉 Flat 20% OFF on Selected Gifts"
+  );
+
+  // Banner Offer Image
+  const [offerImage, setOfferImage] = useState("");
+
+  useEffect(() => {
+
+    const loadOffer = () => {
+
+      const savedOffer =
+        localStorage.getItem("bannerOffer");
+
+      const savedImage =
+        localStorage.getItem("bannerOfferImage");
+
+      if (savedOffer && savedOffer.trim() !== "") {
+        setOffer(savedOffer);
+      } else {
+        setOffer("🎉 Flat 20% OFF on Selected Gifts");
+      }
+
+      if (savedImage) {
+        setOfferImage(savedImage);
+      } else {
+        setOfferImage("");
+      }
+
+    };
+
+    loadOffer();
+
+    window.addEventListener(
+      "offerUpdated",
+      loadOffer
+    );
+
+    return () => {
+      window.removeEventListener(
+        "offerUpdated",
+        loadOffer
+      );
+    };
+
+  }, []);
 
   const whatsappMessage = `Hi 👋,
 
@@ -50,124 +98,136 @@ I want to order gift items from Spider Gift Store.
 
 Please share your catalog and price list.`;
 
-  return (
-    <section className="banner">
-      <div className="banner-overlay">
+return (
+  <section className="banner">
+    <div className="banner-overlay">
 
-        {/* Left Content */}
-        <div className="banner-content">
+      {/* Left Content */}
+      <div className="banner-content">
 
-          <div className="offer-tag">
-            🎉 Flat 20% OFF on Selected Gifts
-          </div>
+        {/* Dynamic Offer */}
 
-          <h1>
-            Welcome to <span>Spider Gift Store</span>
-          </h1>
+        <div className="offer-tag">
 
-          <p className="main-text">
-            ❤️Celebrate Every Moment with Personalized Gifts❤️
-          </p>
+          {offerImage && (
+            <img
+              src={offerImage}
+              alt="Offer"
+              className="offer-tag-image"
+            />
+          )}
 
-          <p className="sub-text">
-            Create unforgettable memories with our premium customized
-            gifts for your loved ones.
-          </p>
-
-          {/* Categories */}
-
-          <div className="categories">
-
-  <span><FaImage /> Photo Frames</span>
-
-  <span><FaKey /> Keychains</span>
-
-  <span><FaCoffee /> Cup Print</span>
-
-  <span><FaMobileAlt /> Mobile Cases</span>
-
-  <span><FaWallet /> Wallets</span>
-
-  <span><FaPaintBrush /> Resin Art</span>
-
-  <span><FaPiggyBank /> Money Box</span>
-
-  <span><FaGift /> Customized Gifts</span>
-
-  <span><FaRegImage /> Acrylic Frames</span>
-
-  <span><FaLightbulb /> Mirror Light</span>
-
-  <span><FaLightbulb /> LED Mirror Light</span>
-
-  <span><FaIdCard /> Wallet Card</span>
-
-  <span><FaGlassWhiskey /> Customized Bottle</span>
-
-  <span><FaRegImage /> Customized Stand</span>
-
-  <span><FaImage /> Polaroid</span>
-
-  <span><FaEye /> Custom Eyes Print</span>
-
-  <span><FaTags /> School Label Sticker</span>
-
-  <span><FaPenFancy /> Engraved Metal Pen</span>
-
-</div>
-          {/* Buttons */}
-
-          <div className="banner-buttons">
-
-            <button
-              className="shop-btn"
-              onClick={() => navigate("/products")}
-            >
-              Shop Now
-            </button>
-
-            <a
-              href={`https://wa.me/918300589035?text=${encodeURIComponent(
-                whatsappMessage
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="whatsapp-btn">
-                WhatsApp Order
-              </button>
-            </a>
-
-          </div>
-
-          {/* Features */}
-
-          <div className="banner-features">
-
-            <div>🚚 Pan India Shipping</div>
-
-            <div>🎁 Customized Gifts</div>
-
-            <div>⭐ Premium Quality</div>
-
-          </div>
+          <span>{offer}</span>
 
         </div>
 
-        {/* Right Image */}
+        <h1>
+          Welcome to <span>Spider Gift Store</span>
+        </h1>
 
-        <div className="banner-image">
+        <p className="main-text">
+          ❤️ Celebrate Every Moment with Personalized Gifts ❤️
+        </p>
 
-          <img
-            src={bannerImage}
-            alt="Spider Gift Store"
-          />
+        <p className="sub-text">
+          Create unforgettable memories with our premium customized
+          gifts for your loved ones.
+        </p>
+
+        {/* Categories */}
+
+        <div className="categories">
+
+          <span><FaImage /> Photo Frames</span>
+
+          <span><FaKey /> Keychains</span>
+
+          <span><FaCoffee /> Cup Print</span>
+
+          <span><FaMobileAlt /> Mobile Cases</span>
+
+          <span><FaWallet /> Wallets</span>
+
+          <span><FaPaintBrush /> Resin Art</span>
+
+          <span><FaPiggyBank /> Money Box</span>
+
+          <span><FaGift /> Customized Gifts</span>
+
+          <span><FaRegImage /> Acrylic Frames</span>
+
+          <span><FaLightbulb /> Mirror Light</span>
+
+          <span><FaLightbulb /> LED Mirror Light</span>
+
+          <span><FaIdCard /> Wallet Card</span>
+
+          <span><FaGlassWhiskey /> Customized Bottle</span>
+
+          <span><FaRegImage /> Customized Stand</span>
+
+          <span><FaImage /> Polaroid</span>
+
+          <span><FaEye /> Custom Eyes Print</span>
+
+          <span><FaTags /> School Label Sticker</span>
+
+          <span><FaPenFancy /> Engraved Metal Pen</span>
+
+        </div>
+
+        {/* Buttons */}
+
+        <div className="banner-buttons">
+
+          <button
+            className="shop-btn"
+            onClick={() => navigate("/products")}
+          >
+            Shop Now
+          </button>
+
+          <a
+            href={`https://wa.me/918300589035?text=${encodeURIComponent(
+              whatsappMessage
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="whatsapp-btn">
+              WhatsApp Order
+            </button>
+          </a>
+
+        </div>
+
+        {/* Features */}
+
+        <div className="banner-features">
+
+          <div>🚚 Pan India Shipping</div>
+
+          <div>🎁 Customized Gifts</div>
+
+          <div>⭐ Premium Quality</div>
 
         </div>
 
       </div>
-    </section>
-  );
-};
 
+      {/* Right Image */}
+
+      <div className="banner-image">
+
+        <img
+          src={bannerImage}
+          alt="Spider Gift Store"
+        />
+
+      </div>
+
+    </div>
+  </section>
+);
+};
 export default Banner;

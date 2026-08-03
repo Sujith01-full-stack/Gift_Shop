@@ -35,6 +35,115 @@
     #070d18 100%);
 }
 
+
+/* ==========================================
+        DYNAMIC OFFER
+========================================== */
+
+.offer-tag{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    width:max-content;
+
+    max-width:100%;
+
+    padding:12px 20px;
+
+    border-radius:16px;
+
+    background:rgba(34,211,238,.12);
+
+    border:1px solid rgba(34,211,238,.25);
+
+    backdrop-filter:blur(15px);
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 0 20px rgba(34,211,238,.18);
+
+}
+
+.offer-tag span{
+
+    line-height:1.5;
+
+}
+
+.offer-tag-image{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    border:2px solid #22d3ee;
+
+    box-shadow:
+        0 0 18px rgba(34,211,238,.45);
+
+    flex-shrink:0;
+
+}
+
+@media(max-width:768px){
+
+.offer-tag{
+
+    width:100%;
+
+    padding:12px;
+
+    gap:12px;
+
+    font-size:14px;
+
+}
+
+.offer-tag-image{
+
+    width:55px;
+
+    height:55px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.offer-tag{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.offer-tag-image{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+}
+
 /* ==========================================
         CYAN GLOW
 ========================================== */

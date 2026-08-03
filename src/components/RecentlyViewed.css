@@ -813,78 +813,149 @@
 
 }
 
-/* Tablet */
+/* ==========================================
+   TABLET
+========================================== */
 
 @media (max-width:992px){
 
+    .recently-viewed{
+        padding:35px 20px;
+        border-radius:24px;
+    }
+
+    .recent-header{
+        margin-bottom:30px;
+    }
+
+    .recent-header h2{
+        font-size:32px;
+        gap:10px;
+    }
+
+    .recent-header p{
+        font-size:15px;
+    }
+
     .recent-grid{
-
-        grid-template-columns:repeat(2,minmax(300px,1fr));
-
+        grid-template-columns:repeat(2,1fr);
         gap:20px;
-
     }
 
     .recent-card img{
+        height:220px;
+        object-fit:contain;
+    }
 
-        height:2000px;
+    .recent-content{
+        padding:20px;
+    }
 
+    .recent-content h3{
+        font-size:20px;
+        min-height:auto;
+    }
+
+    .recent-content h4{
+        font-size:28px;
     }
 
 }
-
-/* Mobile */
 
 @media (max-width:768px){
 
+    .recently-viewed{
+        padding:25px 15px;
+    }
+
     .recent-grid{
-
         grid-template-columns:1fr;
-
+        gap:18px;
     }
 
     .recent-card{
-
-        max-width:450px;
-
-        margin:auto;
-
+        width:100%;
+        max-width:100%;
+        margin:0;
     }
 
     .recent-card img{
+        height:190px;
+        object-fit:contain;
+    }
 
-        height:180px;
+    .recent-content{
+        padding:18px;
+    }
 
+    .recent-content h3{
+        font-size:19px;
+        min-height:auto;
+    }
+
+    .recent-content h4{
+        font-size:26px;
+        margin-bottom:18px;
     }
 
     .recent-buttons{
+        flex-direction:column;
+        gap:12px;
+    }
 
-        flex-direction:row;
-
+    .view-btn,
+    .cart-btn{
+        width:100%;
+        height:48px;
+        font-size:15px;
     }
 
 }
 
-/* Small Mobile */
-
 @media (max-width:480px){
 
+    .recently-viewed{
+        padding:20px 12px;
+        border-radius:18px;
+    }
+
+    .recent-header h2{
+        font-size:24px;
+    }
+
+    .recent-header p{
+        font-size:13px;
+    }
+
     .recent-card{
-
-        max-width:100%;
-
+        border-radius:18px;
     }
 
     .recent-card img{
-
         height:170px;
-
     }
 
-    .recent-buttons{
+    .recent-content{
+        padding:15px;
+    }
 
-        flex-direction:column;
+    .recent-content h3{
+        font-size:17px;
+    }
 
+    .recent-content h4{
+        font-size:22px;
+    }
+
+    .category{
+        font-size:11px;
+        padding:6px 12px;
+    }
+
+    .view-btn,
+    .cart-btn{
+        height:45px;
+        font-size:14px;
     }
 
 }

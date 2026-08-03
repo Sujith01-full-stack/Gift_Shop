@@ -242,37 +242,150 @@
     0 0 30px rgba(239,68,68,.45);
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
 
-@media(max-width:768px){
+@media screen and (max-width:992px){
 
-.edit-product-card{
+    .edit-product-page{
+        padding:40px 20px;
+    }
 
-    padding:25px;
+    .edit-product-card{
+        max-width:650px;
+        padding:30px;
+        border-radius:24px;
+    }
+
+    .edit-product-card h2{
+        font-size:30px;
+        margin-bottom:25px;
+    }
+
+    .edit-form{
+        gap:18px;
+    }
+
+    .edit-form input,
+    .edit-form textarea,
+    .edit-form select{
+        padding:14px 16px;
+        font-size:15px;
+    }
+
+    .image-preview{
+        width:160px;
+        height:160px;
+    }
+
 }
 
-.edit-product-card h2{
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
 
-    font-size:28px;
+@media screen and (max-width:768px){
+
+    .edit-product-page{
+        padding:25px 15px;
+        align-items:flex-start;
+    }
+
+    .edit-product-card{
+        width:100%;
+        padding:22px 18px;
+        border-radius:20px;
+    }
+
+    .edit-product-card h2{
+        font-size:26px;
+        margin-bottom:22px;
+        line-height:1.3;
+    }
+
+    .edit-form{
+        gap:16px;
+    }
+
+    .edit-form input,
+    .edit-form textarea,
+    .edit-form select{
+        padding:13px 14px;
+        font-size:14px;
+        border-radius:12px;
+    }
+
+    .edit-form textarea{
+        min-height:120px;
+    }
+
+    .image-preview{
+        width:130px;
+        height:130px;
+        border-radius:16px;
+    }
+
+    .button-group{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .save-btn,
+    .cancel-btn{
+        width:100%;
+        padding:14px;
+        font-size:15px;
+        border-radius:14px;
+    }
+
 }
 
-.button-group{
+/* ==========================================
+   SMALL MOBILE
+========================================== */
 
-    flex-direction:column;
-}
+@media screen and (max-width:480px){
 
-.save-btn,
-.cancel-btn{
+    .edit-product-page{
+        padding:18px 10px;
+    }
 
-    width:100%;
-}
+    .edit-product-card{
+        padding:18px 14px;
+        border-radius:16px;
+    }
 
-.image-preview{
+    .edit-product-card h2{
+        font-size:22px;
+    }
 
-    width:140px;
-    height:140px;
-}
+    .edit-form{
+        gap:14px;
+    }
+
+    .edit-form input,
+    .edit-form textarea,
+    .edit-form select{
+        padding:12px;
+        font-size:13px;
+    }
+
+    .edit-form textarea{
+        min-height:100px;
+    }
+
+    .image-preview{
+        width:110px;
+        height:110px;
+    }
+
+    .save-btn,
+    .cancel-btn{
+        height:48px;
+        padding:12px;
+        font-size:14px;
+        border-radius:12px;
+    }
 
 }

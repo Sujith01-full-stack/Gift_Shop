@@ -682,251 +682,156 @@
 }
 
 /* ==========================================
-   MOBILE
+   EXTRA MOBILE FIX
 ========================================== */
 
-@media(max-width:992px){
+@media screen and (max-width:768px){
 
-.search-grid{
+    .search-page{
+        padding:80px 15px 30px;
+        overflow-x:hidden;
+    }
 
-    grid-template-columns:repeat(2,1fr);
+    .search-container{
+        width:100%;
+        max-width:100%;
+    }
 
-    gap:25px;
+    .search-header{
+        margin-bottom:30px;
+    }
 
-}
+    .search-header h1{
+        font-size:28px;
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
 
-.search-header h1{
+    .search-header p{
+        font-size:14px;
+        line-height:1.7;
+    }
 
-    font-size:42px;
+    .page-title{
+        font-size:24px;
+        margin:30px 0 20px;
+    }
 
-}
+    .page-card{
+        flex-direction:column;
+        text-align:center;
+        padding:18px;
+        gap:15px;
+    }
 
-}
+    .page-card svg{
+        width:55px;
+        height:55px;
+        padding:14px;
+    }
 
-@media(max-width:768px){
+    .search-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
 
-.search-page{
+    .search-card{
+        width:100%;
+        border-radius:20px;
+    }
 
-    padding:45px 18px;
+    .search-card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+    }
 
-}
+    .search-content{
+        padding:18px;
+    }
 
-.search-header{
+    .search-content h3{
+        font-size:20px;
+    }
 
-    margin-bottom:40px;
+    .search-content h2{
+        font-size:28px;
+    }
 
-}
+    .search-content p{
+        font-size:14px;
+        line-height:1.7;
+    }
 
-.search-header h1{
+    .search-buttons{
+        flex-direction:column;
+        gap:12px;
+    }
 
-    font-size:34px;
+    .cart-btn,
+    .wish-btn{
+        width:100%;
+        height:50px;
+    }
 
-    flex-direction:column;
-
-    gap:12px;
-
-}
-
-.search-header p{
-
-    font-size:16px;
-
-}
-
-.page-title{
-
-    font-size:28px;
-
-}
-
-.page-card{
-
-    flex-direction:column;
-
-    text-align:center;
-
-    padding:20px;
-
-}
-
-.page-card svg{
-
-    width:60px;
-
-    height:60px;
-
-}
-
-.search-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.search-card img{
-
-    height:220px;
-
-}
-
-.search-content{
-
-    padding:22px;
-
-}
-
-.search-content h3{
-
-    font-size:22px;
-
-}
-
-.search-content h2{
-
-    font-size:30px;
+    .browse-btn{
+        width:100%;
+        padding:14px;
+    }
 
 }
 
-.search-buttons{
-
-    flex-direction:column;
-
-}
-
-.cart-btn{
-
-    width:100%;
-
-}
-
-.wish-btn{
-
-    width:100%;
-
-    height:54px;
-
-}
-
-.empty-icon{
-
-    font-size:70px;
-
-}
-
-.empty-search h2{
-
-    font-size:32px;
-
-}
-
-.empty-search p{
-
-    font-size:16px;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.search-page{
-
-    padding:35px 15px;
-
-}
-
-.search-header h1{
-
-    font-size:28px;
-
-}
-
-.search-header p{
-
-    font-size:15px;
-
-}
-
-.page-title{
-
-    font-size:24px;
-
-}
-
-.page-card{
-
-    padding:18px;
-
-}
-
-.page-card h3{
-
-    font-size:20px;
-
-}
-
-.page-card p{
-
-    font-size:14px;
-
-}
-
-.search-card{
-
-    border-radius:22px;
-
-}
-
-.search-card img{
-
-    height:200px;
-
-}
-
-.search-content{
-
-    padding:18px;
-
-}
-
-.search-content h3{
-
-    font-size:20px;
-
-}
-
-.search-content h2{
-
-    font-size:28px;
-
-}
-
-.category{
-
-    font-size:12px;
-
-    padding:7px 16px;
-
-}
-
-.cart-btn{
-
-    height:50px;
-
-    font-size:15px;
-
-}
-
-.wish-btn{
-
-    height:50px;
-
-}
-
-.browse-btn{
-
-    width:100%;
-
-}
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media screen and (max-width:480px){
+
+    .search-page{
+        padding:75px 10px 25px;
+    }
+
+    .search-header h1{
+        font-size:24px;
+    }
+
+    .search-header p{
+        font-size:13px;
+    }
+
+    .page-title{
+        font-size:22px;
+    }
+
+    .page-card{
+        padding:15px;
+    }
+
+    .search-card img{
+        height:180px;
+    }
+
+    .search-content{
+        padding:15px;
+    }
+
+    .search-content h3{
+        font-size:18px;
+    }
+
+    .search-content h2{
+        font-size:24px;
+    }
+
+    .category{
+        font-size:11px;
+        padding:6px 12px;
+    }
+
+    .cart-btn,
+    .wish-btn{
+        font-size:14px;
+    }
 
 }

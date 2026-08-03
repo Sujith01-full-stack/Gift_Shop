@@ -139,62 +139,74 @@
 }
 
 /* ==========================================
-        LAPTOP
+        RESPONSIVE ADMIN LAYOUT
 ========================================== */
 
-@media(max-width:1200px){
+/* Laptop */
 
-.admin-content{
+@media screen and (max-width:1200px){
 
-    margin-left:250px;
-
-    padding:30px;
-
-}
-
-}
-
-/* ==========================================
-        TABLET
-========================================== */
-
-@media(max-width:992px){
-
-.admin-content{
-
-    margin-left:220px;
-
-    padding:22px;
+    .admin-content{
+        margin-left:250px;
+        padding:28px;
+    }
 
 }
 
-}
+/* Tablet */
 
-/* ==========================================
-        MOBILE
-========================================== */
+@media screen and (max-width:992px){
 
-@media(max-width:768px){
-
-.admin-layout{
-
-    flex-direction:column;
+    .admin-content{
+        margin-left:220px;
+        padding:22px;
+    }
 
 }
 
-.admin-content{
+/* Mobile */
 
-    margin-left:0;
+@media screen and (max-width:768px){
 
-    padding:18px;
+    .admin-layout{
+        display:block;
+    }
+
+    .admin-content{
+        margin-left:82px;      /* Sidebar width */
+        width:calc(100% - 82px);
+        min-height:100vh;
+        padding:18px 15px;
+        overflow-x:hidden;
+    }
+
+    .admin-content::before,
+    .admin-content::after{
+        display:none;
+    }
 
 }
 
-.admin-content::before,
-.admin-content::after{
+/* Small Mobile */
 
-    display:none;
+@media screen and (max-width:480px){
+
+    .admin-content{
+        margin-left:70px;      /* Small sidebar width */
+        width:calc(100% - 70px);
+        padding:15px 12px;
+    }
 
 }
+
+/* Very Small Mobile */
+
+@media screen and (max-width:360px){
+
+    .admin-content{
+        margin-left:65px;
+        width:calc(100% - 65px);
+        padding:12px 10px;
+    }
 
 }

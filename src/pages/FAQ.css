@@ -666,78 +666,93 @@ transform:translateY(0);
 }
 
 /* ==========================================
-        SMALL MOBILE
+   EXTRA MOBILE OPTIMIZATION
 ========================================== */
 
-@media (max-width:480px){
+@media screen and (max-width:480px){
 
-.faq-page{
+    .faq-header{
+        margin-bottom:25px;
+    }
 
-    padding:25px 12px;
-}
+    .faq-search{
+        gap:10px;
+        padding:12px 15px;
+    }
 
-.faq-icon{
+    .faq-search svg{
+        font-size:18px;
+    }
 
-    font-size:45px;
-}
+    .faq-search input{
+        font-size:14px;
+    }
 
-.faq-header h1{
+    .faq-question{
+        padding:16px;
+    }
 
-    font-size:26px;
-}
+    .question-left{
+        gap:8px;
+    }
 
-.faq-header p{
+    .question-left h3{
+        font-size:15px;
+        line-height:1.5;
+    }
 
-    font-size:14px;
-}
+    .faq-question > svg{
+        font-size:20px;
+        min-width:20px;
+    }
 
-.faq-question{
+    .faq-category{
+        font-size:11px;
+        padding:5px 10px;
+    }
 
-    padding:18px;
-}
+    .faq-answer{
+        padding:0 16px 16px;
+        font-size:13px;
+        line-height:1.7;
+    }
 
-.question-left h3{
+    .faq-empty{
+        padding:35px 15px;
+    }
 
-    font-size:16px;
-}
+    .faq-empty h3{
+        font-size:20px;
+    }
 
-.faq-category{
+    .faq-empty p{
+        font-size:13px;
+    }
 
-    font-size:12px;
+    .faq-support{
+        margin-top:35px;
+        padding:18px 15px;
+    }
 
-    padding:6px 12px;
-}
+    .faq-support h2{
+        font-size:20px;
+    }
 
-.faq-answer{
+    .faq-support p{
+        font-size:13px;
+        margin-bottom:20px;
+    }
 
-    padding:0 18px 18px;
+    .support-buttons{
+        gap:12px;
+    }
 
-    font-size:14px;
-}
-
-.faq-support{
-
-    padding:20px;
-
-    border-radius:18px;
-}
-
-.faq-support h2{
-
-    font-size:22px;
-}
-
-.faq-support p{
-
-    font-size:14px;
-}
-
-.support-buttons a{
-
-    height:50px;
-
-    font-size:15px;
-}
+    .support-buttons a{
+        min-width:100%;
+        height:46px;
+        font-size:14px;
+        border-radius:12px;
+    }
 
 }
 

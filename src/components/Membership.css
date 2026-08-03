@@ -563,152 +563,186 @@
 }
 
 /* ==========================================
-   TABLET
+   EXTRA MOBILE RESPONSIVE
 ========================================== */
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
-.membership-card{
+    .membership-card{
+        width:100%;
+        max-width:100%;
+        margin:20px auto;
+        padding:20px 15px;
+        border-radius:18px;
+        overflow:hidden;
+    }
 
-padding:25px;
+    .membership-header{
+        text-align:center;
+        margin-bottom:25px;
+    }
 
-}
+    .membership-header h2{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+        font-size:28px;
+        line-height:1.3;
+    }
 
-.membership-header h2{
+    .membership-header svg{
+        font-size:28px;
+    }
 
-font-size:30px;
+    .membership-info{
+        flex-direction:column;
+        text-align:center;
+        gap:18px;
+        padding:18px;
+        border-radius:18px;
+    }
 
-}
+    .membership-icon{
+        width:70px;
+        height:70px;
+        font-size:30px;
+    }
 
-.membership-info{
+    .membership-info h3{
+        font-size:24px;
+        margin-bottom:8px;
+    }
 
-flex-direction:column;
+    .membership-info p{
+        font-size:14px;
+        line-height:1.7;
+    }
 
-text-align:center;
+    .membership-status{
+        justify-content:center;
+        font-size:13px;
+        padding:7px 14px;
+    }
 
-}
+    .reward-points{
+        margin:25px 0;
+        padding:18px;
+        border-radius:18px;
+    }
 
-.membership-icon{
+    .points-row{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
 
-width:80px;
+    .points-row h3{
+        font-size:20px;
+    }
 
-height:80px;
+    .points-row span{
+        font-size:28px;
+    }
 
-font-size:34px;
+    .progress-bar{
+        height:12px;
+    }
 
-}
+    .reward-points p{
+        font-size:14px;
+        line-height:1.7;
+    }
 
-.membership-info h3{
+    .membership-benefits{
+        margin-top:25px;
+    }
 
-font-size:28px;
+    .membership-benefits h3{
+        justify-content:center;
+        font-size:22px;
+        text-align:center;
+    }
 
-}
+    .membership-benefits li{
+        font-size:14px;
+        padding:14px;
+        gap:12px;
+        border-radius:14px;
+    }
 
-.points-row{
-
-flex-direction:column;
-
-gap:10px;
-
-text-align:center;
-
-}
-
-.points-row h3{
-
-font-size:24px;
-
-}
-
-.points-row span{
-
-font-size:28px;
-
-}
-
-.membership-benefits h3{
-
-font-size:24px;
-
-}
-
-.membership-benefits li{
-
-font-size:16px;
-
-padding:16px;
-
-}
+    .membership-benefits li svg{
+        font-size:18px;
+        flex-shrink:0;
+    }
 
 }
 
 /* ==========================================
-   MOBILE
+   SMALL MOBILE
 ========================================== */
 
-@media(max-width:480px){
+@media screen and (max-width:480px){
 
-.membership-card{
+    .membership-card{
+        padding:15px 10px;
+        border-radius:16px;
+    }
 
-padding:18px;
+    .membership-header h2{
+        font-size:22px;
+    }
 
-border-radius:20px;
+    .membership-header svg{
+        font-size:22px;
+    }
 
-}
+    .membership-info{
+        padding:15px;
+    }
 
-.membership-header h2{
+    .membership-icon{
+        width:60px;
+        height:60px;
+        font-size:24px;
+    }
 
-font-size:24px;
+    .membership-info h3{
+        font-size:20px;
+    }
 
-}
+    .membership-info p{
+        font-size:13px;
+    }
 
-.membership-icon{
+    .membership-status{
+        font-size:12px;
+        padding:6px 12px;
+    }
 
-width:65px;
+    .reward-points{
+        padding:15px;
+    }
 
-height:65px;
+    .points-row h3{
+        font-size:18px;
+    }
 
-font-size:28px;
+    .points-row span{
+        font-size:22px;
+    }
 
-}
+    .reward-points p{
+        font-size:13px;
+    }
 
-.membership-info h3{
+    .membership-benefits h3{
+        font-size:20px;
+    }
 
-font-size:22px;
-
-}
-
-.membership-info p{
-
-font-size:15px;
-
-}
-
-.reward-points{
-
-padding:20px;
-
-}
-
-.points-row span{
-
-font-size:24px;
-
-}
-
-.reward-points p{
-
-font-size:15px;
-
-}
-
-.membership-benefits li{
-
-font-size:15px;
-
-padding:14px;
-
-}
+    .membership-benefits li{
+        font-size:13px;
+        padding:12px;
+    }
 
 }
 

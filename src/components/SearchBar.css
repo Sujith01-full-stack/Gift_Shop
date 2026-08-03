@@ -608,195 +608,121 @@
 }
 
 /* ==========================================
-            TABLET
-========================================== */
-
-@media (max-width:992px){
-
-.searchbar{
-
-    width:100%;
-
-    max-width:100%;
-
-}
-
-.search-input-box{
-
-    height:64px;
-
-}
-
-.search-results{
-
-    top:74px;
-
-}
-
-.search-item{
-
-    padding:14px 16px;
-
-}
-
-.search-item img{
-
-    width:60px;
-
-    height:60px;
-
-    min-width:60px;
-
-}
-
-.search-details h4{
-
-    font-size:16px;
-
-}
-
-}
-
-/* ==========================================
-            MOBILE
+   MOBILE FIX (768px)
 ========================================== */
 
 @media (max-width:768px){
 
-.search-input-box{
+    .searchbar{
+        width:100%;
+        max-width:100%;
+    }
 
-    height:60px;
+    .search-input-box{
+        height:58px;
+        padding:0 16px;
+        border-radius:18px;
+        gap:10px;
+    }
 
-    padding:0 18px;
+    .search-icon{
+        font-size:20px;
+        flex-shrink:0;
+    }
 
-    border-radius:20px;
+    .search-input-box input{
+        width:100%;
+        font-size:15px;
+    }
 
-}
+    .search-results{
+        top:66px;
+        max-height:320px;
+        border-radius:16px;
+    }
 
-.search-icon{
+    .search-item{
+        padding:12px;
+        gap:12px;
+    }
 
-    font-size:22px;
+    .search-item img{
+        width:50px;
+        height:50px;
+        min-width:50px;
+        border-radius:12px;
+    }
 
-}
+    .search-details h4{
+        font-size:15px;
+    }
 
-.search-input-box input{
+    .search-details p{
+        font-size:12px;
+    }
 
-    font-size:16px;
-
-}
-
-.search-results{
-
-    top:68px;
-
-    border-radius:18px;
-
-}
-
-.search-item{
-
-    gap:12px;
-
-}
-
-.search-item img{
-
-    width:55px;
-
-    height:55px;
-
-    min-width:55px;
-
-}
-
-.search-details h4{
-
-    font-size:15px;
-
-}
-
-.search-details p{
-
-    font-size:13px;
-
-}
-
-.search-details span{
-
-    font-size:16px;
-
-}
+    .search-details span{
+        font-size:14px;
+    }
 
 }
 
 /* ==========================================
-            SMALL MOBILE
+   SMALL MOBILE (480px)
 ========================================== */
 
 @media (max-width:480px){
 
-.search-input-box{
+    .searchbar{
+        width:100%;
+    }
 
-    height:56px;
+    .search-input-box{
+        height:54px;
+        padding:0 14px;
+        border-radius:16px;
+    }
 
-    padding:0 15px;
+    .search-icon{
+        font-size:18px;
+    }
 
-}
+    .search-input-box input{
+        font-size:14px;
+    }
 
-.search-icon{
+    .search-input-box input::placeholder{
+        font-size:14px;
+    }
 
-    font-size:20px;
+    .search-results{
+        top:62px;
+        max-height:280px;
+    }
 
-}
+    .search-item{
+        padding:10px;
+    }
 
-.search-input-box input{
+    .search-item img{
+        width:45px;
+        height:45px;
+        min-width:45px;
+    }
 
-    font-size:15px;
+    .search-details h4{
+        font-size:13px;
+    }
 
-}
+    .search-details p{
+        font-size:11px;
+    }
 
-.search-item{
-
-    padding:12px;
-
-}
-
-.search-item img{
-
-    width:50px;
-
-    height:50px;
-
-    min-width:50px;
-
-}
-
-.search-details h4{
-
-    font-size:14px;
-
-}
-
-.search-details p{
-
-    font-size:12px;
-
-}
-
-.search-details span{
-
-    font-size:15px;
+    .search-details span{
+        font-size:13px;
+    }
 
 }
-
-.search-results{
-
-    max-height:320px;
-
-}
-
-}
-
 /* ==========================================
             PREMIUM HOVER
 ========================================== */

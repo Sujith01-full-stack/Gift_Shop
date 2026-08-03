@@ -722,192 +722,198 @@
 }
 
 /* ==========================================
-            TABLET
+   TABLET (992px)
 ========================================== */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
-.orders-header{
+    .recent-orders{
+        padding:30px 20px;
+        border-radius:24px;
+    }
 
-    flex-direction:column;
+    .orders-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
 
-    align-items:flex-start;
+    .orders-header h2{
+        font-size:32px;
+    }
 
-}
+    .view-all{
+        width:100%;
+    }
 
-.view-all{
+    .order-card{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:20px;
+        padding:22px;
+    }
 
-    width:100%;
+    .order-card img{
+        width:220px;
+        height:220px;
+        min-width:auto;
+        object-fit:contain;
+    }
 
-}
+    .order-info{
+        width:100%;
+        align-items:center;
+    }
 
-.order-card{
+    .order-info p{
+        justify-content:center;
+    }
 
-    flex-direction:column;
+    .order-price{
+        width:100%;
+        margin-top:10px;
+    }
 
-    text-align:center;
-
-}
-
-.order-card img{
-
-    width:220px;
-
-    height:220px;
-
-}
-
-.order-info{
-
-    align-items:center;
-
-}
-
-.order-price{
-
-    width:100%;
-
-    margin-top:20px;
-
-}
-
-.details-btn{
-
-    width:220px;
-
-}
+    .details-btn{
+        width:100%;
+        max-width:260px;
+        margin:auto;
+        margin-top:18px;
+    }
 
 }
 
 /* ==========================================
-            MOBILE
+   MOBILE (768px)
 ========================================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.recent-orders{
+    .recent-orders{
+        padding:22px 15px;
+        border-radius:20px;
+    }
 
-    padding:24px;
+    .orders-header{
+        margin-bottom:25px;
+    }
 
-    border-radius:22px;
+    .orders-header h2{
+        font-size:26px;
+        gap:10px;
+    }
 
-}
+    .orders-header h2 svg{
+        font-size:28px;
+    }
 
-.orders-header h2{
+    .view-all{
+        padding:14px;
+        font-size:15px;
+    }
 
-    font-size:30px;
+    .orders-list{
+        gap:18px;
+    }
 
-}
+    .order-card{
+        padding:18px;
+        border-radius:18px;
+        gap:16px;
+    }
 
-.order-card{
+    .order-card img{
+        width:100%;
+        max-width:220px;
+        height:180px;
+        object-fit:contain;
+        min-width:auto;
+    }
 
-    padding:18px;
+    .order-info h3{
+        font-size:20px;
+        margin-bottom:8px;
+    }
 
-    gap:18px;
+    .order-info p{
+        font-size:14px;
+        justify-content:center;
+    }
 
-}
+    .order-price h3{
+        font-size:24px;
+    }
 
-.order-card img{
+    .status{
+        width:100%;
+        justify-content:center;
+    }
 
-    width:100%;
-
-    max-width:260px;
-
-    height:200px;
-
-    object-fit:contain;
-
-}
-
-.order-info h3{
-
-    font-size:22px;
-
-}
-
-.order-info p{
-
-    font-size:15px;
-
-}
-
-.order-price h3{
-
-    font-size:28px;
-
-}
-
-.details-btn{
-
-    width:100%;
-
-}
+    .details-btn{
+        width:100%;
+        height:48px;
+        font-size:15px;
+    }
 
 }
 
 /* ==========================================
-            SMALL MOBILE
+   SMALL MOBILE (480px)
 ========================================== */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
-.recent-orders{
+    .recent-orders{
+        padding:16px 12px;
+        border-radius:16px;
+    }
 
-    padding:18px;
+    .orders-header h2{
+        font-size:22px;
+    }
 
-}
+    .orders-header h2 svg{
+        font-size:24px;
+    }
 
-.orders-header h2{
+    .view-all{
+        font-size:14px;
+        padding:12px;
+    }
 
-    font-size:24px;
+    .order-card{
+        padding:15px;
+        border-radius:16px;
+    }
 
-}
+    .order-card img{
+        max-width:180px;
+        height:150px;
+    }
 
-.order-card{
+    .order-info h3{
+        font-size:18px;
+    }
 
-    border-radius:18px;
+    .order-info p{
+        font-size:13px;
+        line-height:1.6;
+    }
 
-}
+    .order-price h3{
+        font-size:22px;
+    }
 
-.order-card img{
+    .status{
+        font-size:12px;
+        padding:8px 12px;
+    }
 
-    height:170px;
-
-}
-
-.order-info h3{
-
-    font-size:20px;
-
-}
-
-.order-info p{
-
-    font-size:14px;
-
-}
-
-.order-price h3{
-
-    font-size:24px;
-
-}
-
-.status{
-
-    width:100%;
-
-    justify-content:center;
-
-}
-
-.details-btn{
-
-    height:48px;
-
-    font-size:15px;
-
-}
+    .details-btn{
+        height:44px;
+        font-size:14px;
+    }
 
 }
 

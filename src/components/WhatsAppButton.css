@@ -184,51 +184,61 @@
 }
 
 /* ==========================================
-        TABLET
+   TABLET (768px)
 ========================================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.whatsapp-float{
+    .whatsapp-float{
+        width:60px;
+        height:60px;
+        right:18px;
+        bottom:18px;
+        font-size:28px;
+    }
 
-    width:62px;
+    .whatsapp-float::before{
+        inset:-6px;
+    }
 
-    height:62px;
-
-    font-size:28px;
-
-    right:20px;
-
-    bottom:20px;
-
-}
-
-.whatsapp-float::after{
-
-    display:none;
-
-}
+    .whatsapp-float::after{
+        display:none;
+    }
 
 }
 
 /* ==========================================
-        MOBILE
+   MOBILE (480px)
 ========================================== */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
-.whatsapp-float{
+    .whatsapp-float{
+        width:54px;
+        height:54px;
+        right:14px;
+        bottom:calc(14px + env(safe-area-inset-bottom));
+        font-size:24px;
+    }
 
-    width:56px;
-
-    height:56px;
-
-    font-size:24px;
-
-    right:16px;
-
-    bottom:16px;
+    .whatsapp-float::before{
+        inset:-5px;
+    }
 
 }
+
+/* ==========================================
+   SMALL MOBILE (360px)
+========================================== */
+
+@media (max-width:360px){
+
+    .whatsapp-float{
+        width:50px;
+        height:50px;
+        right:12px;
+        bottom:calc(12px + env(safe-area-inset-bottom));
+        font-size:22px;
+    }
 
 }

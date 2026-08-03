@@ -560,6 +560,8 @@
     border-radius:18px;
 
     white-space:nowrap;
+    flex:1;
+    min-width:0;
 
     font-size:17px;
     font-weight:700;
@@ -794,186 +796,200 @@
 }
 
 /* ==========================================
-            MOBILE
+   MOBILE RESPONSIVE
 ========================================== */
 
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
-.profile-card{
+    .profile-card{
+        width:100%;
+        max-width:100%;
+        min-width:100%;
+        padding:22px 18px;
+        border-radius:20px;
+    }
 
-    padding:22px;
+    .profile-image{
+        width:120px;
+        height:120px;
+        margin:0 auto 20px;
+    }
 
-    border-radius:20px;
+    .camera-btn{
+        width:40px;
+        height:40px;
+        font-size:16px;
+    }
 
-}
+    .profile-header{
+        margin-bottom:20px;
+    }
 
-.profile-image{
+    .profile-header h2{
+        font-size:22px;
+    }
 
-    width:130px;
+    .profile-header p{
+        font-size:14px;
+    }
 
-    height:130px;
+    .member-info{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
 
-}
+    .member-card{
+        padding:15px;
+    }
 
-.profile-header h2{
+    .member-card h4{
+        font-size:15px;
+    }
 
-    font-size:24px;
+    .member-card span{
+        font-size:13px;
+    }
 
-}
+    .progress-text{
+        font-size:13px;
+    }
 
-.profile-header p{
+    .progress-bar{
+        height:10px;
+    }
 
-    font-size:14px;
+    .info-item{
+        padding:14px;
+        gap:10px;
+    }
 
-}
+    .icon{
+        font-size:18px;
+    }
 
-.member-info{
+    .info-item input,
+    .info-item textarea{
+        font-size:14px;
+    }
 
-    grid-template-columns:1fr;
+    .profile-btns{
+        flex-direction:column;
+        gap:12px;
+    }
 
-}
-
-.info-item{
-
-    padding:14px;
-
-}
-
-.edit-btn,
-.save-btn{
-
-    height:52px;
-
-    font-size:15px;
-
-}
+    .edit-btn,
+    .save-btn{
+        width:100%;
+        min-width:100%;
+        height:50px;
+        font-size:15px;
+    }
 
 }
 
 /* ==========================================
-            SMALL MOBILE
+   SMALL MOBILE
 ========================================== */
 
-@media (max-width:480px){
+@media screen and (max-width:480px){
 
-.profile-card{
+    .profile-card{
+        padding:16px;
+        border-radius:18px;
+    }
 
-    padding:18px;
+    .profile-image{
+        width:100px;
+        height:100px;
+    }
 
-    border-radius:18px;
+    .camera-btn{
+        width:34px;
+        height:34px;
+        font-size:14px;
+    }
 
-}
+    .profile-header h2{
+        font-size:20px;
+    }
 
-.profile-image{
+    .profile-header p{
+        font-size:13px;
+    }
 
-    width:110px;
+    .member-card{
+        padding:12px;
+    }
 
-    height:110px;
+    .member-card svg{
+        font-size:20px;
+    }
 
-}
+    .member-card h4{
+        font-size:14px;
+    }
 
-.camera-btn{
+    .member-card span{
+        font-size:12px;
+    }
 
-    width:38px;
+    .info-item{
+        padding:12px;
+    }
 
-    height:38px;
+    .info-item input,
+    .info-item textarea{
+        font-size:13px;
+    }
 
-    font-size:15px;
-
-}
-
-.profile-header h2{
-
-    font-size:20px;
-
-}
-
-.profile-header p{
-
-    font-size:13px;
-
-}
-
-.member-card{
-
-    padding:14px;
-
-}
-
-.member-card svg{
-
-    font-size:22px;
-
-}
-
-.info-item{
-
-    gap:10px;
-
-    padding:12px;
-
-}
-
-.icon{
-
-    font-size:18px;
-
-}
-
-.info-item input,
-.info-item textarea{
-
-    font-size:14px;
-
-}
-
-.edit-btn,
-.save-btn{
-
-    height:48px;
-
-    font-size:14px;
-
-}
+    .edit-btn,
+    .save-btn{
+        height:46px;
+        font-size:14px;
+    }
 
 }
 
 /* ==========================================
-            PREMIUM HOVER EFFECTS
+   EXTRA SMALL MOBILE
 ========================================== */
 
-.profile-card:hover .profile-photo{
+@media screen and (max-width:360px){
 
-    transform:scale(1.05);
+    .profile-card{
+        padding:14px;
+    }
 
-    box-shadow:
-        0 0 25px rgba(34,211,238,.45),
-        0 0 50px rgba(34,211,238,.25);
+    .profile-image{
+        width:90px;
+        height:90px;
+    }
 
-}
+    .profile-header h2{
+        font-size:18px;
+    }
 
-.profile-card:hover .profile-header h2{
+    .profile-header p{
+        font-size:12px;
+    }
 
-    color:#67e8f9;
+    .member-card{
+        padding:10px;
+    }
 
-}
+    .member-card h4{
+        font-size:13px;
+    }
 
-.profile-card:hover .verified-icon{
+    .member-card span{
+        font-size:11px;
+    }
 
-    transform:rotate(10deg);
-
-}
-
-.member-card:hover svg{
-
-    transform:scale(1.15);
-
-}
-
-.edit-btn:hover,
-.save-btn:hover{
-
-    letter-spacing:.5px;
+    .edit-btn,
+    .save-btn{
+        height:44px;
+        font-size:13px;
+    }
 
 }
 

@@ -54,6 +54,7 @@ import CustomerManagement from "./pages/CustomerManagement";
 import Reports from "./pages/Reports";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
+import AdminOffer from "./pages/AdminOffer";
 function App() {
 
   const location = useLocation();
@@ -76,7 +77,7 @@ function App() {
 
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
-
+          
           {/* ================= PRODUCTS ================= */}
 
           <Route path="/products" element={<Products />} />
@@ -189,6 +190,15 @@ function App() {
   element={
     <AdminProtectedRoute>
       <Settings />
+    </AdminProtectedRoute>
+  }
+/>
+
+<Route
+  path="/admin/offer"
+  element={
+    <AdminProtectedRoute>
+      <AdminOffer />
     </AdminProtectedRoute>
   }
 />

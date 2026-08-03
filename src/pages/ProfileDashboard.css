@@ -533,100 +533,35 @@
 }
 
 /* ==========================================
-   MOBILE RESPONSIVE
+   EXTRA MOBILE FIX
 ========================================== */
 
 @media screen and (max-width:768px){
 
     .profile-dashboard{
-        padding:85px 15px 30px;
+        width:100%;
+        overflow-x:hidden;
+        padding:80px 15px 30px;
     }
 
     .dashboard-container{
+        width:100%;
+        display:grid;
         grid-template-columns:1fr;
         gap:20px;
     }
 
-    .dashboard-left{
-        position:static;
-        padding:20px;
-        border-radius:20px;
-    }
-
-    .profile-image{
-        width:100px;
-        height:100px;
-    }
-
-    .profile-name{
-        font-size:22px;
-    }
-
-    .profile-email{
-        font-size:14px;
-    }
-
-    .dashboard-menu{
-        gap:12px;
-    }
-
-    .dashboard-menu a{
-        padding:14px 16px;
-        font-size:15px;
-    }
-
-    .dashboard-menu a svg{
-        font-size:18px;
-    }
-
+    .dashboard-left,
     .dashboard-right{
-        gap:18px;
+        width:100%;
     }
 
-    .dashboard-right>*{
-        padding:20px;
-        border-radius:20px;
-    }
-
-    .dashboard-right h1{
-        font-size:28px;
-    }
-
-    .dashboard-right h2{
-        font-size:22px;
-    }
-
-    .dashboard-right h3{
-        font-size:18px;
-    }
-
-    .dashboard-right p{
-        font-size:14px;
-        line-height:1.7;
+    .dashboard-right > *{
+        width:100%;
     }
 
     .stats-grid{
         grid-template-columns:1fr;
-        gap:15px;
-    }
-
-    .stat-card{
-        padding:20px;
-    }
-
-    .stat-card h2{
-        font-size:28px;
-    }
-
-    .activity-card{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .activity-icon{
-        width:50px;
-        height:50px;
-        font-size:20px;
     }
 
     .dashboard-table{
@@ -637,25 +572,18 @@
 
     .dashboard-btn{
         width:100%;
-        padding:14px;
-        font-size:15px;
     }
 
 }
 
-/* ==========================================
-   SMALL MOBILE
-========================================== */
-
 @media screen and (max-width:480px){
 
     .profile-dashboard{
-        padding:80px 12px 25px;
+        padding:75px 10px 25px;
     }
 
     .dashboard-left{
         padding:15px;
-        border-radius:18px;
     }
 
     .profile-image{
@@ -664,25 +592,24 @@
     }
 
     .profile-name{
-        font-size:18px;
+        font-size:20px;
     }
 
     .profile-email{
-        font-size:12px;
+        font-size:13px;
     }
 
     .dashboard-menu a{
         padding:12px;
         font-size:14px;
-        gap:10px;
     }
 
-    .dashboard-right>*{
-        padding:16px;
+    .dashboard-right > *{
+        padding:15px;
     }
 
     .dashboard-right h1{
-        font-size:24px;
+        font-size:22px;
     }
 
     .dashboard-right h2{
@@ -690,33 +617,22 @@
     }
 
     .dashboard-right h3{
-        font-size:17px;
-    }
-
-    .dashboard-right p{
-        font-size:13px;
-    }
-
-    .stat-card{
-        padding:16px;
+        font-size:18px;
     }
 
     .stat-card h2{
         font-size:24px;
     }
 
-    .activity-info h4{
-        font-size:15px;
+    .activity-card{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .activity-info p{
-        font-size:12px;
-    }
-
-    .dashboard-btn{
-        width:100%;
-        padding:12px;
-        font-size:14px;
+    .activity-icon{
+        width:45px;
+        height:45px;
+        font-size:18px;
     }
 
 }

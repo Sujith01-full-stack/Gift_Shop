@@ -501,199 +501,139 @@
 }
 
 /* ==========================================
-            LARGE MOBILE
+   EXTRA MOBILE RESPONSIVE FIX
 ========================================== */
 
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
-.settings-page{
-    padding:30px 15px;
-}
+    .settings-page{
+        min-height:100vh;
+        padding:80px 15px 30px;
+        overflow-x:hidden;
+    }
 
-.settings-container{
-    padding:25px;
-    border-radius:22px;
-}
+    .settings-container{
+        width:100%;
+        max-width:100%;
+        padding:20px;
+        border-radius:20px;
+    }
 
-.settings-icon{
-    width:75px;
-    height:75px;
-    font-size:32px;
-}
+    .settings-header{
+        margin-bottom:25px;
+    }
 
-.settings-header h1{
-    font-size:30px;
-}
+    .settings-icon{
+        width:70px;
+        height:70px;
+        font-size:30px;
+        margin-bottom:15px;
+    }
 
-.settings-header p{
-    font-size:15px;
-}
+    .settings-header h1{
+        font-size:28px;
+        line-height:1.3;
+    }
 
-.setting-card{
-    padding:20px;
-}
+    .settings-header p{
+        font-size:14px;
+        line-height:1.7;
+    }
 
-.setting-card h2{
-    font-size:20px;
-}
+    .setting-card{
+        padding:18px;
+        border-radius:18px;
+        margin-bottom:18px;
+    }
 
-.setting-card input{
+    .setting-card h2{
+        font-size:20px;
+        gap:10px;
+    }
 
-    padding:14px;
+    .setting-card h2 svg{
+        font-size:20px;
+    }
 
-    font-size:15px;
+    .setting-card input{
+        height:50px;
+        padding:14px 16px;
+        font-size:14px;
+    }
 
-}
+    .switch-row{
+        gap:10px;
+    }
 
-.switch-row{
+    .switch-row span{
+        font-size:14px;
+        line-height:1.5;
+    }
 
-    font-size:15px;
+    .button-group{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
 
-}
-
-.button-group{
-
-    flex-direction:column;
-
-}
-
-.button-group button{
-
-    width:100%;
-
-    font-size:16px;
-
-}
+    .button-group button{
+        width:100%;
+        height:50px;
+        font-size:15px;
+    }
 
 }
 
 /* ==========================================
-            MOBILE
+   SMALL MOBILE
 ========================================== */
 
-@media (max-width:480px){
+@media screen and (max-width:480px){
 
-.settings-page{
+    .settings-page{
+        padding:75px 10px 25px;
+    }
 
-    padding:20px 10px;
+    .settings-container{
+        padding:15px;
+        border-radius:16px;
+    }
 
-}
+    .settings-icon{
+        width:60px;
+        height:60px;
+        font-size:26px;
+    }
 
-.settings-container{
+    .settings-header h1{
+        font-size:24px;
+    }
 
-    padding:18px;
+    .settings-header p{
+        font-size:13px;
+    }
 
-    border-radius:18px;
+    .setting-card{
+        padding:15px;
+    }
 
-}
+    .setting-card h2{
+        font-size:18px;
+    }
 
-.settings-icon{
+    .setting-card input{
+        height:46px;
+        font-size:13px;
+    }
 
-    width:65px;
+    .switch-row span{
+        font-size:13px;
+    }
 
-    height:65px;
-
-    font-size:28px;
-
-}
-
-.settings-header h1{
-
-    font-size:26px;
-
-}
-
-.settings-header p{
-
-    font-size:14px;
-
-}
-
-.setting-card{
-
-    padding:16px;
-
-    border-radius:16px;
-
-}
-
-.setting-card h2{
-
-    font-size:18px;
-
-}
-
-.setting-card input{
-
-    height:48px;
-
-    font-size:14px;
-
-}
-
-.switch-row{
-
-    font-size:14px;
-
-}
-
-.switch-row input{
-
-    transform:scale(1.1);
-
-}
-
-.button-group{
-
-    gap:15px;
-
-}
-
-.button-group button{
-
-    height:50px;
-
-    font-size:15px;
-
-}
-
-}
-
-/* ==========================================
-            EXTRA SMALL MOBILE
-========================================== */
-
-@media (max-width:360px){
-
-.settings-header h1{
-
-    font-size:22px;
-
-}
-
-.settings-header p{
-
-    font-size:13px;
-
-}
-
-.setting-card h2{
-
-    font-size:17px;
-
-}
-
-.setting-card input{
-
-    font-size:13px;
-
-}
-
-.button-group button{
-
-    font-size:14px;
-
-}
+    .button-group button{
+        height:48px;
+        font-size:14px;
+    }
 
 }
 

@@ -772,154 +772,163 @@ padding:28px;
 }
 
 /* ==========================================
-            MOBILE
+   EXTRA MOBILE RESPONSIVE
 ========================================== */
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
-.address-book{
+    .address-book{
+        width:100%;
+        max-width:100%;
+        margin:20px auto;
+        padding:20px 15px;
+        border-radius:20px;
+        overflow:hidden;
+    }
 
-padding:20px;
+    .address-header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:18px;
+        margin-bottom:25px;
+    }
 
-border-radius:20px;
+    .address-header h2{
+        font-size:28px;
+        line-height:1.3;
+        justify-content:center;
+    }
 
-}
+    .add-address-btn{
+        width:100%;
+        justify-content:center;
+        padding:14px;
+        font-size:15px;
+    }
 
-.address-header{
+    .address-form{
+        padding:18px;
+        border-radius:18px;
+    }
 
-align-items:center;
+    .address-form h3{
+        font-size:24px;
+    }
 
-text-align:center;
+    .address-form input,
+    .address-form textarea,
+    .address-form select{
+        font-size:14px;
+        padding:14px;
+    }
 
-}
+    .form-buttons{
+        flex-direction:column;
+        gap:12px;
+    }
 
-.address-header h2{
+    .form-buttons button{
+        width:100%;
+        height:50px;
+        font-size:15px;
+    }
 
-font-size:28px;
+    .address-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
 
-justify-content:center;
+    .address-card{
+        width:100%;
+        padding:18px;
+        border-radius:18px;
+    }
 
-}
+    .address-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
 
-.add-address-btn{
+    .address-actions{
+        width:100%;
+        justify-content:flex-end;
+    }
 
-width:100%;
+    .address-actions button{
+        width:42px;
+        height:42px;
+        font-size:15px;
+    }
 
-justify-content:center;
+    .address-card h3{
+        font-size:22px;
+    }
 
-}
-
-.form-buttons{
-
-flex-direction:column;
-
-}
-
-.form-buttons button{
-
-width:100%;
-
-}
-
-.address-top{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:16px;
-
-}
-
-.address-actions{
-
-width:100%;
-
-justify-content:flex-end;
-
-}
-
-.address-card{
-
-padding:22px;
-
-}
-
-.address-card h3{
-
-font-size:22px;
-
-}
-
-.address-card p{
-
-font-size:15px;
-
-}
+    .address-card p{
+        font-size:14px;
+        line-height:1.7;
+        word-break:break-word;
+    }
 
 }
 
 /* ==========================================
-            SMALL MOBILE
+   SMALL MOBILE
 ========================================== */
 
-@media(max-width:480px){
+@media screen and (max-width:480px){
 
-.address-book{
+    .address-book{
+        padding:15px 10px;
+    }
 
-padding:15px;
+    .address-header h2{
+        font-size:24px;
+    }
 
-}
+    .address-form{
+        padding:15px;
+    }
 
-.address-header h2{
+    .address-form h3{
+        font-size:22px;
+    }
 
-font-size:24px;
+    .address-form input,
+    .address-form textarea,
+    .address-form select{
+        padding:12px;
+        font-size:13px;
+    }
 
-}
+    .address-card{
+        padding:15px;
+    }
 
-.address-form{
+    .address-type{
+        font-size:18px;
+    }
 
-padding:20px;
+    .address-card h3{
+        font-size:20px;
+    }
 
-}
+    .address-card p{
+        font-size:13px;
+    }
 
-.address-form h3{
+    .address-actions button{
+        width:38px;
+        height:38px;
+        font-size:14px;
+    }
 
-font-size:26px;
-
-}
-
-.address-form input,
-.address-form textarea,
-.address-form select{
-
-font-size:15px;
-
-padding:14px;
-
-}
-
-.address-card{
-
-padding:18px;
-
-}
-
-.address-type{
-
-font-size:18px;
-
-}
-
-.address-actions button{
-
-width:42px;
-
-height:42px;
-
-font-size:16px;
-
-}
+    .add-address-btn,
+    .form-buttons button{
+        font-size:14px;
+    }
 
 }
 

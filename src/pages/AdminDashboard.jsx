@@ -20,6 +20,7 @@ import {
   FaCog,
   FaStar,
   FaArrowUp,
+  FaTags,
 } from "react-icons/fa";
 
 const AdminDashboard = () => {
@@ -111,9 +112,7 @@ const AdminDashboard = () => {
               }
             >
               <FaChartLine />
-
               <span>Dashboard</span>
-
             </NavLink>
 
           </li>
@@ -121,11 +120,8 @@ const AdminDashboard = () => {
           <li>
 
             <Link to="/admin/add-product">
-
               <FaPlusCircle />
-
               <span>Add Product</span>
-
             </Link>
 
           </li>
@@ -133,11 +129,8 @@ const AdminDashboard = () => {
           <li>
 
             <Link to="/admin/products">
-
               <FaBoxOpen />
-
               <span>Products</span>
-
             </Link>
 
           </li>
@@ -145,11 +138,8 @@ const AdminDashboard = () => {
           <li>
 
             <Link to="/admin/manage-orders">
-
               <FaClipboardList />
-
               <span>Manage Orders</span>
-
             </Link>
 
           </li>
@@ -157,11 +147,8 @@ const AdminDashboard = () => {
           <li>
 
             <Link to="/admin/customers">
-
               <FaUsers />
-
               <span>Customers</span>
-
             </Link>
 
           </li>
@@ -169,11 +156,8 @@ const AdminDashboard = () => {
           <li>
 
             <Link to="/admin/reports">
-
               <FaChartLine />
-
               <span>Reports</span>
-
             </Link>
 
           </li>
@@ -181,11 +165,8 @@ const AdminDashboard = () => {
           <li>
 
             <Link to="/admin/notifications">
-
               <FaBell />
-
               <span>Notifications</span>
-
             </Link>
 
           </li>
@@ -193,11 +174,19 @@ const AdminDashboard = () => {
           <li>
 
             <Link to="/admin/settings">
-
               <FaCog />
-
               <span>Settings</span>
+            </Link>
 
+          </li>
+
+          {/* Banner Offer */}
+
+          <li>
+
+            <Link to="/admin/offer">
+              <FaTags />
+              <span>Banner Offer</span>
             </Link>
 
           </li>
@@ -210,9 +199,7 @@ const AdminDashboard = () => {
               onClick={handleLogout}
             >
               <FaSignOutAlt />
-
               <span>Logout</span>
-
             </button>
 
           </li>
@@ -225,419 +212,366 @@ const AdminDashboard = () => {
 
       <main className="dashboard-content">
 
-             {/* ===========================
-          DASHBOARD HEADER
-      ============================ */}
+                {/* ===========================
+            DASHBOARD HEADER
+        ============================ */}
 
-      <div className="dashboard-header">
+        <div className="dashboard-header">
 
-        <div>
+          <div>
 
-          <h1>Dashboard</h1>
+            <h1>Dashboard</h1>
 
-          <p>
-            Welcome back, Administrator 👋
-          </p>
+            <p>
+              Welcome back, Administrator 👋
+            </p>
 
-        </div>
-
-        <div className="header-actions">
-
-          <Link
-            to="/admin/add-product"
-            className="add-btn"
-          >
-            <FaPlusCircle />
-            Add Product
-          </Link>
-
-        </div>
-
-      </div>
-
-      {/* ===========================
-          STATISTICS
-      ============================ */}
-
-      <div className="stats-grid">
-
-        <div className="stat-card">
-
-          <div className="stat-icon blue">
-            <FaBoxOpen />
           </div>
 
-          <div className="stat-info">
+          <div className="header-actions">
 
-            <h3>{products.length}</h3>
-
-            <p>Total Products</p>
+            <Link
+              to="/admin/add-product"
+              className="add-btn"
+            >
+              <FaPlusCircle />
+              Add Product
+            </Link>
 
           </div>
 
         </div>
 
-        <div className="stat-card">
+        {/* ===========================
+            STATISTICS
+        ============================ */}
 
-          <div className="stat-icon green">
-            <FaShoppingCart />
+        <div className="stats-grid">
+
+          <div className="stat-card">
+
+            <div className="stat-icon blue">
+              <FaBoxOpen />
+            </div>
+
+            <div className="stat-info">
+
+              <h3>{products.length}</h3>
+
+              <p>Total Products</p>
+
+            </div>
+
           </div>
 
-          <div className="stat-info">
+          <div className="stat-card">
 
-            <h3>{recentOrders.length}</h3>
+            <div className="stat-icon green">
+              <FaShoppingCart />
+            </div>
 
-            <p>Total Orders</p>
+            <div className="stat-info">
+
+              <h3>{recentOrders.length}</h3>
+
+              <p>Total Orders</p>
+
+            </div>
+
+          </div>
+
+          <div className="stat-card">
+
+            <div className="stat-icon orange">
+              <FaUsers />
+            </div>
+
+            <div className="stat-info">
+
+              <h3>245</h3>
+
+              <p>Total Customers</p>
+
+            </div>
+
+          </div>
+
+          <div className="stat-card">
+
+            <div className="stat-icon purple">
+              <FaRupeeSign />
+            </div>
+
+            <div className="stat-info">
+
+              <h3>₹1,24,500</h3>
+
+              <p>Total Revenue</p>
+
+            </div>
 
           </div>
 
         </div>
 
-        <div className="stat-card">
+        {/* ===========================
+            QUICK ACTIONS
+        ============================ */}
 
-          <div className="stat-icon orange">
-            <FaUsers />
-          </div>
+        <div className="quick-actions">
 
-          <div className="stat-info">
+          <h2>Quick Actions</h2>
 
-            <h3>245</h3>
+          <div className="action-grid">
 
-            <p>Total Customers</p>
+            <Link
+              to="/admin/add-product"
+              className="action-card"
+            >
+              <FaPlusCircle />
+
+              <h4>Add Product</h4>
+
+              <p>Create a new product</p>
+
+            </Link>
+
+            <Link
+              to="/admin/products"
+              className="action-card"
+            >
+              <FaBoxOpen />
+
+              <h4>Manage Products</h4>
+
+              <p>View and edit products</p>
+
+            </Link>
+
+            <Link
+              to="/admin/manage-orders"
+              className="action-card"
+            >
+              <FaClipboardList />
+
+              <h4>Manage Orders</h4>
+
+              <p>Track customer orders</p>
+
+            </Link>
+
+            <Link
+              to="/admin/customers"
+              className="action-card"
+            >
+              <FaUsers />
+
+              <h4>Customers</h4>
+
+              <p>View customer details</p>
+
+            </Link>
+
+            <Link
+              to="/admin/reports"
+              className="action-card"
+            >
+              <FaChartLine />
+
+              <h4>Reports</h4>
+
+              <p>Sales & Analytics</p>
+
+            </Link>
+
+            <Link
+              to="/admin/settings"
+              className="action-card"
+            >
+              <FaCog />
+
+              <h4>Settings</h4>
+
+              <p>Store Configuration</p>
+
+            </Link>
+
+            {/* Banner Offer */}
+
+            <Link
+              to="/admin/offer"
+              className="action-card"
+            >
+              <FaTags />
+
+              <h4>Banner Offer</h4>
+
+              <p>Manage Homepage Banner Offer</p>
+
+            </Link>
 
           </div>
 
         </div>
 
-        <div className="stat-card">
+                {/* ===========================
+            RECENT ORDERS
+        ============================ */}
 
-          <div className="stat-icon purple">
-            <FaRupeeSign />
-          </div>
+        <div className="orders-section">
 
-          <div className="stat-info">
+          <h2>Recent Orders</h2>
 
-            <h3>₹1,24,500</h3>
+          <table className="orders-table">
 
-            <p>Total Revenue</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* ===========================
-          QUICK ACTIONS
-      ============================ */}
-
-      <div className="quick-actions">
-
-        <h2>Quick Actions</h2>
-
-        <div className="action-grid">
-
-          <Link
-            to="/admin/add-product"
-            className="action-card"
-          >
-            <FaPlusCircle />
-
-            <h4>Add Product</h4>
-
-            <p>Create a new product</p>
-
-          </Link>
-
-          <Link
-            to="/admin/products"
-            className="action-card"
-          >
-            <FaBoxOpen />
-
-            <h4>Manage Products</h4>
-
-            <p>View and edit products</p>
-
-          </Link>
-
-          <Link
-            to="/admin/manage-orders"
-            className="action-card"
-          >
-            <FaClipboardList />
-
-            <h4>Manage Orders</h4>
-
-            <p>Track customer orders</p>
-
-          </Link>
-
-          <Link
-            to="/admin/customers"
-            className="action-card"
-          >
-            <FaUsers />
-
-            <h4>Customers</h4>
-
-            <p>View customer details</p>
-
-          </Link>
-
-          <Link
-            to="/admin/reports"
-            className="action-card"
-          >
-            <FaChartLine />
-
-            <h4>Reports</h4>
-
-            <p>Sales & Analytics</p>
-
-          </Link>
-
-          <Link
-            to="/admin/settings"
-            className="action-card"
-          >
-            <FaCog />
-
-            <h4>Settings</h4>
-
-            <p>Store configuration</p>
-
-          </Link>
-
-        </div>
-
-      </div>
-
-      {/* ===========================
-          RECENT ORDERS
-      ============================ */}
-
-      <div className="orders-section">
-
-        <h2>Recent Orders</h2>
-
-        <table className="orders-table">
-
-          <thead>
-
-            <tr>
-              <th>Order ID</th>
-              <th>Customer</th>
-              <th>Product</th>
-              <th>Status</th>
-              <th>Amount</th>
-            </tr>
-
-          </thead>
-
-          <tbody>
-
-            {recentOrders.map((order) => (
-
-              <tr key={order.id}>
-
-                <td>{order.id}</td>
-
-                <td>{order.customer}</td>
-
-                <td>{order.product}</td>
-
-                <td>
-                  <span
-                    className={`status ${order.status.toLowerCase()}`}
-                  >
-                    {order.status}
-                  </span>
-                </td>
-
-                <td>{order.amount}</td>
-
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Status</th>
+                <th>Amount</th>
               </tr>
+            </thead>
 
-            ))}
+            <tbody>
 
-          </tbody>
+              {recentOrders.map((order) => (
 
-        </table>
+                <tr key={order.id}>
 
-      </div>
-            {/* ===========================
-          RECENT PRODUCTS
-      ============================ */}
+                  <td>{order.id}</td>
 
-      <div className="dashboard-section">
+                  <td>{order.customer}</td>
 
-        <div className="section-header">
-          <h2>Recent Products</h2>
+                  <td>{order.product}</td>
 
-          <Link
-            to="/admin/products"
-            className="view-all-btn"
-          >
-            View All
-          </Link>
+                  <td>
+                    <span
+                      className={`status ${order.status.toLowerCase()}`}
+                    >
+                      {order.status}
+                    </span>
+                  </td>
+
+                  <td>{order.amount}</td>
+
+                </tr>
+
+              ))}
+
+            </tbody>
+
+          </table>
+
         </div>
 
-        <div className="product-grid">
+        {/* ===========================
+            RECENT PRODUCTS
+        ============================ */}
 
-          {products.length > 0 ? (
+        <div className="dashboard-section">
 
-            products.slice(0, 6).map((product) => (
+          <div className="section-header">
 
-              <div
-                key={product.id}
-                className="product-card"
-              >
+            <h2>Recent Products</h2>
 
-                <img
-                  src={product.image}
-                  alt={product.name}
-                />
+            <Link
+              to="/admin/products"
+              className="view-all-btn"
+            >
+              View All
+            </Link>
 
-                <h4>{product.name}</h4>
+          </div>
 
-                <p>{product.category}</p>
+          <div className="product-grid">
 
-                <h3>₹{product.price}</h3>
+            {products.length > 0 ? (
+
+              products.slice(0, 6).map((product) => (
+
+                <div
+                  key={product.id}
+                  className="product-card"
+                >
+
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                  />
+
+                  <h4>{product.name}</h4>
+
+                  <p>{product.category}</p>
+
+                  <h3>₹{product.price}</h3>
+
+                </div>
+
+              ))
+
+            ) : (
+
+              <div className="empty-products">
+
+                <FaBoxOpen size={60} />
+
+                <h3>No Products Found</h3>
+
+                <p>Add your first product.</p>
 
               </div>
 
-            ))
-
-          ) : (
-
-            <div className="empty-products">
-
-              <FaBoxOpen size={60} />
-
-              <h3>No Products Found</h3>
-
-              <p>Add your first product.</p>
-
-            </div>
-
-          )}
-
-        </div>
-
-      </div>
-
-      {/* ===========================
-          SALES OVERVIEW
-      ============================ */}
-
-      <div className="dashboard-section">
-
-        <h2>Sales Overview</h2>
-
-        <div className="sales-cards">
-
-          <div className="sales-card">
-
-            <FaArrowUp className="sales-icon green" />
-
-            <h3>Today's Sales</h3>
-
-            <h2>₹18,250</h2>
-
-            <span>+12%</span>
-
-          </div>
-
-          <div className="sales-card">
-
-            <FaArrowUp className="sales-icon blue" />
-
-            <h3>This Week</h3>
-
-            <h2>₹1,24,800</h2>
-
-            <span>+18%</span>
-
-          </div>
-
-          <div className="sales-card">
-
-            <FaArrowUp className="sales-icon orange" />
-
-            <h3>This Month</h3>
-
-            <h2>₹4,82,600</h2>
-
-            <span>+26%</span>
+            )}
 
           </div>
 
         </div>
 
-      </div>
+        {/* ===========================
+            SALES OVERVIEW
+        ============================ */}
 
-      {/* ===========================
-          TOP PRODUCTS
-      ============================ */}
+        <div className="dashboard-section">
 
-      <div className="dashboard-section">
+          <h2>Sales Overview</h2>
 
-        <h2>Best Selling Products</h2>
+          <div className="sales-cards">
 
-        <div className="top-products">
+            <div className="sales-card">
 
-          <div className="top-product">
+              <FaArrowUp className="sales-icon green" />
 
-            <FaStar className="star" />
+              <h3>Today's Sales</h3>
 
-            <div>
+              <h2>₹18,250</h2>
 
-              <h4>Magic Mug</h4>
-
-              <p>245 Orders</p>
+              <span>+12%</span>
 
             </div>
 
-          </div>
+            <div className="sales-card">
 
-          <div className="top-product">
+              <FaArrowUp className="sales-icon blue" />
 
-            <FaStar className="star" />
+              <h3>This Week</h3>
 
-            <div>
+              <h2>₹1,24,800</h2>
 
-              <h4>LED Photo Frame</h4>
-
-              <p>198 Orders</p>
+              <span>+18%</span>
 
             </div>
 
-          </div>
+            <div className="sales-card">
 
-          <div className="top-product">
+              <FaArrowUp className="sales-icon orange" />
 
-            <FaStar className="star" />
+              <h3>This Month</h3>
 
-            <div>
+              <h2>₹4,82,600</h2>
 
-              <h4>Photo Keychain</h4>
-
-              <p>170 Orders</p>
-
-            </div>
-
-          </div>
-
-          <div className="top-product">
-
-            <FaStar className="star" />
-
-            <div>
-
-              <h4>Customized Pillow</h4>
-
-              <p>145 Orders</p>
+              <span>+26%</span>
 
             </div>
 
@@ -645,15 +579,70 @@ const AdminDashboard = () => {
 
         </div>
 
-      </div>
+        {/* ===========================
+            BEST SELLING PRODUCTS
+        ============================ */}
 
-    </main>
+        <div className="dashboard-section">
 
-  </div>
+          <h2>Best Selling Products</h2>
 
-);
+          <div className="top-products">
+
+            <div className="top-product">
+
+              <FaStar className="star" />
+
+              <div>
+                <h4>Magic Mug</h4>
+                <p>245 Orders</p>
+              </div>
+
+            </div>
+
+            <div className="top-product">
+
+              <FaStar className="star" />
+
+              <div>
+                <h4>LED Photo Frame</h4>
+                <p>198 Orders</p>
+              </div>
+
+            </div>
+
+            <div className="top-product">
+
+              <FaStar className="star" />
+
+              <div>
+                <h4>Photo Keychain</h4>
+                <p>170 Orders</p>
+              </div>
+
+            </div>
+
+            <div className="top-product">
+
+              <FaStar className="star" />
+
+              <div>
+                <h4>Customized Pillow</h4>
+                <p>145 Orders</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  );
 
 };
 
 export default AdminDashboard;
-

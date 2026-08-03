@@ -11,6 +11,7 @@ import {
   FaCog,
   FaSignOutAlt,
   FaSpider,
+  FaTags,
 } from "react-icons/fa";
 
 import "./AdminSidebar.css";
@@ -25,14 +26,12 @@ const AdminSidebar = () => {
 
     if (!confirmLogout) return;
 
-    // Clear Login Data
     localStorage.removeItem("token");
     localStorage.removeItem("role");
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("currentUser");
     localStorage.removeItem("lastLogin");
 
-    // Redirect Login
     navigate("/login", { replace: true });
   };
 
@@ -47,6 +46,9 @@ const AdminSidebar = () => {
       </div>
 
       <nav className="sidebar-menu">
+
+        {/* Dashboard */}
+
         <NavLink
           to="/admin"
           end
@@ -56,6 +58,8 @@ const AdminSidebar = () => {
           <span>Dashboard</span>
         </NavLink>
 
+        {/* Add Product */}
+
         <NavLink
           to="/admin/add-product"
           className="sidebar-link"
@@ -63,6 +67,8 @@ const AdminSidebar = () => {
           <FaPlusCircle />
           <span>Add Product</span>
         </NavLink>
+
+        {/* Products */}
 
         <NavLink
           to="/admin/products"
@@ -72,6 +78,8 @@ const AdminSidebar = () => {
           <span>Products</span>
         </NavLink>
 
+        {/* Orders */}
+
         <NavLink
           to="/admin/manage-orders"
           className="sidebar-link"
@@ -79,6 +87,8 @@ const AdminSidebar = () => {
           <FaClipboardList />
           <span>Manage Orders</span>
         </NavLink>
+
+        {/* Customers */}
 
         <NavLink
           to="/admin/customers"
@@ -88,6 +98,8 @@ const AdminSidebar = () => {
           <span>Customers</span>
         </NavLink>
 
+        {/* Reports */}
+
         <NavLink
           to="/admin/reports"
           className="sidebar-link"
@@ -95,6 +107,8 @@ const AdminSidebar = () => {
           <FaChartBar />
           <span>Reports</span>
         </NavLink>
+
+        {/* Notifications */}
 
         <NavLink
           to="/admin/notifications"
@@ -104,6 +118,18 @@ const AdminSidebar = () => {
           <span>Notifications</span>
         </NavLink>
 
+        {/* Offer Management */}
+
+        <NavLink
+          to="/admin/offer"
+          className="sidebar-link"
+        >
+          <FaTags />
+          <span>Offer Management</span>
+        </NavLink>
+
+        {/* Settings */}
+
         <NavLink
           to="/admin/settings"
           className="sidebar-link"
@@ -111,6 +137,8 @@ const AdminSidebar = () => {
           <FaCog />
           <span>Settings</span>
         </NavLink>
+
+        {/* Logout */}
 
         <button
           type="button"
@@ -120,6 +148,7 @@ const AdminSidebar = () => {
           <FaSignOutAlt />
           <span>Logout</span>
         </button>
+
       </nav>
     </aside>
   );
