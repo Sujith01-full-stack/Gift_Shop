@@ -430,257 +430,140 @@ body{
     transition:all .4s ease;
 }
 
+.mobile-search-li {
+    display: none;
+    width: 100%;
+}
+
+.desktop-searchbar {
+    display: block;
+}
+
 @media(max-width:768px){
 
 .navbar{
-
-    height:72px;
-
-    padding:0 18px;
+    height:70px;
+    padding:0 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
 }
 
 .menu-icon{
-
-    display:block;
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    font-size:26px;
+    flex-shrink:0;
 }
 
-.searchbar{
+.desktop-searchbar {
+    display: none;
+}
 
-    display:none;
+.mobile-search-li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mobile-search-li .searchbar {
+    display: flex !important;
+    width: 90% !important;
+    max-width: 380px;
+    height: 46px;
+}
+
+.logo {
+    min-width: auto;
+    flex: 1;
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-links{
-        position:fixed;
-        top:80px;
-        left:-100%;
-        width:100%;
-        height:calc(100vh - 80px);
+    position:fixed;
+    top:70px;
+    left:-100%;
+    width:100%;
+    height:calc(100vh - 70px);
+    background:rgba(8,17,31,0.98);
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:18px;
+    padding:30px 15px;
+    overflow-y:auto;
+    transition:.4s ease;
+    z-index:9999;
+}
 
-        background:#0b1220;
-
-        display:flex;
-        flex-direction:column;
-        justify-content:flex-start;
-        align-items:center;
-
-        gap:30px;
-        padding-top:40px;
-
-        transition:.4s;
-    }
-
-    .nav-links.active{
-        left:0;
-
+.nav-links.active{
+    left:0;
     animation:slideMenu .4s ease;
 }
 
 .nav-links li{
-
     width:100%;
-
     display:flex;
-
     justify-content:center;
 }
 
 .nav-links a{
-
     width:90%;
-
     justify-content:center;
-
     padding:14px 18px;
-
     border-radius:14px;
-
     color:#d7e3f3;
-
     transition:.35s;
+    font-size:16px;
 }
 
 .nav-links a:hover{
-
     background:rgba(25,232,255,.12);
-
     color:#19e8ff;
-
     transform:translateX(6px);
-
-    box-shadow:
-        0 0 18px rgba(25,232,255,.18);
+    box-shadow:0 0 18px rgba(25,232,255,.18);
 }
 
-/* ==========================================
-        MOBILE ICON
-========================================== */
-
 .nav-links .nav-icon{
-
     color:#19e8ff;
-
     font-size:18px;
 }
 
+.nav-icons{
+    display:flex;
+    align-items:center;
+    gap:8px;
 }
 
-/* ==========================================
-        SLIDE ANIMATION
-========================================== */
-
-@keyframes slideMenu{
-
-from{
-
-    opacity:0;
-
-    transform:translateY(-25px);
+.nav-icons a{
+    width:40px;
+    height:40px;
+    font-size:18px;
 }
 
-to{
-
-    opacity:1;
-
-    transform:translateY(0);
+.badge{
+    width:18px;
+    height:18px;
+    font-size:10px;
 }
 
 }
-
-/* ==========================================
-        HOVER GLOW
-========================================== */
-
-.nav-links a:hover{
-
-    text-shadow:
-        0 0 12px rgba(25,232,255,.60);
-}
-
-/* ==========================================
-        ACTIVE LINK
-========================================== */
-
-.nav-links a.active{
-
-    color:#19e8ff;
-
-    background:rgba(25,232,255,.12);
-
-    border:1px solid rgba(25,232,255,.22);
-
-    box-shadow:
-        0 0 18px rgba(25,232,255,.20);
-}
-
-/* ===========================
-LAPTOP
-=========================== */
-
-@media (max-width:1200px){
-
-    .navbar-container{
-        padding:0 30px;
-    }
-
-    .nav-menu ul{
-        gap:20px;
-    }
-
-    .nav-menu a{
-        font-size:16px;
-    }
-
-    .resume-btn{
-        padding:12px 24px;
-        font-size:15px;
-    }
-
-    .theme-toggle{
-        width:42px;
-        height:42px;
-    }
-
-}
-
-/* ==========================================
-   MOBILE NAVBAR FIX
-========================================== */
-
-@media screen and (max-width:768px){
-
-    .navbar{
-        height:70px;
-        padding:0 14px;
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        gap:10px;
-    }
-
-    .logo{
-        min-width:auto;
-        flex:1;
-        font-size:22px;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow:ellipsis;
-    }
-
-    .nav-icons{
-        display:flex;
-        align-items:center;
-        gap:8px;
-    }
-
-    .nav-icons a{
-        width:40px;
-        height:40px;
-        font-size:18px;
-    }
-
-    .badge{
-        width:18px;
-        height:18px;
-        font-size:10px;
-    }
-
-    .menu-icon{
-        display:flex !important;
-        align-items:center;
-        justify-content:center;
-        width:40px;
-        height:40px;
-        font-size:28px;
-        flex-shrink:0;
-    }
-
-    .nav-links{
-        top:70px;
-        height:calc(100vh - 70px);
-        padding:30px 15px;
-        gap:20px;
-    }
-
-    .nav-links a{
-        width:100%;
-        justify-content:center;
-        padding:14px;
-        font-size:16px;
-    }
-
-    .searchbar{
-        display:none;
-    }
-}
-
-/* ==========================================
-   SMALL MOBILE
-========================================== */
 
 @media screen and (max-width:480px){
 
     .navbar{
-        height:65px;
+        height:64px;
         padding:0 10px;
     }
 
@@ -711,12 +594,15 @@ LAPTOP
     }
 
     .nav-links{
-        top:65px;
-        height:calc(100vh - 65px);
+        top:64px;
+        height:calc(100vh - 64px);
+        padding:20px 10px;
+        gap:14px;
     }
 
     .nav-links a{
         font-size:15px;
+        padding:12px;
     }
 }
 /* ==========================================

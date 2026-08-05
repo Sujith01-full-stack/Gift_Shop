@@ -115,11 +115,17 @@ const Navbar = () => {
           </li>
         )}
 
+        {/* Mobile Search Bar inside Drawer */}
+        <li className="mobile-search-li">
+          <SearchBar onSearchSubmit={() => setMenuOpen(false)} />
+        </li>
+
       </ul>
 
-      {/* Search */}
-
-      <SearchBar />
+      {/* Search Bar for Desktop */}
+      <div className="desktop-searchbar">
+        <SearchBar />
+      </div>
 
       {/* Icons */}
 

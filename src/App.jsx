@@ -77,7 +77,7 @@ function App() {
 
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
-          
+        
           {/* ================= PRODUCTS ================= */}
 
           <Route path="/products" element={<Products />} />
@@ -190,15 +190,6 @@ function App() {
   element={
     <AdminProtectedRoute>
       <Settings />
-    </AdminProtectedRoute>
-  }
-/>
-
-<Route
-  path="/admin/offer"
-  element={
-    <AdminProtectedRoute>
-      <AdminOffer />
     </AdminProtectedRoute>
   }
 />

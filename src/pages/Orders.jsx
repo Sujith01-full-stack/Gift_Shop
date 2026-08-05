@@ -7,9 +7,12 @@ import {
   FaTimesCircle,
   FaShoppingBag,
 } from "react-icons/fa";
+import OrderTrackerModal from "../components/OrderTrackerModal";
+import { toast } from "react-toastify";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
+  const [selectedOrder, setSelectedOrder] = useState(null);
 
   // Load Orders from localStorage
   useEffect(() => {
@@ -36,26 +39,21 @@ const Orders = () => {
 
   // Remove Order
   const removeOrder = (id) => {
-    const updatedOrders = orders.filter(
-      (order) => order.id !== id
+    const confirmCancel = window.confirm(
+      "Are you sure you want to cancel this order?"
+    );
+    if (!confirmCancel) return;
+
+    const updatedOrders = orders.map((order) =>
+      order.id === id ? { ...order, status: "Cancelled" } : order
     );
 
     setOrders(updatedOrders);
-
-    localStorage.setItem(
-      "orders",
-      JSON.stringify(updatedOrders)
-    );
-  };
-
-  // Track Order
-  const trackOrder = (order) => {
-    alert(
-      `Order ID: ${order.id}
-Product: ${order.product}
-Status: ${order.status}
-Date: ${order.date}`
-    );
+    localStorage.setItem("orders", JSON.stringify(updatedOrders));
+    toast.warn("Order status updated to Cancelled", {
+      position: "top-right",
+      autoClose: 2000,
+    });
   };
 
   return (
@@ -99,7 +97,7 @@ Date: ${order.date}`
 
                 <p>
                   <strong>Quantity:</strong>{" "}
-                  {order.quantity}
+                  {order.quantity || 1}
                 </p>
 
                 <h3>₹{order.price}</h3>
@@ -130,21 +128,26 @@ Date: ${order.date}`
 
     <p>
       <strong>Total:</strong>{" "}
-      ₹{order.price * order.quantity + 100}
+      ₹{(order.price || 0) * (order.quantity || 1) + 100}
     </p>
 
   </div>
 
   <button
     className="track-btn"
-    onClick={() => trackOrder(order)}
+    onClick={() => setSelectedOrder(order)}
   >
-    Track Order
+    Track Order Live
   </button>
 
   <button
     className="reorder-btn"
-    onClick={() => alert("Product added to cart")}
+    onClick={() =>
+      toast.success(`🛒 Product added to cart`, {
+        position: "top-right",
+        autoClose: 2000,
+      })
+    }
   >
     Reorder
   </button>
@@ -163,6 +166,14 @@ Date: ${order.date}`
         )}
 
       </div>
+
+      {/* Live Order Tracker Modal */}
+      {selectedOrder && (
+        <OrderTrackerModal
+          order={selectedOrder}
+          onClose={() => setSelectedOrder(null)}
+        />
+      )}
     </div>
   );
 };

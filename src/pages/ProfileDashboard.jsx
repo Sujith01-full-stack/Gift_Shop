@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ProfileDashboard.css";
+import { toast } from "react-toastify";
 
 import defaultProfile from "../assets/images/Dp1.jpeg";
 
@@ -22,16 +23,18 @@ import {
   FaCrown,
 } from "react-icons/fa";
 
+const defaultUserData = {
+  name: "Spider User",
+  email: "spider@gmail.com",
+  phone: "+91 8300589035",
+  address: "Veeyanoor, Tamil Nadu, India",
+  image: defaultProfile,
+};
+
 const ProfileDashboard = () => {
   const [editing, setEditing] = useState(false);
-
-  const [user, setUser] = useState({
-    name: "Spider User",
-    email: "spider@gmail.com",
-    phone: "+91 8300589035",
-    address: "Veeyanoor, Tamil Nadu, India",
-    image: defaultProfile,
-  });
+  const [user, setUser] = useState(defaultUserData);
+  const [tempUser, setTempUser] = useState(defaultUserData);
 
   const stats = [
     {
@@ -66,95 +69,96 @@ const ProfileDashboard = () => {
 
   useEffect(() => {
     const saved = localStorage.getItem("profile");
-
     if (saved) {
-      setUser(JSON.parse(saved));
+      try {
+        const parsed = JSON.parse(saved);
+        setUser(parsed);
+        setTempUser(parsed);
+      } catch (err) {
+        console.error("Error loading profile:", err);
+      }
     }
   }, []);
 
   const handleChange = (e) => {
-    setUser({
-      ...user,
+    setUser((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-
     if (!file) return;
 
     const reader = new FileReader();
-
     reader.onloadend = () => {
       setUser((prev) => ({
         ...prev,
         image: reader.result,
       }));
+      toast.info("📷 Profile picture preview updated!");
     };
-
     reader.readAsDataURL(file);
   };
 
-  const handleSave = () => {
-    localStorage.setItem(
-      "profile",
-      JSON.stringify(user)
-    );
+  const handleEdit = () => {
+    setTempUser(user);
+    setEditing(true);
+    toast.info("✏️ Edit mode enabled. Modify fields and click Save!");
+  };
 
+  const handleCancel = () => {
+    setUser(tempUser);
     setEditing(false);
+    toast.info("↩️ Profile edit cancelled");
+  };
 
-    alert("Profile updated successfully!");
+  const handleSave = () => {
+    if (!user.name || !user.email) {
+      toast.error("⚠️ Name and Email are required!");
+      return;
+    }
+
+    localStorage.setItem("profile", JSON.stringify(user));
+    setTempUser(user);
+    setEditing(false);
+    toast.success("✅ Profile Updated Successfully!", {
+      position: "top-right",
+      autoClose: 2500,
+    });
   };
 
   return (
     <div className="profile-dashboard">
-
       <div className="dashboard-container">
-
         {/* Left Side */}
-
         <div className="dashboard-left">
-
           <ProfileCard
             user={user}
             editing={editing}
-            onEdit={() => setEditing(true)}
+            onEdit={handleEdit}
             onSave={handleSave}
+            onCancel={handleCancel}
             onChange={handleChange}
             onImageChange={handleImageChange}
           />
-
         </div>
 
         {/* Right Side */}
-
         <div className="dashboard-right">
-
           <ProfileStats stats={stats} />
-
           <OrderChart />
-
           <RecentlyViewed />
-
           <RecentOrders />
-
           <Membership />
-
           <AddressBook />
-
           <PaymentMethods />
-
           <NotificationSettings />
-
           <ChangePassword />
-
           <LogoutButton />
-
         </div>
-
       </div>
-
     </div>
   );
 };

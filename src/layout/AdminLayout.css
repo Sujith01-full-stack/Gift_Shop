@@ -139,74 +139,62 @@
 }
 
 /* ==========================================
-        RESPONSIVE ADMIN LAYOUT
+        LAPTOP
 ========================================== */
 
-/* Laptop */
+@media(max-width:1200px){
 
-@media screen and (max-width:1200px){
+.admin-content{
 
-    .admin-content{
-        margin-left:250px;
-        padding:28px;
-    }
+    margin-left:250px;
 
-}
-
-/* Tablet */
-
-@media screen and (max-width:992px){
-
-    .admin-content{
-        margin-left:220px;
-        padding:22px;
-    }
+    padding:30px;
 
 }
 
-/* Mobile */
+}
 
-@media screen and (max-width:768px){
+/* ==========================================
+        TABLET
+========================================== */
 
-    .admin-layout{
-        display:block;
-    }
+@media(max-width:992px){
 
-    .admin-content{
-        margin-left:82px;      /* Sidebar width */
-        width:calc(100% - 82px);
-        min-height:100vh;
-        padding:18px 15px;
-        overflow-x:hidden;
-    }
+.admin-content{
 
-    .admin-content::before,
-    .admin-content::after{
-        display:none;
-    }
+    margin-left:220px;
+
+    padding:22px;
 
 }
 
-/* Small Mobile */
+}
 
-@media screen and (max-width:480px){
+/* ==========================================
+        MOBILE
+========================================== */
 
-    .admin-content{
-        margin-left:70px;      /* Small sidebar width */
-        width:calc(100% - 70px);
-        padding:15px 12px;
-    }
+@media(max-width:768px){
+
+.admin-layout{
+
+    flex-direction:column;
 
 }
 
-/* Very Small Mobile */
+.admin-content{
 
-@media screen and (max-width:360px){
+    margin-left:0;
 
-    .admin-content{
-        margin-left:65px;
-        width:calc(100% - 65px);
-        padding:12px 10px;
-    }
+    padding:18px;
+
+}
+
+.admin-content::before,
+.admin-content::after{
+
+    display:none;
+
+}
 
 }
